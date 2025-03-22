@@ -9,6 +9,8 @@ now let's add the hardware-configuration.nix to our config-flake direcotory
 cp /etc/nixos/hardware-configuration.nix path/to/where/you/cloned/the/repo
 ```
 
+now edit the configuration.nix file to change the username to match yours
+
 now justo run the rebuild with an special flag that gpt gave me(if it doesn't is gpt's fault)
 
 ```
