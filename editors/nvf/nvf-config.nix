@@ -43,10 +43,9 @@
         action = ":Telescope oldfiles<CR>";
       }
       {
-        key = "<leader>ñ";
+        key = "<leader>e";
         mode = "n";
-        silent = true;
-        action = ":lua vim.diagnostic.open_float()<CR>";
+        action = ":lua vim.diagnostic.open_float<CR>";
       }
     ];
 
