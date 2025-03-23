@@ -46,7 +46,7 @@
         key = "<leader>e";
         mode = "n";
         siletn = true;
-        action = ":lua vim.diagnostic.open_float()<CR>";
+        action = "<cmd>lua vim.diagnostic.open_float()<CR>";
       }
     ];
 
