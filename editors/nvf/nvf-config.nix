@@ -42,6 +42,12 @@
         silent = true;
         action = ":Telescope oldfiles<CR>";
       }
+      {
+        key = "<leader>e";
+        mode = "n";
+        siletn = true;
+        action = ":lua vim.diagnostic.open_float()<CR>";
+      }
     ];
 
     languages = {
