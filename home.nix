@@ -27,6 +27,9 @@
 
     #vscode
     ./editors/vscode/vscode.nix
+
+    #helix
+    ./editors/helix/helix.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
