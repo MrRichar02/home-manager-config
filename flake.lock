@@ -554,8 +554,8 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1742845170,
-        "narHash": "sha256-w8ROO/nEX9kxVG+J8GfG95vObvaboQr6RvUOOa/5H94=",
+        "lastModified": 1742845705,
+        "narHash": "sha256-BhOnE80PDb6a9pR3vhjxg5wot9xEZKPJ02fU+PAKOZQ=",
         "path": "/home/docair/config-flake/hosts/editors/nvf",
         "type": "path"
       },
