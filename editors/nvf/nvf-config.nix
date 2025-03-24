@@ -54,7 +54,10 @@
       enableLSP = true;
       enableTreesitter = true;
       nix.enable = true;
-      python.enable = true;
+      python = {
+        enable = true;
+        lsp.server = "python-lsp-server";
+      };
     };
   };
 }
