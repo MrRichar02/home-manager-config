@@ -28,8 +28,6 @@
     #vscode
     ./editors/vscode/vscode.nix
 
-    #helix
-    ./editors/helix/helix.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -87,6 +85,7 @@
 
     #ideas
     jetbrains.idea-community
+    helix
 
     #request thing
     postman
