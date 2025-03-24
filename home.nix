@@ -87,6 +87,9 @@
     jetbrains.idea-community
     helix
 
+    #helix lsp
+    nixd
+
     #request thing
     postman
 
