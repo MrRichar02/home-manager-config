@@ -474,8 +474,8 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1741970949,
-        "narHash": "sha256-tMfCOFY61jKakdZCFjm7EiEyFpd5k8MNerQ++KQziyo=",
+        "lastModified": 1743041512,
+        "narHash": "sha256-HjW7PE7/1P+fu+aJR4YwPtStegKK30ito1FIsQwNuos=",
         "path": "/home/docair/config-flake/hosts/editors/nixvim",
         "type": "path"
       },
@@ -554,8 +554,8 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1742845705,
-        "narHash": "sha256-BhOnE80PDb6a9pR3vhjxg5wot9xEZKPJ02fU+PAKOZQ=",
+        "lastModified": 1743041481,
+        "narHash": "sha256-6Xaoib8FbWxD4ch0CaYx0dBVifbz+M3xa1SjAUUHqus=",
         "path": "/home/docair/config-flake/hosts/editors/nvf",
         "type": "path"
       },
