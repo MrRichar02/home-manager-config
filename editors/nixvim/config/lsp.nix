@@ -1,4 +1,3 @@
-{ self, ...}:
 {
   plugins.lsp = {
     enable = true;
@@ -11,7 +10,8 @@
         };
       };
       ruff.enable = true;
-      #nil_ls.enable = true;
+      nil_ls.enable = true;
+      nixd.enable = true;
       ts_ls.enable = true;
       gopls.enable = true;
       sqls.enable = true;

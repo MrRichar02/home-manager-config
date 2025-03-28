@@ -35,7 +35,7 @@
   home.packages = with pkgs; [
 
     #editors
-    inputs.nvf-flake.packages.x86_64-linux.default
+    inputs.nixvim-flake.x86_64-linux.default
 
     #office apps
     onlyoffice-desktopeditors
