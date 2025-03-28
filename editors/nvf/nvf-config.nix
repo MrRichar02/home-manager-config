@@ -20,7 +20,9 @@
       };
     };
 
-    visuals.nvim-web-devicons.enable = true;
+    visuals = {
+      nvim-web-devicons.enable = true;
+    };
 
     autocomplete.nvim-cmp.enable = true;
 
@@ -53,8 +55,13 @@
     languages = {
       enableLSP = true;
       enableTreesitter = true;
+      enableExtraDiagnostics = true;
+
       nix.enable = true;
-      python.enable = true;
+      python = {
+        lsp.package = pkgs.python312Packages.python-lsp-server;
+        lsp.server = "python-lsp-server";
+      };
     };
   };
 }
