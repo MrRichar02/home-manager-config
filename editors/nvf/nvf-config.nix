@@ -57,11 +57,12 @@
       enableTreesitter = true;
       enableExtraDiagnostics = true;
 
-      nix.enable = true;
-      python = {
-        lsp.package = pkgs.python312Packages.python-lsp-server;
-        lsp.server = "python-lsp-server";
+      nix = {
+        enable = true;
+        lsp.package = pkgs.nixd;
+        lsp.server = "nixd";
       };
+      python.enable = true;
     };
   };
 }
