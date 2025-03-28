@@ -474,7 +474,7 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1743176639,
+        "lastModified": 1743177321,
         "narHash": "sha256-VntIqFmpLjGcfFxHvAWfWf89k8NZ14McfqcrKs00wcg=",
         "path": "/home/docair/config-flake/hosts/editors/nixvim",
         "type": "path"

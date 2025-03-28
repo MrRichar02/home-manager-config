@@ -35,7 +35,7 @@
   home.packages = with pkgs; [
 
     #editors
-    inputs.nixvim-flake.${system}.default
+    inputs.nixvim-flake.packages.${system}.default
 
     #office apps
     onlyoffice-desktopeditors
