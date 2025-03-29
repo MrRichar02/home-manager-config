@@ -1,5 +1,5 @@
 {
-  programs.yaz = {
+  programs.yazi = {
     enable = true;
   };
 }
