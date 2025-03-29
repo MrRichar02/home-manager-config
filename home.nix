@@ -17,6 +17,7 @@
     ./cli-tools/git.nix
     ./cli-tools/ranger.nix
     ./cli-tools/nnn.nix
+    ./cli-tools/yazi.nix
 
     #shells
     ./shells/nushell/nushell.nix

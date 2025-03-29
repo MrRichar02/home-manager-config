@@ -1,0 +1,5 @@
+{
+  programs.yaz = {
+    enable = true;
+  };
+}
