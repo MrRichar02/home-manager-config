@@ -84,7 +84,7 @@
     spotify
 
     #ideas
-    jetbrains.idea-community
+    jetbrains.idea-ultimate
     helix
 
     #helix lsp
