@@ -11,7 +11,7 @@
     ./wms/hyprland.nix
 
     #cli-tools
-    #./cli-tools/tmux.nix
+    ./cli-tools/tmux.nix
     ./cli-tools/lazygit.nix
     ./cli-tools/oh-my-posh.nix
     ./cli-tools/git.nix

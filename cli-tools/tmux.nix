@@ -15,6 +15,8 @@
     extraConfig = '' 
       set -g mouse on
 
+      set-option -g default-terminal "xterm-kitty"
+
       bind-key h select-pane -L
       bind-key j select-pane -D
       bind-key k select-pane -U
