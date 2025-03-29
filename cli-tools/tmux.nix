@@ -4,18 +4,15 @@
   programs.tmux = {
     enable = true; 
 
-    plugins = with pkgs; [
-
-      tmuxPlugins.catppuccin
-      tmuxPlugins.cpu
-    ];
+    prefix = "C-a";
 
     keyMode = "vi";
 
     extraConfig = '' 
       set -g mouse on
 
-      set-option -g default-terminal "xterm-kitty"
+      set -g base-index 1
+      setw -g pane-base-index 1
 
       bind-key h select-pane -L
       bind-key j select-pane -D
