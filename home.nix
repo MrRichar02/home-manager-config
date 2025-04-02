@@ -66,7 +66,7 @@
     rofi
 
     #browsers
-    brave
+    #brave
     inputs.zen-browser.packages."${system}".default # beta not sigma :(
 
     #bars
