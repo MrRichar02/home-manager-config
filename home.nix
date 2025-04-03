@@ -152,6 +152,10 @@
     package = pkgs.taskwarrior3;
   };
 
+  home.sessionVariables = {
+    EDITOR = "neovim";
+  };
+
   #Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }
