@@ -112,10 +112,10 @@
 
   ];
 
-  home.file.".config/waybar" = {
-    source = ./bars/waybar;
-    recursive = true;
-  };
+  # home.file.".config/waybar" = {
+  #   source = ./bars/waybar;
+  #   recursive = true;
+  # };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
@@ -150,6 +150,10 @@
   programs.taskwarrior = {
     enable = true;
     package = pkgs.taskwarrior3;
+  };
+
+  programs.waybar = {
+    enable = true;
   };
 
   home.sessionVariables = {
