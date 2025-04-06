@@ -32,6 +32,9 @@
     #stylix
     ./style/stylix.nix
 
+    #bars
+    ./bars/waybar/waybar.nix
+
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -150,10 +153,6 @@
   programs.taskwarrior = {
     enable = true;
     package = pkgs.taskwarrior3;
-  };
-
-  programs.waybar = {
-    enable = true;
   };
 
   home.sessionVariables = {
