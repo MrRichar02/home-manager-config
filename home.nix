@@ -29,6 +29,9 @@
     #vscode
     ./editors/vscode/vscode.nix
 
+    #stylix
+    ./style/stylix.nix
+
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -87,9 +90,6 @@
 
     #helix lsp
     nixd
-
-    #styles
-    ./style/stylix.nix
 
     #request thing
     postman
