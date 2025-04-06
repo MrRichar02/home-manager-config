@@ -39,7 +39,7 @@
 
       "hyprland/window" = {
         "format" = "👉 {}";
-        "separate-outputs" = true;
+        #"separate-outputs" = true;
       };
 
       "battery" = {
