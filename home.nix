@@ -65,9 +65,6 @@
     vesktop
     zapzap
 
-    #app launcher
-    rofi
-
     #browsers
     #brave
     inputs.zen-browser.packages."${system}".default # beta not sigma :(
@@ -130,29 +127,13 @@
   # changes in each release.
   home.stateVersion = "24.11";
 
-  # gtk = {
-  #   enable = true;
-  #   cursorTheme = {
-  #     package = pkgs.vanilla-dmz;
-  #     name = "Vanilla-DMZ";
-  #     size = 24;
-  #   };
-  # };
-
-  # home.pointerCursor = {
-  #   package = pkgs.vanilla-dmz;
-  #   name = "Vanilla-DMZ";
-  #   size = 24;
-  #   gtk.enable = true;
-  #   hyprcursor = {
-  #    enable = true;
-  #    size = 24;
-  #   };
-  # };
-
   programs.taskwarrior = {
     enable = true;
     package = pkgs.taskwarrior3;
+  };
+
+  programs.rofi = {
+    enable = true;
   };
 
   home.sessionVariables = {
