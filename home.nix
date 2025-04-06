@@ -55,9 +55,6 @@
     swww
     waypaper
 
-    #fetch
-    fastfetch
-
     #terminal font
     monocraft
 
@@ -133,6 +130,10 @@
   };
 
   programs.rofi = {
+    enable = true;
+  };
+
+  programs.fastfetch = {
     enable = true;
   };
 
