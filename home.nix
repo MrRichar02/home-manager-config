@@ -163,7 +163,7 @@
 
     cursor.package = pkgs.bibata-cursors;
     cursor.name = "Bibata-Modern-Ice";
-    cursor.size = 12;
+    cursor.size = 16;
   };
 
 
