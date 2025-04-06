@@ -24,7 +24,7 @@
     ./shells/bash/bash.nix
 
     #terminals
-    ./terminals/kitty.nix
+    #./terminals/kitty.nix
 
     #vscode
     ./editors/vscode/vscode.nix
@@ -127,25 +127,25 @@
   # changes in each release.
   home.stateVersion = "24.11";
 
-  gtk = {
-    enable = true;
-    cursorTheme = {
-      package = pkgs.vanilla-dmz;
-      name = "Vanilla-DMZ";
-      size = 24;
-    };
-  };
+  # gtk = {
+  #   enable = true;
+  #   cursorTheme = {
+  #     package = pkgs.vanilla-dmz;
+  #     name = "Vanilla-DMZ";
+  #     size = 24;
+  #   };
+  # };
 
-  home.pointerCursor = {
-    package = pkgs.vanilla-dmz;
-    name = "Vanilla-DMZ";
-    size = 24;
-    gtk.enable = true;
-    #hyprcursor = {
-    #  enable = true;
-    #  size = 24;
-    #};
-  };
+  # home.pointerCursor = {
+  #   package = pkgs.vanilla-dmz;
+  #   name = "Vanilla-DMZ";
+  #   size = 24;
+  #   gtk.enable = true;
+  #   hyprcursor = {
+  #    enable = true;
+  #    size = 24;
+  #   };
+  # };
 
   programs.taskwarrior = {
     enable = true;
@@ -159,6 +159,12 @@
   home.sessionVariables = {
     EDITOR = "neovim";
   };
+
+  stylix = {
+    enable = true;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-medium.yaml";
+  };
+
 
   #Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

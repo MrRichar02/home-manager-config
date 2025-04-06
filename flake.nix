@@ -11,6 +11,7 @@
     nixvim-flake.url = "path:/home/docair/config-flake/hosts/editors/nixvim";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     nvf-flake.url = "path:/home/docair/config-flake/hosts/editors/nvf";
+    stylix.url = "github:danth/stylix";
   };
 
   outputs = { nixpkgs, home-manager, ... }@ inputs:
@@ -23,7 +24,10 @@
 
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
-        modules = [ ./home.nix ];
+        modules = [ 
+          ./home.nix
+          inputs.stylix.homeManagerModules.stylix
+        ];
 
 
         # Optionally use extraSpecialArgs
