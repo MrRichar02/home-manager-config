@@ -47,8 +47,8 @@
         };
 
         clock = {
-          format = "{ %H %M}  ";
-          format-alt = "{ %A; %B %d; %Y (%R)}  ";
+          format = "{ :%H :%M}  ";
+          format-alt = "{ :%A; %B %d; %Y (%R)}  ";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
           calendar = {
             mode           = "year";
@@ -87,7 +87,7 @@
 
         "memory" = {
           "interval" = 30;
-          "format" = "{used 0.1f}G/{total 0.1f}G ";
+          "format" = "{used: 0.1f}G/{total: 0.1f}G ";
         };
 
         "pulseaudio" = {
