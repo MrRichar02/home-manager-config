@@ -24,7 +24,7 @@
     ./shells/bash/bash.nix
 
     #terminals
-    #./terminals/kitty.nix
+    ./terminals/kitty.nix
 
     #vscode
     ./editors/vscode/vscode.nix
@@ -51,9 +51,6 @@
 
     #fetch
     fastfetch
-
-    #terminals
-    kitty 
 
     #terminal font
     monocraft
