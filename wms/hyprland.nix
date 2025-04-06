@@ -23,8 +23,8 @@
         "XDG_SESSION_DESKTOP,Hyprland"
         "QT_QPA_PLATFORM,wayland"
         "QT_QPA_PLATFORMTHEME,qt5ct"
-        #"HYPRCURSOR_THEME,Vanilla-DMZ"
-        #"HYPRCURSOR_SIZE,24"
+        "HYPRCURSOR_THEME,Bibata-Modern-Ice"
+        "HYPRCURSOR_SIZE,24"
       ];
 
       exec-once = [
