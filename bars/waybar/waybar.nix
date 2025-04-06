@@ -47,8 +47,8 @@
         };
 
         clock = {
-          format = "{ :%H :%M}  ";
-          format-alt = "{ :%A; %B %d; %Y (%R)}  ";
+          format = "{:%H:%M} ";
+          format-alt = "{:%A, %B %d, %Y (%R)} ";
           tooltip-format = "<tt><small>{calendar}</small></tt>";
           calendar = {
             mode           = "year";
@@ -63,7 +63,7 @@
               today =      "<span color='#ff6699'><b><u>{}</u></b></span>";
             };
           };
-          actions =  {
+          actions = {
             on-click-right = "mode";
             on-scroll-up = "tz_up";
             on-scroll-down = "tz_down";
