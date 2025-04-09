@@ -8,7 +8,7 @@
     ./colorScheme.nix
     ./lua-line.nix
     ./web-devicons.nix
-    #./noice.nix
+    ./noice.nix
   ];
 
   clipboard = {
