@@ -1,9 +1,12 @@
 {
-  colorschemes.catppuccin = {
+  # colorschemes.catppuccin = {
+  #   enable = true;
+  #   settings = {
+  #     flavour = "mocha";
+  #     background.dark = "mocha";
+  #   };
+  # };
+  colorschemes.gruvbox = {
     enable = true;
-    settings = {
-      flavour = "mocha";
-      background.dark = "mocha";
-    };
   };
 }
