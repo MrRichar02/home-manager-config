@@ -1,6 +1,7 @@
 {
   programs.oh-my-posh = {
-    enable = false;
+    enable = true;
     #useTheme = "catppuccin_mocha";
+    useTheme = "paraussel";
   };
 }
