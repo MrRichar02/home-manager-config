@@ -733,14 +733,17 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1744320391,
+        "lastModified": 1744336136,
         "narHash": "sha256-Ex8Pg43mKYjHPP1IRrfLf1AyX1itHJB7cXbbNxZu1Zk=",
-        "path": "/home/docair/config-flake/hosts/editors/nixvim",
-        "type": "path"
+        "owner": "MrRichar02",
+        "repo": "nixvim",
+        "rev": "c3739f48557ecabe89303a4aa200e687c1516bd5",
+        "type": "github"
       },
       "original": {
-        "path": "/home/docair/config-flake/hosts/editors/nixvim",
-        "type": "path"
+        "owner": "MrRichar02",
+        "repo": "nixvim",
+        "type": "github"
       }
     },
     "nmd": {
@@ -836,14 +839,17 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1743175740,
+        "lastModified": 1744333811,
         "narHash": "sha256-4tk62WxeVA3SNMrDEjmIvZa1q8ghnpK5ujwLsaIFEss=",
-        "path": "/home/docair/config-flake/hosts/editors/nvf",
-        "type": "path"
+        "owner": "MrRichar02",
+        "repo": "nvf",
+        "rev": "e82ff836317fc47a5a658c08941e927f39a98bbd",
+        "type": "github"
       },
       "original": {
-        "path": "/home/docair/config-flake/hosts/editors/nvf",
-        "type": "path"
+        "owner": "MrRichar02",
+        "repo": "nvf",
+        "type": "github"
       }
     },
     "root": {

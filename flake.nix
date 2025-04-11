@@ -8,9 +8,9 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixvim-flake.url = "path:/home/docair/config-flake/hosts/editors/nixvim";
+    nixvim-flake.url = "github:MrRichar02/nixvim";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
-    nvf-flake.url = "path:/home/docair/config-flake/hosts/editors/nvf";
+    nvf-flake.url = "github:MrRichar02/nvf";
     stylix.url = "github:danth/stylix";
   };
 
