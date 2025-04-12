@@ -3,7 +3,7 @@
   stylix = {
     enable = true;
     #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    stylix.image = ./frieren-frog-mufu.png;
+    image = ./frieren-frog-mufu.png;
 
     cursor = {
       package = pkgs.bibata-cursors;
