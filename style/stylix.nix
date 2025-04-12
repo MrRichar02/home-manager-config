@@ -2,8 +2,7 @@
 {
   stylix = {
     enable = true;
-    #base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    image = ./frieren-frog-mufu.png;
+    base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
 
     cursor = {
       package = pkgs.bibata-cursors;
