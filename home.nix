@@ -65,6 +65,7 @@
     #browsers
     #brave
     inputs.zen-browser.packages."${system}".default # beta not sigma :(
+    google-chrome
 
     #bars
     waybar
