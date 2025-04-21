@@ -7,34 +7,7 @@
   home.homeDirectory = "/home/docair";
 
   imports = [
-    #wms
-    ./wms/hyprland.nix
-
-    #cli-tools
-    ./cli-tools/tmux.nix
-    ./cli-tools/lazygit.nix
-    ./cli-tools/oh-my-posh.nix
-    ./cli-tools/git.nix
-    ./cli-tools/ranger.nix
-    ./cli-tools/nnn.nix
-    ./cli-tools/yazi.nix
-
-    #shells
-    ./shells/nushell/nushell.nix
-    ./shells/bash/bash.nix
-
-    #terminals
-    ./terminals/kitty.nix
-
-    #vscode
-    ./editors/vscode/vscode.nix
-
-    #stylix
-    ./style/stylix.nix
-
-    #bars
-    ./bars/waybar/waybar.nix
-
+    ./modules
   ];
 
   nixpkgs.config.allowUnfree = true;
