@@ -9,7 +9,7 @@
 
         modules-left = [ "custom/os_icon" "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "pulseaudio" "custom/weather" "network" "clock"];
+        modules-right = [ "custom/weather" "pulseaudio" "network" "clock"];
 
         "custom/os_icon" = {
           "format" = "";
