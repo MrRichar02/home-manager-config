@@ -9,7 +9,7 @@
 
         modules-left = [ "custom/os_icon" "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "pulseaudio" "memory" "cpu" "network" "battery" "clock"];
+        modules-right = [ "pulseaudio" "custom/weather" "network" "clock"];
 
         "custom/os_icon" = {
           "format" = "";
@@ -36,39 +36,44 @@
         };
 
 
-        "hyprland/window" = {
-          "format" = "👉 {}";
-          #"separate-outputs" = true;
+        # "hyprland/window" = {
+        #   "format" = "👉 {}";
+        #   #"separate-outputs" = true;
+        # };
+
+        # "battery" = {
+        #   "format" = "{capacity}% {icon}";
+        #   "format-icons" = ["" "" "" "" ""];
+        # };
+
+        "clock" = {
+          format = "{:%d.%m.%Y - %H:%M}";
+          format-alt = "{:%A, %B %d at %R}";
         };
 
-        "battery" = {
-          "format" = "{capacity}% {icon}";
-          "format-icons" = ["" "" "" "" ""];
-        };
-
-        clock = {
-          format = "{:%H:%M} ";
-          format-alt = "{:%A, %B %d, %Y (%R)} ";
-          tooltip-format = "<tt><small>{calendar}</small></tt>";
-          calendar = {
-            mode           = "year";
-            mode-mon-col   = 3;
-            weeks-pos      = "right";
-            on-scroll      = 1;
-            format = {
-              months =     "<span color='#ffead3'><b>{}</b></span>";
-              days =       "<span color='#ecc6d9'><b>{}</b></span>";
-              weeks =      "<span color='#99ffdd'><b>W{}</b></span>";
-              weekdays =   "<span color='#ffcc66'><b>{}</b></span>";
-              today =      "<span color='#ff6699'><b><u>{}</u></b></span>";
-            };
-          };
-          actions = {
-            on-click-right = "mode";
-            on-scroll-up = "tz_up";
-            on-scroll-down = "tz_down";
-          };
-        };
+        # clock = {
+        #   format = "{:%H:%M} ";
+        #   format-alt = "{:%A, %B %d, %Y (%R)} ";
+        #   tooltip-format = "<tt><small>{calendar}</small></tt>";
+        #   calendar = {
+        #     mode           = "year";
+        #     mode-mon-col   = 3;
+        #     weeks-pos      = "right";
+        #     on-scroll      = 1;
+        #     format = {
+        #       months =     "<span color='#ffead3'><b>{}</b></span>";
+        #       days =       "<span color='#ecc6d9'><b>{}</b></span>";
+        #       weeks =      "<span color='#99ffdd'><b>W{}</b></span>";
+        #       weekdays =   "<span color='#ffcc66'><b>{}</b></span>";
+        #       today =      "<span color='#ff6699'><b><u>{}</u></b></span>";
+        #     };
+        #   };
+        #   actions = {
+        #     on-click-right = "mode";
+        #     on-scroll-up = "tz_up";
+        #     on-scroll-down = "tz_down";
+        #   };
+        # };
 
         "network" = {
           # "interface" = "wlp2*"; // (Optional) To force the use of this interface
@@ -80,15 +85,22 @@
           "format-alt" = "{ifname} = {ipaddr}/{cidr}";
         };
 
-        "cpu" = {
-          "format" = "{usage}% ";
-          "tooltip" = false;
+        "custom/weather" = {
+          format = " {} ";
+          exec = "curl -s 'wttr.in/Tashkent?format=%c%t'";
+          interval = 300;
+          class = "weather";
         };
 
-        "memory" = {
-          "interval" = 30;
-          "format" = "{used: 0.1f}G/{total: 0.1f}G ";
-        };
+        # "cpu" = {
+        #   "format" = "{usage}% ";
+        #   "tooltip" = false;
+        # };
+        #
+        # "memory" = {
+        #   "interval" = 30;
+        #   "format" = "{used: 0.1f}G/{total: 0.1f}G ";
+        # };
 
         "pulseaudio" = {
           "format" = "{volume}% {icon}";
