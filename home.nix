@@ -30,6 +30,9 @@
     stylix.enable = true;
 
     kitty.enable = true;
+
+    swaync.enable = true;
+    swww.enable = true;
   };
 
   # This value determines the Home Manager release that your
