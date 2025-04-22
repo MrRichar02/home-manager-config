@@ -1,14 +1,17 @@
-{ pkgs, ...}:
+{ pkgs, lib, config, ...}:
 
 {
-  programs.tmux = {
-    enable = true; 
+  options.myModules.tmux.enable = lib.mkEnableOption "enables tmux module";
 
-    prefix = "C-a";
+  config = lib.mkIf config.myModules.tmux.enable {
+    programs.tmux = {
+      enable = true; 
 
-    keyMode = "vi";
+      prefix = "C-a";
 
-    extraConfig = '' 
+      keyMode = "vi";
+
+      extraConfig = '' 
       set -g mouse on
 
       set -g base-index 1
@@ -20,6 +23,7 @@
       bind-key l select-pane -R
 
       set-option -g status-position top
-    '';
+      '';
+    };
   };
 }

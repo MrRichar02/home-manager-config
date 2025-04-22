@@ -1,10 +1,16 @@
+{lib, config, ...}:
 {
-  programs.git = {
-    enable = true;
-    extraConfig = {
-      user.email = "richarmamadi03@gmail.com";
-      user.name = "MrRichar02";
-      init.defaultBranch = "main";
+  options.myModules.git.enable = lib.mkEnableOption "enables git module";
+
+  config = lib.mkIf config.myModules.git.enable {
+
+    programs.git = {
+      enable = true;
+      extraConfig = {
+        user.email = "richarmamadi03@gmail.com";
+        user.name = "MrRichar02";
+        init.defaultBranch = "main";
+      };
     };
   };
 }

@@ -11,11 +11,14 @@
     ./packages.nix
   ];
 
-  nixpkgs.config.allowUnfree = true;
-  # home.file.".config/waybar" = {
-  #   source = ./bars/waybar;
-  #   recursive = true;
-  # };
+  myModules = {
+    fastfetch.enable = true;
+    tmux.enable = true;
+    yazi.enable = true;
+    git.enable = true;
+    rofi.enable = true;
+    oh-my-posh.enable = true;
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
