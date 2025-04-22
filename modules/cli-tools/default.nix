@@ -1,4 +1,3 @@
-{lib, config, ...}:
 {
   imports = [
     ./git.nix
@@ -11,5 +10,6 @@
     ./fzf.nix
     ./task.nix
     ./rofi.nix
+    ./fastfetch.nix
   ];
 }
