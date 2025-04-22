@@ -11,12 +11,26 @@
     ./packages.nix
   ];
 
-  myModules.fastfetch.enable = true;
-  myModules.tmux.enable = true;
-  myModules.yazi.enable = true;
-  myModules.git.enable = true;
-  myModules.rofi.enable = true;
-  myModules.oh-my-posh.enable = true;
+  myModules = {
+    fastfetch.enable = true;
+    tmux.enable = true;
+    yazi.enable = true;
+    git.enable = true;
+    rofi.enable = true;
+    oh-my-posh.enable = true;
+
+    vscode.enable = true;
+
+    waybar.enable = true;
+
+    bash.enable = true;
+
+    hyrpland.enable = true;
+
+    stylix.enable = true;
+
+    kitty.enable = true;
+  };
 
   # This value determines the Home Manager release that your
   # configuration is compatible with. This helps avoid breakage
