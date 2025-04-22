@@ -7,5 +7,8 @@
     ./ranger.nix
     ./lazygit.nix
     ./oh-my-posh.nix
+    ./fzf.nix
+    ./task.nix
+    ./rofi.nix
   ];
 }

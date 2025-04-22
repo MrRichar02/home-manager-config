@@ -7,5 +7,6 @@
     ./editors
     ./cli-tools
     ./terminals
+    ./services
   ];
 }

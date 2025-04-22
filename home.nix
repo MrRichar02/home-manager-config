@@ -8,81 +8,10 @@
 
   imports = [
     ./modules
+    ./packages.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
-
-  home.packages = with pkgs; [
-
-    #editors
-    inputs.nixvim-flake.packages.${system}.default
-
-    #office apps
-    onlyoffice-desktopeditors
-
-    #notifications
-    swaynotificationcenter
-    libnotify
-
-    #wallpaper
-    swww
-    waypaper
-
-    #terminal font
-    monocraft
-
-    #chat apps
-    vesktop
-    zapzap
-
-    #browsers
-    #brave
-    inputs.zen-browser.packages."${system}".default # beta not sigma :(
-    google-chrome
-
-    #bars
-    waybar
-
-    #system utilities
-    hyprshot
-    hyprlock
-    brightnessctl
-    wl-clipboard
-
-    #file manager
-    kdePackages.dolphin
-
-    #music player
-    spotify
-
-    #ideas
-    jetbrains.idea-ultimate
-    helix
-
-    #helix lsp
-    nixd
-
-    #request thing
-    postman
-
-    #note taking
-    obsidian
-
-    #hyprland screen sharing dependencies
-    wireplumber
-    xdg-desktop-portal-hyprland
-    grim
-    slurp
-    kdePackages.xwaylandvideobridge
-
-    #Kde icons
-    kdePackages.breeze
-    kdePackages.breeze-icons
-    libsForQt5.kio-extras
-    kdePackages.qtsvg
-
-  ];
-
   # home.file.".config/waybar" = {
   #   source = ./bars/waybar;
   #   recursive = true;
@@ -97,23 +26,6 @@
   # the Home Manager release notes for a list of state version
   # changes in each release.
   home.stateVersion = "24.11";
-
-  programs.taskwarrior = {
-    enable = true;
-    package = pkgs.taskwarrior3;
-  };
-
-  programs.rofi = {
-    enable = true;
-  };
-
-  programs.fastfetch = {
-    enable = true;
-  };
-
-  programs.fzf = {
-    enable = true;
-  };
 
   home.sessionVariables = {
     EDITOR = "neovim";
