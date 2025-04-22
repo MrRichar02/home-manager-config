@@ -1,3 +1,4 @@
+{lib, config, ...}:
 {
   imports = [
     ./wms
