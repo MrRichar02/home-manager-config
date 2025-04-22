@@ -9,7 +9,7 @@
 
         modules-left = [ "custom/os_icon" "hyprland/workspaces" ];
         modules-center = [ "hyprland/window" ];
-        modules-right = [ "custom/weather" "pulseaudio" "network" "clock"];
+        modules-right = [ "custom/weather" "pulseaudio" "network" "clock" "battery" ];
 
         "custom/os_icon" = {
           "format" = "";
@@ -41,10 +41,10 @@
         #   #"separate-outputs" = true;
         # };
 
-        # "battery" = {
-        #   "format" = "{capacity}% {icon}";
-        #   "format-icons" = ["" "" "" "" ""];
-        # };
+        "battery" = {
+          "format" = "{capacity}% {icon}";
+          "format-icons" = ["" "" "" "" ""];
+        };
 
         "clock" = {
           format = "{:%d.%m.%Y - %H:%M}";
