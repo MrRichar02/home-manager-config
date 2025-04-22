@@ -4,7 +4,7 @@
   options.myModules.nnn.enable = lib.mkEnableOption "enables nnn module";
 
 
-  config = lib.mkIf config.myModules.nnn {
+  config = lib.mkIf config.myModules.nnn.enable {
     programs.nnn = {
       enable = true;
 
