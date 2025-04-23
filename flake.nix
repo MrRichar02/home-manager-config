@@ -25,7 +25,8 @@
         # Specify your home configuration modules here, for example,
         # the path to your home.nix.
         modules = [ 
-          ./home.nix
+          ./hosts/laptop-thinkpad/home.nix
+          ./modules
           inputs.stylix.homeManagerModules.stylix
         ];
 

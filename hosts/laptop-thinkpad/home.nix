@@ -7,7 +7,6 @@
   home.homeDirectory = "/home/docair";
 
   imports = [
-    ./modules
     ./packages.nix
   ];
 
