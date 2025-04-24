@@ -1,4 +1,4 @@
-{lib, config, ...}:
+{lib, config, pkgs, ...}:
 {
   options.myModules.rofi.enable = lib.mkEnableOption "enables rofi module";
 
@@ -6,6 +6,7 @@
 
     programs.rofi = {
       enable = true;
+      package = pkgs.rofi-wayland.override { plugins = [pkgs.rofi-emoji-wayland]; };
     };
   };
 }
