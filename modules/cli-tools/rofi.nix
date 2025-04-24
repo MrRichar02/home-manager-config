@@ -10,7 +10,7 @@
       plugins = [
         pkgs.rofi-emoji-wayland
       ];
-      theme = "fullscreen-preview by Dave Davenport";
+      theme = "gruvbox-dark";
     };
   };
 }
