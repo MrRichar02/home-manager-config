@@ -48,6 +48,9 @@
     #request thing
     postman
 
+    #clase comunicaciones
+    wireshark
+
     #note taking
     obsidian
 
