@@ -6,7 +6,11 @@
 
     programs.rofi = {
       enable = true;
-      package = pkgs.rofi-wayland.override { plugins = [pkgs.rofi-emoji-wayland]; };
+      package = pkgs.rofi-wayland;
+      plugins = [
+        pkgs.rofi-emoji-wayland
+      ];
+      theme = "fullscreen-preview by Dave Davenport";
     };
   };
 }
