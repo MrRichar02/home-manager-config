@@ -50,6 +50,7 @@
 
     #comunicaciones
     wireshark
+    ciscoPacketTracer8
 
     #note taking
     obsidian
