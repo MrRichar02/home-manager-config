@@ -2,7 +2,7 @@
 
 let
   zoomUrl = "https://udearroba.zoom.us/j/99971686698";
-  zenBrowser = "${pkgs.inputs.zen-browser.packages.${pkgs.system}.default}/bin/zen";
+  zenBrowser = "zen";
 in
 {
   systemd.user.services.open-db-zoom-class = {
