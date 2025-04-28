@@ -24,7 +24,7 @@
 
     bash.enable = true;
 
-    hyprland.enable = true;
+    # hyprland.enable = true;
 
     stylix.enable = true;
 
