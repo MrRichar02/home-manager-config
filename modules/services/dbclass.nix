@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, inputs, ... }:
 
 let
   zoomUrl = "https://udearroba.zoom.us/j/99971686698";
