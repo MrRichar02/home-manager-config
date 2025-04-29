@@ -91,7 +91,7 @@
 
           "custom/weather" = {
             format = " {} ";
-            exec = "curl -s 'wttr.in/Rionegro+Antioquia?format=%c%t'";
+            exec = "curl -s 'wttr.in/skrg?format=%c%C'";
             interval = 300;
             class = "weather";
           };
