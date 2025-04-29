@@ -91,7 +91,7 @@
 
           "custom/weather" = {
             format = " {} ";
-            exec = "curl -s 'wttr.in/skrg?format=%c%C'";
+            exec = "curl -s 'wttr.in/skrg?format=%c%t%20%C'";
             interval = 300;
             class = "weather";
           };
