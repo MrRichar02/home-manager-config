@@ -51,16 +51,10 @@
     obsidian
 
     #hyprland screen sharing dependencies
-    wireplumber
-    grim
-    slurp
-    kdePackages.xwaylandvideobridge
-
-    #Kde icons
-    # kdePackages.breeze
-    # kdePackages.breeze-icons
-    # libsForQt5.kio-extras
-    # kdePackages.qtsvg
+    # wireplumber
+    # grim
+    # slurp
+    # kdePackages.xwaylandvideobridge
 
   ];
 }
