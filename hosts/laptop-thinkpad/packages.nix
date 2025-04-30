@@ -14,15 +14,11 @@
     #wallpaper
     waypaper
 
-    #terminal font
-    monocraft
-
     #chat apps
     vesktop
     zapzap
 
     #browsers
-    #brave
     inputs.zen-browser.packages."${system}".default # beta not sigma :(
     google-chrome
 
@@ -56,16 +52,15 @@
 
     #hyprland screen sharing dependencies
     wireplumber
-    xdg-desktop-portal-hyprland
     grim
     slurp
     kdePackages.xwaylandvideobridge
 
     #Kde icons
-    kdePackages.breeze
-    kdePackages.breeze-icons
-    libsForQt5.kio-extras
-    kdePackages.qtsvg
+    # kdePackages.breeze
+    # kdePackages.breeze-icons
+    # libsForQt5.kio-extras
+    # kdePackages.qtsvg
 
   ];
 }
