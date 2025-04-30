@@ -24,7 +24,12 @@
 
     bash.enable = true;
 
-    # hyprland.enable = true;
+    hyprland1 = {
+      enable = true;
+      animations.enable = true;
+      keybinds.enable = true;
+      windowRules.enable = true;
+    };
 
     stylix.enable = true;
 
