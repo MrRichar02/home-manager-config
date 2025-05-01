@@ -41,9 +41,6 @@
     #helix lsp
     nixd
 
-    #request thing
-    postman
-
     #comunicaciones
     wireshark
 
