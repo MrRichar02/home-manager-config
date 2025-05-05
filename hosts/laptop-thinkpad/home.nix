@@ -34,9 +34,6 @@
         stylix.enable = true;
 
         kitty.enable = true;
-
-        swaync.enable = true;
-        swww.enable = true;
     };
 
     myServices = {
