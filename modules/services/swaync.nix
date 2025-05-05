@@ -1,8 +1,8 @@
 {lib, config, ...}:
 {
-  options.myModules.swaync.enable = lib.mkEnableOption "enables swaync module";
+  options.myServices.swaync.enable = lib.mkEnableOption "enables swaync service";
 
-  config = lib.mkIf config.myModules.swaync.enable {
+  config = lib.mkIf config.myServices.swaync.enable {
     services.swaync = {
       enable = true;
       settings = {

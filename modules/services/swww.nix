@@ -1,8 +1,8 @@
 {lib, config, ...}:
 {
-  options.myModules.swww.enable = lib.mkEnableOption "enables swww service";
+  options.myServices.swww.enable = lib.mkEnableOption "enables swww service";
 
-  config = lib.mkIf config.myModules.swww.enable {
+  config = lib.mkIf config.myServices.swww.enable {
     services.swww = {
       enable = true;
     };
