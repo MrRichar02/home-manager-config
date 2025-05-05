@@ -1,6 +1,6 @@
 # Home-manager config
 
-first clone the repo
+First clone the repo
 
 ```
 git clone https://github.com/MrRichar02/home-manager-config.git
