@@ -29,7 +29,7 @@ in
         systemd.user.timers.git-sync-obsidian = {
             Unit.Description = "Runs Git sync for obsidian vault";
             Timer.OnCalendar = "*:0/15";
-            Install.WantedBty = [ "timers.target" ];
+            Install.WantedBy = [ "timers.target" ];
         };
     };
 }
