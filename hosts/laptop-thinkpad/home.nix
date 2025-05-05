@@ -22,7 +22,7 @@
 
     waybar.enable = true;
 
-    bash.enable = true;
+    # bash.enable = true;
 
     hyprland1 = {
       enable = true;

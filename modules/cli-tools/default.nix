@@ -1,6 +1,5 @@
 {
   imports = [
-    ./git.nix
     ./nnn.nix
     ./tmux.nix
     ./yazi.nix
@@ -9,7 +8,6 @@
     ./oh-my-posh.nix
     ./fzf.nix
     ./task.nix
-    ./rofi.nix
     ./fastfetch.nix
   ];
 }
