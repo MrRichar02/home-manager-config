@@ -3,7 +3,7 @@
     ./wms
     ./bars
     ./style
-    # ./shells
+    ./shells
     ./editors
     ./cli-tools
     ./terminals
