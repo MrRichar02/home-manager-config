@@ -6,7 +6,7 @@
         stylix = {
             enable = true;
             # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-            image = /home/docair/Pictures/wallpapers/nixos-rainbow.png;
+            image = ./nixos-rainbow.png;
 
             targets = {
                 rofi.enable = false;
