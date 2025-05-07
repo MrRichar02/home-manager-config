@@ -130,6 +130,7 @@
                     "tray" = {
                         "icon-size" = 18;
                         "spacing" = 5;
+                        "show-passivi-items" = true;
                     };
                 };
             };
