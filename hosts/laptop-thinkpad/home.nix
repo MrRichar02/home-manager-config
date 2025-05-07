@@ -34,6 +34,8 @@
         stylix.enable = true;
 
         kitty.enable = true;
+
+        onlyOffice.enable = true;
     };
 
     myServices = {

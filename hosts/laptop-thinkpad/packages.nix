@@ -8,9 +8,6 @@
     #editors
     inputs.nixvim-flake.packages.${system}.default
 
-    #office apps
-    onlyoffice-desktopeditors
-
     #wallpaper
     waypaper
 
