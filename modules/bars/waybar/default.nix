@@ -81,8 +81,8 @@
 
                     "network" = {
                         # "interface" = "wlp2*"; // (Optional) To force the use of this interface
-                        "format-wifi" = "{bandwidthDownBits} ";
-                        "format-ethernet" = "{bandwidthDownBits} ";
+                        "format-wifi" = "({signalStrength}%) ";
+                        "format-ethernet" = "{signalStrength}%) ";
                         "tooltip-format" = "{ifname} via {gwaddr} ";
                         "format-linked" = "{ifname} (No IP) ";
                         "format-disconnected" = "Disconnected ⚠";
