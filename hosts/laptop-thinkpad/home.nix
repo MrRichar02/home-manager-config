@@ -10,8 +10,6 @@
         ./packages.nix
     ];
 
-    services.xembed-sni-proxy.enable = true;
-
     myModules = {
         fastfetch.enable = true;
         tmux.enable = true;

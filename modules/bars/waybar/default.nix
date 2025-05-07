@@ -12,8 +12,8 @@
                     height = 36;
 
                     modules-left = [ "hyprland/workspaces" ];
-                    modules-center = [ "tray" ];
-                    modules-right = [ "custom/weather" "pulseaudio" "network" "clock" "battery" ];
+                    modules-center = [ "clock" ];
+                    modules-right = [ "custom/weather" "pulseaudio" "network" "battery" ];
 
                     # "custom/nixos-btw" = {
                     #     "format" = "i use nixos btw ";
@@ -127,11 +127,6 @@
                         "ignored-sinks" = ["Easy Effects Sink"];
                     };
 
-                    "tray" = {
-                        "icon-size" = 18;
-                        "spacing" = 5;
-                        "show-passivi-items" = true;
-                    };
                 };
             };
 
