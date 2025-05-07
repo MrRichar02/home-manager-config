@@ -5,10 +5,10 @@
     config = lib.mkIf config.myModules.onlyOffice.enable {
         programs.onlyoffice = {
             enable = true;
-            settings = ''
-    editorWindowMode = false;
-    maximized = true;
-            '';
+            settings = {
+                editorWindowMode = false;
+                maximized = true;
+            };
         };
     };
 }
