@@ -3,7 +3,7 @@
     options.myModules.onlyOffice.enable = lib.mkEnableOption "enables only office module";
 
     config = lib.mkIf config.myModules.onlyOffice.enable {
-        programs.onlyOffice = {
+        programs.onlyoffice = {
             enable = true;
             settings = ''
     editorWindowMode = false;
