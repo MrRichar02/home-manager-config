@@ -51,7 +51,7 @@
         # wireplumber
         # grim
         # slurp
-        # kdePackages.xwaylandvideobridge
+        kdePackages.xwaylandvideobridge
 
     ];
 }
