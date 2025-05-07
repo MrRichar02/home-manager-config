@@ -126,6 +126,11 @@
                         "on-click" = "pavucontrol";
                         "ignored-sinks" = ["Easy Effects Sink"];
                     };
+
+                    "tray" = {
+                        "icon-size" = 18;
+                        "spacing" = 5;
+                    };
                 };
             };
 
