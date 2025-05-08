@@ -620,11 +620,11 @@
         "nixvim": "nixvim"
       },
       "locked": {
-        "lastModified": 1746710980,
-        "narHash": "sha256-BdP9depox0rFCCcq6l2DfppCuRIpbM8t30NTd4bDSiQ=",
+        "lastModified": 1746711261,
+        "narHash": "sha256-JFmvBf7Ysk+T1M+h+Yn4buII5h9y6mUZtk0zyrkbBOw=",
         "owner": "MrRichar02",
         "repo": "nixvim",
-        "rev": "20cfbeb9e664118fdfbfb66b70efa62fcaa3f7ae",
+        "rev": "42fd0f77c529a8edcbcd25f54aa48475e4c9e246",
         "type": "github"
       },
       "original": {
