@@ -51,8 +51,8 @@
                     };
 
                     "clock" = {
-                        format = "{:%d.%m.%Y - %H:%M}";
-                        format-alt = "{:%A, %B %d at %R}";
+                        format = "{:%A, %B %d at %R}";
+                        format-alt = "{:%d.%m.%Y - %H:%M}";
                     };
 
                     # clock = {
