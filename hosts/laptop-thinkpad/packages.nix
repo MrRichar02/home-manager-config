@@ -47,6 +47,9 @@
         #sql things
         dbeaver-bin
 
+        #video conferencing
+        zoom-us
+
         #hyprland screen sharing dependencies
         # wireplumber
         # grim
