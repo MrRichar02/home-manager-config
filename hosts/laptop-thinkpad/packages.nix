@@ -47,9 +47,9 @@
         #sql things
         dbeaver-bin
 
-        #video conferencing
-        zoom-us
-        xdg-desktop-portal-hyprland
+        # #video conferencing
+        # zoom-us
+        # xdg-desktop-portal-hyprland
 
         #hyprland screen sharing dependencies
         # wireplumber
