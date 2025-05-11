@@ -34,6 +34,8 @@
         kitty.enable = true;
 
         onlyOffice.enable = true;
+
+        taskwarrior.enable = true;
     };
 
     myServices = {
