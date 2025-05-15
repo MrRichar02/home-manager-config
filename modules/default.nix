@@ -9,5 +9,6 @@
     ./terminals
     ./services
     ./apps
+    ./browsers
   ];
 }
