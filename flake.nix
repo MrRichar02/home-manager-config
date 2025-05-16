@@ -27,7 +27,7 @@
         modules = [ 
           ./hosts/laptop-thinkpad/home.nix
           ./modules
-          inputs.stylix.homeManagerModules.stylix
+          inputs.stylix.homeModules.stylix
         ];
 
 

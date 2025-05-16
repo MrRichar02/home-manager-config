@@ -17,7 +17,7 @@
 
     #browsers
     inputs.zen-browser.packages."${system}".default # beta not sigma :(
-    google-chrome
+    #google-chrome
 
     #system utilities
     hyprshot
@@ -29,7 +29,8 @@
     kdePackages.dolphin
 
     #music player
-    spotify
+    #spotify
+    youtube-music
 
     #ideas
     jetbrains.idea-ultimate
