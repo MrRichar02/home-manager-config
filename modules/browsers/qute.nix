@@ -14,7 +14,7 @@
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
-        np = "https://search.nixos.org/packages?channel=unstable&from=0&size=50&sort=relevance&type=packages&query={}";
+        np = "https://search.nixos.org/packages?channel=unstable&type=packages&query={}";
       };
     };
   };
