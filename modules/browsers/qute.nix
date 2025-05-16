@@ -7,7 +7,7 @@
       enable = true;
       
       settings = {
-        c.colors.webpage.darkmode = {
+        colors.webpage.darkmode = {
           enable = true;
           algorithm = "lightness-cielab";
         };
