@@ -5,6 +5,13 @@
   config = lib.mkIf config.myModules.quteBrowser.enable {
     programs.qutebrowser = {
       enable = true;
+      
+      settings = {
+        c.colors.webpage.darkmode = {
+          enable = true;
+          algorithm = "lightness-cielab";
+        };
+      };
     };
   };
 }
