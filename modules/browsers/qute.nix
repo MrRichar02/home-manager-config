@@ -25,11 +25,18 @@
           algorithm = "lightness-cielab";
           policy.images = "never";
         };
-        content.media.audio_capture."https://meet.google.com" = true;
-        content.media.audio_video_capture."https://meet.google.com" = true;
-        content.media.video_capture."https://meet.google.com" = true;
-        content.notifications.enabled."https://meet.google.com" = true;
-
+        content.media.audio_capture = {
+          "https://meet.google.com/*" = true;
+        };
+        content.media.audio_video_capture = {
+          "https://meet.google.com/*" = true;
+        };
+        content.media.video_capture = {
+          "https://meet.google.com/*" = true;
+        };
+        content.notifications.enabled = {
+          "https://meet.google.com/*" = true;
+        };
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
