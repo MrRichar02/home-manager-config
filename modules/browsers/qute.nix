@@ -8,6 +8,7 @@
 
       extraConfig = ''
         config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+        config.set('colors.webpage.darkmode.enabled', False, 'https://docs.google.com/*')
 
         #privacy
 
