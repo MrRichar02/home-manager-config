@@ -25,18 +25,22 @@
           algorithm = "lightness-cielab";
           policy.images = "never";
         };
-        content.media.audio_capture = {
-          "https://meet.google.com/*" = true;
-        };
-        content.media.audio_video_capture = {
-          "https://meet.google.com/*" = true;
-        };
-        content.media.video_capture = {
-          "https://meet.google.com/*" = true;
-        };
-        content.notifications.enabled = {
-          "https://meet.google.com/*" = true;
-        };
+        content.media.audio_capture = [
+          { pattern = "https://meet.google.com/*"; value = true; }
+        ];
+
+        content.media.audio_video_capture = [
+          { pattern = "https://meet.google.com/*"; value = true; }
+        ];
+
+        content.media.video_capture = [
+          { pattern = "https://meet.google.com/*"; value = true; }
+        ];
+
+        content.notifications.enabled = [
+          { pattern = "https://meet.google.com/*"; value = true; }
+        ];
+
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
