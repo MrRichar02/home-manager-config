@@ -17,6 +17,12 @@
         config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
         config.set("content.cookies.accept", "all")
         config.set("content.cookies.store", True)
+
+        # Configuraciones para Google Meet (si también las necesitas)
+        config.set('content.media.audio_capture', True, 'https://meet.google.com/*')
+        config.set('content.media.audio_video_capture', True, 'https://meet.google.com/*')
+        config.set('content.media.video_capture', True, 'https://meet.google.com/*')
+        config.set('content.notifications.enabled', True, 'https://meet.google.com/*')
       '';
       
       settings = {
@@ -25,22 +31,6 @@
           algorithm = "lightness-cielab";
           policy.images = "never";
         };
-        content.media.audio_capture = [
-          { pattern = "https://meet.google.com/*"; value = true; }
-        ];
-
-        content.media.audio_video_capture = [
-          { pattern = "https://meet.google.com/*"; value = true; }
-        ];
-
-        content.media.video_capture = [
-          { pattern = "https://meet.google.com/*"; value = true; }
-        ];
-
-        content.notifications.enabled = [
-          { pattern = "https://meet.google.com/*"; value = true; }
-        ];
-
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
