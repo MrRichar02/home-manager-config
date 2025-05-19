@@ -32,7 +32,7 @@
           algorithm = "lightness-cielab";
           policy.images = "never";
         };
-        autosave.session = true;
+        auto_save.session = true;
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
