@@ -31,6 +31,8 @@
           enabled = true;
           algorithm = "lightness-cielab";
           policy.images = "never";
+          
+          autosave.session = true;
         };
       };
       searchEngines = {
