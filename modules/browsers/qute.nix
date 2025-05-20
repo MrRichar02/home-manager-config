@@ -39,8 +39,16 @@
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
         np = "https://search.nixos.org/packages?channel=unstable&type=packages&query={}";
+        hm = "https://home-manager-options.extranix.com/?query={}&release=master";
       };
 
+      quickmarks = {
+        bitwarden = "https://vault.bitwarden.com/#/vault";
+        udearroba = "https://udearroba.udea.edu.co/internos/my/";
+        ingenia = "https://virtualingenieriaudea.co/my/";
+        gmail = "https://mail.google.com/mail/u/0/#inbox";
+      };
+ 
       greasemonkey = [
         (pkgs.writeText "yt-ads.js" ''
           // ==UserScript==
