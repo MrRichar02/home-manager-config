@@ -10,5 +10,6 @@
     ./services
     ./apps
     ./browsers
+    ./video
   ];
 }

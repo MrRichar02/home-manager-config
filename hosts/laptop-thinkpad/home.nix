@@ -39,6 +39,10 @@
 
     quteBrowser.enable = true;
 
+    mpv.enable = true;
+
+    obs.enable = true;
+
   };
 
   myServices = {
