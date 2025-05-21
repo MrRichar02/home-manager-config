@@ -11,7 +11,6 @@
         config.set('colors.webpage.darkmode.enabled', False, 'https://docs.google.com/*')
         config.set('colors.webpage.darkmode.enabled', False, 'https://app.diagrams.net/*')
         config.set('colors.webpage.darkmode.enabled', False, 'https://excalidraw.com/*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://chatgpt.com/*')
 
         #privacy
 
