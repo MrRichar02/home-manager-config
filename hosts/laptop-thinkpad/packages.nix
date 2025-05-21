@@ -4,6 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    ciscoPacketTracer8
 
     #editors
     inputs.nixvim-flake.packages.${system}.default
