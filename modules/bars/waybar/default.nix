@@ -3,7 +3,7 @@
   options.myModules.waybar.enable = lib.mkEnableOption "enables waybar module";
 
   config = lib.mkIf config.myModules.waybar.enable {
-    home.packges = [ pkgs.helvum ];
+    home.packages = [ pkgs.helvum ];
     programs.waybar = {
       enable = true;
       settings = {
