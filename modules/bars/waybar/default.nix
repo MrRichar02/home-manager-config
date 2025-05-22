@@ -97,7 +97,7 @@
           };
 
           "user"= {
-            "format"= "{user} (up {work_H} days ↑)";
+            "format"= "{user} up {work_H}H";
             "interval"= 60;
             "height"= 30;
             "width"= 30;
