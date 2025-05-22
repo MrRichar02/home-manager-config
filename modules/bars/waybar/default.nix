@@ -36,7 +36,7 @@
             };
           };
 
-          "image#album-art"= {
+          "image"= {
             "path"= ./Lady.png;
             "size"= 32;
             "interval"= 5;
