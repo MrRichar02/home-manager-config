@@ -37,7 +37,7 @@
           };
 
           "image#album-art"= {
-            "path"= /Home/docair/Pictures/wallpapers/Lady.png;
+            "path"= ./Lady.png;
             "size"= 32;
             "interval"= 5;
             "on-click"= "mpc toggle";
