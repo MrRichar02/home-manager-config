@@ -1,8 +1,9 @@
-{lib, config, ...}:
+{lib, config, pkgs, ...}:
 {
   options.myModules.waybar.enable = lib.mkEnableOption "enables waybar module";
 
   config = lib.mkIf config.myModules.waybar.enable {
+    home.packges = [ pkgs.helvum ];
     programs.waybar = {
       enable = true;
       settings = {
@@ -12,7 +13,7 @@
           height = 36;
 
           modules-left = [ "hyprland/workspaces" ];
-          modules-center = [ "user" "clock" "image" ];
+          modules-center = [ "user" "clock" ];
           modules-right = [ "tray" "backlight" "wireplumber" "network" "battery" ];
 
           # "custom/nixos-btw" = {
@@ -28,19 +29,12 @@
               "5" = "";
               "8" = "󱓧";
               "10" = "";
-              "active" = "";
-              "default" = "󰒲";
+              "active" = "";
+              "default" = "";
             };
             "persistent-workspaces" = {
               "*" = 10; # 5 workspaces by default on every monitor
             };
-          };
-
-          "image"= {
-            "path"= ./Lady.png;
-            "size"= 32;
-            "interval"= 5;
-            "on-click"= "mpc toggle";
           };
 
           "backlight"= {
@@ -103,7 +97,7 @@
           };
 
           "user"= {
-            "format"= "{user} (up {work_d} days ↑)";
+            "format"= "{user} (up {work_H} days ↑)";
             "interval"= 60;
             "height"= 30;
             "width"= 30;
