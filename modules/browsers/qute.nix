@@ -47,6 +47,12 @@
         udearroba = "https://udearroba.udea.edu.co/internos/my/";
         ingenia = "https://virtualingenieriaudea.co/my/";
         gmail = "https://mail.google.com/mail/u/0/#inbox";
+        fundamentos = "https://udea.zoom.us/j/96066678530";
+        arqui = "https://udearroba.zoom.us/j/93613150158";
+        comu1 = "https://udearroba.zoom.us/j/91952714313";
+        db = "https://udearroba.zoom.us/j/99971686698";
+        proyecto1 = "https://udearroba.zoom.us/j/99830580258";
+        modelos1 = "https://udea.zoom.us/j/91785418283";
       };
  
       greasemonkey = [
