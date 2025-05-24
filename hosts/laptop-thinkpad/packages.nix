@@ -35,13 +35,6 @@
 
     #ideas
     jetbrains.idea-ultimate
-    helix
-
-    #helix lsp
-    nixd
-
-    #comunicaciones
-    wireshark
 
     #note taking
     obsidian
@@ -60,7 +53,6 @@
     kdePackages.xwaylandvideobridge
 
     #lab-2 arqui
-    gitkraken
     postman
   ];
 }
