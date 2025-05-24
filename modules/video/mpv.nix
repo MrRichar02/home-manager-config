@@ -5,7 +5,7 @@
   config = lib.mkIf config.myModules.mpv.enable {
     programs.mpv = {
       enable = true;
-      package = pkgs.mpv-unwrapped.wrapper { mpv =  pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }; youtubeSuport = true; };
+      package = pkgs.mpv-unwrapped.wrapper { mpv =  pkgs.mpv-unwrapped.override { vapoursynthSupport = true; }; youtubeSupport = true; };
       config = {
         profile = "gpu-hq";
         force-window = true;
