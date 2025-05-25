@@ -9,6 +9,9 @@
     #editors
     inputs.nixvim-flake.packages.${system}.default
 
+    #password manager
+    bitwarden-desktop
+
     #wallpaper
     waypaper
 
