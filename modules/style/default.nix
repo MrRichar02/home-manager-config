@@ -5,8 +5,8 @@
   config = lib.mkIf config.myModules.stylix.enable {
     stylix = {
       enable = true;
-      # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-      base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+      base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+      # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
 
       targets = {
         rofi.enable = false;

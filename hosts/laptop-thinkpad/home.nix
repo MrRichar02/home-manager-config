@@ -41,7 +41,7 @@
 
     mpv.enable = true;
 
-    obs.enable = true;
+    obs.enable = false;
 
   };
 
