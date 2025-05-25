@@ -35,7 +35,7 @@
           policy.images = "never";
         };
         auto_save.session = true;
-        spellcheck.languages = [ "en-US" ];
+        spellcheck.languages = [ "en-US" "es-ES" ];
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
