@@ -7,7 +7,7 @@
     ciscoPacketTracer8
 
     #editors
-    inputs.nixvim-flake.packages.${system}.default
+    inputs.nvf-flake.packages.${system}.default
 
     #password manager
     bitwarden-desktop
