@@ -29,6 +29,10 @@
     brightnessctl
     wl-clipboard
 
+    # video
+    ffmpeg_6-full
+
+
     #file manager
     kdePackages.dolphin
 
@@ -45,9 +49,6 @@
     #sql things
     dbeaver-bin
 
-    # #video conferencing
-    # zoom-us
-    # xdg-desktop-portal-hyprland
 
     #hyprland screen sharing dependencies
     # wireplumber
