@@ -4,7 +4,6 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    ventoy
     ciscoPacketTracer8
 
     #editors
