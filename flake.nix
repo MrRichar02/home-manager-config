@@ -19,23 +19,39 @@
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
     in {
-      homeConfigurations."docair" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+      homeConfigurations = {
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [ 
-          ./hosts/laptop-thinkpad/home.nix
-          ./modules
-          inputs.stylix.homeModules.stylix
-        ];
+        "thinkpad" = home-manager.lib.homeManagerConfiguration {
+
+          inherit pkgs;
+
+          # Specify your home configuration modules here, for example,
+          # the path to your home.nix.
+          modules = [ 
+            ./hosts/laptop-thinkpad/home.nix
+            ./modules
+            inputs.stylix.homeModules.stylix
+          ];
 
 
-        # Optionally use extraSpecialArgs
+          # Optionally use extraSpecialArgs
 
-        extraSpecialArgs = { inherit inputs; };
+          extraSpecialArgs = { inherit inputs; };
 
-        # to pass through arguments to home.nix
+          # to pass through arguments to home.nix
+        };
+
+        "ideapad" = home-manager.lib.homeManagerConfiguration {
+
+          inherit pkgs;
+
+          modules = [
+            ./hosts/laptop-ideapad/home.nix
+            ./modules
+            inputs.stylix.homeModules.stylix
+          ];
+        };
+
       };
     };
 }
