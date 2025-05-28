@@ -4,7 +4,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    #ciscoPacketTracer8
+    ciscoPacketTracer8
 
     #editors
     inputs.nvf-flake.packages.${system}.default
