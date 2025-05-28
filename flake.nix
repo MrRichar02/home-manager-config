@@ -50,6 +50,12 @@
             ./modules
             inputs.stylix.homeModules.stylix
           ];
+
+          # Optionally use extraSpecialArgs
+
+          extraSpecialArgs = { inherit inputs; };
+
+          # to pass through arguments to home.nix
         };
 
       };
