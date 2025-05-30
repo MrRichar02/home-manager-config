@@ -5,7 +5,7 @@
     monitor = lib.mkOption {
       type = lib.types.str;
       description = "Hyprland monitor configuration string";
-      default = "preferred,auto,1"; 
+      default = ",preferred,auto,1"; 
     };
   };
 
