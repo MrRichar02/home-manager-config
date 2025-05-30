@@ -13,8 +13,8 @@
           height = 36;
 
           modules-left = [ "hyprland/workspaces" ];
-          modules-center = [ "user" "clock" ];
-          modules-right = [ "tray" "backlight" "wireplumber" "network" "battery" ];
+          modules-center = [ "clock" ];
+          modules-right = [ "tray" "backlight" "pulseaudio" "wireplumber" "network" "battery" ];
 
           # "custom/nixos-btw" = {
           #     "format" = "i use nixos btw ";
@@ -44,12 +44,17 @@
           };
 
 
-          "wireplumber" = {
-            "format"= "{volume}%";
+          "wireplumber"= {
+            "format"= "{volume}% {icon}";
             "format-muted"= "";
             "on-click"= "helvum";
-            "max-volume"= 150;
-            "scroll-step"= 0.2;
+            "format-icons"= ["" "" ""];
+          };
+
+          "pulseaudio"= {
+            "format"= "{icon} {volume}% {format_source}";
+            "format-source"= "Mic ON";
+            "format-source-muted"= "Mic OFF";
           };
 
           # "hyprland/window" = {
