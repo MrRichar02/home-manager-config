@@ -48,7 +48,7 @@
   myServices = {
     swaync.enable = true;
     swww.enable = true;
-    git-sync-obsidian.enable = true;
+    git-sync-obsidian.enable = false;
   };
 
   # This value determines the Home Manager release that your
