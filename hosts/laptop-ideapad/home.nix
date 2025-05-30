@@ -1,8 +1,21 @@
+{config, ...}:
 {
+home = {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
-  home.username = "docair";
-  home.homeDirectory = "/home/docair";
+  username = "docair";
+  homeDirectory = "/home/docair";
+
+  # This value determines the Home Manager release that your
+  # configuration is compatible with. This helps avoid breakage
+  # when a new Home Manager release introduces backwards
+  # incompatible changes.
+  #
+  # You can update Home Manager without changing this value. See
+  # the Home Manager release notes for a list of state version
+  # changes in each release.
+  stateVersion = "24.11";
+};
 
   imports = [
     ./packages.nix
@@ -22,14 +35,15 @@
 
     bash.enable = true;
 
+    stylix.enable = true;
+
     hyprland1 = {
       enable = true;
       animations.enable = true;
       keybinds.enable = true;
       windowRules.enable = true;
+      monitor = "eDP-1, 1366x768, 0x0, 1";
     };
-
-    stylix.enable = true;
 
     kitty.enable = true;
 
@@ -50,16 +64,6 @@
     swww.enable = true;
     git-sync-obsidian.enable = false;
   };
-
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  home.stateVersion = "24.11";
 
   # home.sessionVariables = {
   #   EDITOR = "neovim";

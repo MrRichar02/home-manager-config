@@ -1,6 +1,13 @@
 {lib, config, ...}:
 {
-  options.myModules.hyprland1.enable = lib.mkEnableOption "enables main module for hyprland config 1";
+  options.myModules.hyprland1 = {
+    enable = lib.mkEnableOption "enables main module for hyprland config 1";
+    monitor = lib.mkOption {
+      type = lib.types.str;
+      description = "Hyprland monitor configuration string";
+      default = "preferred,auto,1"; 
+    };
+  };
 
   config = lib.mkIf config.myModules.hyprland1.enable {
     wayland.windowManager.hyprland = {
@@ -17,7 +24,7 @@
         "$browser" = "zen";
         "$menu" = "rofi -show drun";
 
-        monitor = ",preferred,auto,1";
+        inherit (config.myModules.hyprland1) monitor;
 
         env = [
           "NIXOS_OZONE_WL,1"
