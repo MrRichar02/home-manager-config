@@ -27,13 +27,13 @@ home = {
     yazi.enable = true;
     git.enable = true;
     rofi.enable = true;
-    oh-my-posh.enable = true;
+    oh-my-posh.enable = false;
 
     vscode.enable = false;
 
     waybar.enable = true;
 
-    bash.enable = true;
+    bash.enable = false;
 
     stylix.enable = true;
 

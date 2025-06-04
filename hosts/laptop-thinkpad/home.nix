@@ -14,13 +14,13 @@
     yazi.enable = true;
     git.enable = true;
     rofi.enable = true;
-    oh-my-posh.enable = false;
+    oh-my-posh.enable = true;
 
     vscode.enable = true;
 
     waybar.enable = true;
 
-    bash.enable = false;
+    bash.enable = true;
 
     hyprland1 = {
       enable = true;
