@@ -47,7 +47,7 @@
     obsidian
 
     #sql things
-    #dbeaver-bin
+    dbeaver-bin
 
 
     #hyprland screen sharing dependencies
