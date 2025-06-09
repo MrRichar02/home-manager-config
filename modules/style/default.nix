@@ -1,4 +1,4 @@
-{ pkgs, inputs, lib, config, ...}:
+{ pkgs, lib, config, ...}:
 {
   options.myModules.stylix.enable = lib.mkEnableOption "enables stylix module";
 
