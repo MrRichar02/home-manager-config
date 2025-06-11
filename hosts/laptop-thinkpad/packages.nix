@@ -6,6 +6,9 @@
   home.packages = with pkgs; [
     #ciscoPacketTracer8
 
+    minikube
+    kubectl
+
     #editors
     inputs.nvf-flake.packages.${system}.default
 
