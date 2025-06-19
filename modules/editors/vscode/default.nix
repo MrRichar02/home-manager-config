@@ -9,6 +9,7 @@
         vscodevim.vim
         ms-python.python
         batisteo.vscode-django
+        ms-toolsai.jupyter
       ];
     };
   };
