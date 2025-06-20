@@ -11,6 +11,7 @@
       targets = {
         rofi.enable = false;
         qutebrowser.enable = false;
+        # starship.enable = false;
       };
 
       cursor = {

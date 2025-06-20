@@ -9,5 +9,6 @@
     ./fzf.nix
     ./task.nix
     ./fastfetch.nix
+    ./starship.nix
   ];
 }
