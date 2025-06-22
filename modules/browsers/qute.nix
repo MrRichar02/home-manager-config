@@ -49,6 +49,7 @@
         udearroba = "https://udearroba.udea.edu.co/internos/my/";
         ingenia = "https://virtualingenieriaudea.co/my/";
         gmail = "https://mail.google.com/mail/u/0/#inbox";
+        udea = "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado";
         fundamentos = "https://udea.zoom.us/j/96066678530";
         arqui = "https://udearroba.zoom.us/j/93613150158";
         comu1 = "https://udearroba.zoom.us/j/91952714313";

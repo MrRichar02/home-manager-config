@@ -8,7 +8,6 @@
     ./packages.nix
   ];
 
-
   myModules = {
     fastfetch.enable = true;
     tmux.enable = true;
@@ -23,6 +22,8 @@
     waybar.enable = true;
 
     bash.enable = true;
+
+    zoxide.enable = true;
 
     hyprland1 = {
       enable = true;

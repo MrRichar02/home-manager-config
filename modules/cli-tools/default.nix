@@ -10,5 +10,6 @@
     ./task.nix
     ./fastfetch.nix
     ./starship.nix
+    ./zoxide.nix
   ];
 }
