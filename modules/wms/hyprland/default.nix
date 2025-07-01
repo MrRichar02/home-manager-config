@@ -1,9 +1,9 @@
-{lib, ...}:
 {
   imports =  [
     ./main.nix
     ./animations.nix
     ./keybinds.nix
     ./windowRules.nix
+    ./packages.nix
   ];
 }
