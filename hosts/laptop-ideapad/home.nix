@@ -28,12 +28,16 @@ home = {
     git.enable = true;
     rofi.enable = true;
     oh-my-posh.enable = false;
+    
+    starship.enable = true;
+
+    zoxide.enable = true;
 
     vscode.enable = false;
 
     waybar.enable = true;
 
-    bash.enable = false;
+    bash.enable = true;
 
     stylix.enable = true;
 
@@ -51,7 +55,7 @@ home = {
 
     taskwarrior.enable = true;
 
-    quteBrowser.enable = true;
+    quteBrowser.enable = false;
 
     mpv.enable = true;
 
