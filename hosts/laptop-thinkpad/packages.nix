@@ -4,6 +4,9 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+
+    prismlauncher
+
     #editors
     inputs.nvf-flake.packages.${system}.default
 
@@ -39,7 +42,7 @@
     obsidian
 
     #sql things
-    dbeaver-bin
+    # dbeaver-bin
 
     #lab-2 arqui
     postman
