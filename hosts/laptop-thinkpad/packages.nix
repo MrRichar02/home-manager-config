@@ -20,29 +20,11 @@
     vesktop
     zapzap
 
-    #browsers
-    inputs.zen-browser.packages."${system}".default # beta not sigma :(
-
-    #system utilities
-    hyprshot
-    hyprlock
-    brightnessctl
-    wl-clipboard
-
-    # video
-    ffmpeg_6-full
-
-    #file manager
-    kdePackages.dolphin
-
     #music player
     youtube-music
 
     #note taking
     obsidian
-
-    #sql things
-    # dbeaver-bin
 
     #lab-2 arqui
     postman

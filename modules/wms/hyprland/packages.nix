@@ -12,8 +12,5 @@
 
     #file manager
     kdePackages.dolphin
-
-    #music
-    youtube-music
   ];
 }
