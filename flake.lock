@@ -661,11 +661,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1751997857,
-        "narHash": "sha256-epeeYxBQYxeVgnzBFAYQuFDvoicFLZATGRflaCUafH8=",
+        "lastModified": 1751998448,
+        "narHash": "sha256-lsneeVoo1xx7gnpfz7X6NWOT1qAXJK2Yt8PlFeqB9QY=",
         "owner": "MrRichar02",
         "repo": "nvf",
-        "rev": "cc4cfd9647699481a32b7970c858821ae2ca35bc",
+        "rev": "c53dfd27f555eef81cec9968dd7781b95990dae8",
         "type": "github"
       },
       "original": {
