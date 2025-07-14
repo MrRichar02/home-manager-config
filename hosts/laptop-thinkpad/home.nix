@@ -40,7 +40,7 @@
 
     taskwarrior.enable = true;
 
-    quteBrowser.enable = false;
+    quteBrowser.enable = true;
 
     mpv.enable = true;
 

@@ -21,7 +21,7 @@
 
         "$terminal" = "kitty";
         "$fileManager" = "dolphin";
-        "$browser" = "zen-beta";
+        "$browser" = "qutebrowser";
         "$menu" = "rofi -show drun";
 
         inherit (config.myModules.hyprland1) monitor;
