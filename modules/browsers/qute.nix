@@ -13,6 +13,7 @@
         config.set('colors.webpage.darkmode.enabled', False, 'https://excalidraw.com/*')
         config.set('colors.webpage.darkmode.enabled', False, 'https://app.powerbi.com/*')
         config.set('colors.webpage.darkmode.enabled', False, 'https://udeaeduco-my.sharepoint.com/*')
+        config.set('colors.webpage.darkmode.enabled', False, 'https://www.canva.com/*')
 
         #privacy
 
