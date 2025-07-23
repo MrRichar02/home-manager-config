@@ -2,11 +2,6 @@
 {
   options.myModules.hyprland1 = {
     enable = lib.mkEnableOption "enables main module for hyprland config 1";
-    monitor = lib.mkOption {
-      type = lib.types.str;
-      description = "Hyprland monitor configuration string";
-      default = ",preferred,auto,1"; 
-    };
   };
 
   config = lib.mkIf config.myModules.hyprland1.enable {
@@ -24,7 +19,9 @@
         "$browser" = "qutebrowser";
         "$menu" = "rofi -show drun";
 
-        inherit (config.myModules.hyprland1) monitor;
+
+        monitor = ",preferred,auto,1";
+
 
         env = [
           "NIXOS_OZONE_WL,1"

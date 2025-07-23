@@ -576,11 +576,11 @@
         "nvf": "nvf"
       },
       "locked": {
-        "lastModified": 1752767781,
-        "narHash": "sha256-4j5QU3W3+TF+KRuBedhKX6SKn/PDR85JdzgTPBtkWs4=",
+        "lastModified": 1753278997,
+        "narHash": "sha256-JnghzzLo8vBnvFlFgVND8RI+5/FyjqPD8fWcxxFr/EA=",
         "owner": "MrRichar02",
         "repo": "nvf",
-        "rev": "9ee7c4ae56ddb683ee85b2687d6b773fa2eed338",
+        "rev": "5748137ff126fac271d847f2a848fe65d1c43f2a",
         "type": "github"
       },
       "original": {
