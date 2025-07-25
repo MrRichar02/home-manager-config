@@ -28,7 +28,7 @@
           # Specify your home configuration modules here, for example,
           # the path to your home.nix.
           modules = [ 
-            ./hosts/laptop-thinkpad/home.nix
+            ./hosts/thinkpad-x1
             ./modules
             inputs.stylix.homeModules.stylix
           ];
@@ -46,7 +46,7 @@
           inherit pkgs;
 
           modules = [
-            ./hosts/laptop-ideapad/home.nix
+            ./hosts/ideapad
             ./modules
             inputs.stylix.homeModules.stylix
           ];
