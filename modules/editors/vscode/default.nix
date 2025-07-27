@@ -8,9 +8,11 @@
       profiles.default.extensions = with pkgs.vscode-extensions; [
         vscodevim.vim
         ms-python.python
-        batisteo.vscode-django
         ms-toolsai.jupyter
       ];
+
+      package = pkgs.vscodium;
+
     };
   };
 }
