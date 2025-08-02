@@ -8,7 +8,8 @@
     prismlauncher
 
     #editors
-    inputs.nvf-flake.packages.${system}.default
+    # inputs.nvf-flake.packages.${system}.default
+    nvim-pkg
 
     #password manager
     bitwarden-desktop

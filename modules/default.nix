@@ -11,5 +11,6 @@
     ./apps
     ./browsers
     ./video
+    ./overlays
   ];
 }
