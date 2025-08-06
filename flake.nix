@@ -10,7 +10,7 @@
     };
     # nixvim-flake.url = "github:MrRichar02/nixvim";
     # nvf-flake.url = "github:MrRichar02/nvf";
-    kickstart-nix = "github:MrRichar02/kickstart-nix";
+    kickstart-nix.url = "github:MrRichar02/kickstart-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     stylix.url = "github:danth/stylix";
   };
