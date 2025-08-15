@@ -1,9 +1,12 @@
-{ pkgs, inputs, ...}:
 {
-
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    zoom-us
 
     prismlauncher
 
@@ -23,9 +26,6 @@
 
     #music player
     youtube-music
-
-    #note taking
-    obsidian
 
     #lab-2 arqui
     postman

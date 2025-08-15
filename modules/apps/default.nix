@@ -1,7 +1,8 @@
 {
-    imports = [
-        ./git.nix
-        ./rofi.nix
-        ./only-office.nix
-    ];
+  imports = [
+    ./git.nix
+    ./rofi.nix
+    ./only-office.nix
+    ./obsidian.nix
+  ];
 }
