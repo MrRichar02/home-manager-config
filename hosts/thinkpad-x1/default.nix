@@ -46,6 +46,8 @@
 
     obs.enable = false;
 
+		obsidian.enable = true;
+
   };
 
   myServices = {
