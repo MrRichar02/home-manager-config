@@ -32,11 +32,12 @@
       '';
       
       settings = {
-        colors.webpage.darkmode = {
-          enabled = true;
-          algorithm = "lightness-cielab";
-          policy.images = "never";
-        };
+				colors.webpage.preferred_color_scheme = "dark";
+        # colors.webpage.darkmode = {
+        #   enabled = true;
+        #   algorithm = "lightness-cielab";
+        #   policy.images = "never";
+        # };
         auto_save.session = true;
         spellcheck.languages = [ "en-US" "es-ES" ];
       };
@@ -48,16 +49,18 @@
 
       quickmarks = {
         bitwarden = "https://vault.bitwarden.com/#/vault";
+
+        gmail = "https://mail.google.com/mail/u/0/#inbox";
+
         udearroba = "https://udearroba.udea.edu.co/internos/my/";
         ingenia = "https://virtualingenieriaudea.co/my/";
-        gmail = "https://mail.google.com/mail/u/0/#inbox";
-        udea = "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/pregrado";
-        fundamentos = "https://udea.zoom.us/j/96066678530";
-        arqui = "https://udearroba.zoom.us/j/93613150158";
-        comu1 = "https://udearroba.zoom.us/j/91952714313";
-        db = "https://udearroba.zoom.us/j/99971686698";
-        proyecto1 = "https://udearroba.zoom.us/j/99830580258";
-        modelos1 = "https://udea.zoom.us/j/91785418283";
+        udea = "https://www.udea.edu.co/wps/portal/udea/web/inicio/somos-udea/estudiantes";
+
+        arqui = "https://udearroba.zoom.us/j/92917572997";
+        calidad = "https://udearroba.zoom.us/j/97886573439";
+        fundamentos = "https://udearroba.zoom.us/j/99736892062";
+        comu-2 = "https://udearroba.zoom.us/j/94871308458";
+        lab-fis = "https://udearroba.zoom.us/j/93957590011";
       };
  
       # greasemonkey = [
