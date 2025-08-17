@@ -46,7 +46,6 @@ home = {
       animations.enable = true;
       keybinds.enable = true;
       windowRules.enable = true;
-      monitor = "eDP-1, 1366x768, 0x0, 1";
     };
 
     kitty.enable = true;
@@ -55,7 +54,7 @@ home = {
 
     taskwarrior.enable = true;
 
-    quteBrowser.enable = false;
+    quteBrowser.enable = true;
 
     mpv.enable = true;
 
