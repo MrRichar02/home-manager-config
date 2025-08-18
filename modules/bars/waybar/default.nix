@@ -6,6 +6,7 @@
     home.packages = [ pkgs.helvum ];
     programs.waybar = {
       enable = true;
+			style = ./style.css;
       settings = {
         mainBar = {
           layer = "top";
@@ -55,6 +56,7 @@
             "format"= "{format_source}";
             "format-source"= "{volume}% ";
             "format-source-muted"= "";
+						"on-click"= "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 75%";
           };
 
           # "hyprland/window" = {
