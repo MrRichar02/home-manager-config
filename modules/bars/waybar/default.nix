@@ -1,21 +1,28 @@
-{lib, config, pkgs, ...}:
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   options.myModules.waybar.enable = lib.mkEnableOption "enables waybar module";
 
   config = lib.mkIf config.myModules.waybar.enable {
-    home.packages = [ pkgs.helvum ];
+    home.packages = with pkgs; [helvum monocraft];
+
+    fonts.fontconfig.enable = true;
+
     programs.waybar = {
       enable = true;
-			style = ./style.css;
+      style = ./style.css;
       settings = {
         mainBar = {
           layer = "top";
           position = "top";
           height = 36;
 
-          modules-left = [ "hyprland/workspaces" ];
-          modules-center = [ "clock" ];
-          modules-right = [ "tray" "backlight" "pulseaudio" "wireplumber" "network" "battery" ];
+          modules-left = ["hyprland/workspaces"];
+          modules-center = ["clock"];
+          modules-right = ["tray" "backlight" "pulseaudio" "wireplumber" "network" "battery"];
 
           # "custom/nixos-btw" = {
           #     "format" = "i use nixos btw ";
@@ -38,25 +45,24 @@
             };
           };
 
-          "backlight"= {
-            "device"= "intel_backlight";
-            "format"= "{percent}% {icon}";
-            "format-icons"= ["" ""];
+          "backlight" = {
+            "device" = "intel_backlight";
+            "format" = "{percent}% {icon}";
+            "format-icons" = ["" ""];
           };
 
-
-          "wireplumber"= {
-            "format"= "{volume}% {icon}";
-            "format-muted"= "";
-            "on-click"= "helvum";
-            "format-icons"= ["" "" ""];
+          "wireplumber" = {
+            "format" = "{volume}% {icon}";
+            "format-muted" = "";
+            "on-click" = "helvum";
+            "format-icons" = ["" "" ""];
           };
 
-          "pulseaudio"= {
-            "format"= "{format_source}";
-            "format-source"= "{volume}% ";
-            "format-source-muted"= "";
-						"on-click"= "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 75%";
+          "pulseaudio" = {
+            "format" = "{format_source}";
+            "format-source" = "{volume}% ";
+            "format-source-muted" = "";
+            "on-click" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 75%";
           };
 
           # "hyprland/window" = {
@@ -98,17 +104,17 @@
           #   };
           # };
 
-          "tray"= {
-            "icon-size"= 21;
-            "spacing"= 10;
+          "tray" = {
+            "icon-size" = 21;
+            "spacing" = 10;
           };
 
-          "user"= {
-            "format"= "{user} up {work_H}H";
-            "interval"= 60;
-            "height"= 30;
-            "width"= 30;
-            "icon"= true;
+          "user" = {
+            "format" = "{user} up {work_H}H";
+            "interval" = 60;
+            "height" = 30;
+            "width" = 30;
+            "icon" = true;
           };
 
           "network" = {
@@ -161,7 +167,6 @@
           #
         };
       };
-
     };
   };
 }
