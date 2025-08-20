@@ -7,8 +7,6 @@
     programs.tmux = {
       enable = true; 
 
-      prefix = "C-a";
-
       keyMode = "vi";
 
       extraConfig = '' 
@@ -23,6 +21,7 @@
       bind-key l select-pane -R
 
       set-option -g status-position top
+			set-option -g status-justify absolute-centre
       '';
     };
   };
