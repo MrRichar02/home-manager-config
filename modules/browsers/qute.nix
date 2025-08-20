@@ -1,5 +1,9 @@
-{lib, config, pkgs, ...}:
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   options.myModules.quteBrowser.enable = lib.mkEnableOption "enables qutebrowser module";
 
   config = lib.mkIf config.myModules.quteBrowser.enable {
@@ -18,28 +22,21 @@
         #privacy
 
         config.set("content.webgl", False, "*")
-        config.set("content.canvas_reading", False)
+        #config.set("content.canvas_reading", False)
         config.set("content.geolocation", False)
-        config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
-        config.set("content.cookies.accept", "all")
-        config.set("content.cookies.store", True)
-
-        # Configuraciones para Google Meet (si también las necesitas)
-        config.set('content.media.audio_capture', True, 'https://meet.google.com/*')
-        config.set('content.media.audio_video_capture', True, 'https://meet.google.com/*')
-        config.set('content.media.video_capture', True, 'https://meet.google.com/*')
-        config.set('content.notifications.enabled', True, 'https://meet.google.com/*')
+        #config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
+        #config.set("content.cookies.accept", "all")
+        #config.set("content.cookies.store", True)
       '';
-      
+
       settings = {
-				colors.webpage.preferred_color_scheme = "dark";
-        # colors.webpage.darkmode = {
-        #   enabled = true;
-        #   algorithm = "lightness-cielab";
-        #   policy.images = "never";
-        # };
+        colors.webpage.darkmode = {
+          enabled = true;
+          algorithm = "lightness-cielab";
+          policy.images = "never";
+        };
         auto_save.session = true;
-        spellcheck.languages = [ "en-US" "es-ES" ];
+        spellcheck.languages = ["en-US" "es-ES"];
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
@@ -62,31 +59,12 @@
         comu-2 = "https://udearroba.zoom.us/j/94871308458";
         lab-fis = "https://udearroba.zoom.us/j/93957590011";
       };
- 
-      # greasemonkey = [
-      #   (pkgs.writeText "yt-ads.js" ''
-      #     // ==UserScript==
-      #   // @name         Auto Skip YouTube Ads
-      #   // @version      1.1.0
-      #   // @description  Speed up and skip YouTube ads automatically
-      #   // @author       jso8910 and others
-      #   // @match        *://*.youtube.com/*
-      #   // ==/UserScript==
-      #
-      #
-      #   document.addEventListener('load', () => {
-      #       const btn = document.querySelector('.videoAdUiSkipButton,.ytp-ad-skip-button-modern')
-      #       if (btn) {
-      #           btn.click()
-      #       }
-      #       const ad = [...document.querySelectorAll('.ad-showing')][0];
-      #       if (ad) {
-      #           document.querySelector('video').currentTime = 9999999999;
-      #       }
-      #   }, true);
-      #   '')
-      # ];
+
+      keyBindings = {
+        normal = {
+          "<Ctrl-ñ>" = "hint links spawn --detach mpv {hint-url}";
+        };
+      };
     };
   };
 }
-
