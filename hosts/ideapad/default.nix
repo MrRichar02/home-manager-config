@@ -28,6 +28,7 @@ home = {
     git.enable = true;
     rofi.enable = true;
     oh-my-posh.enable = false;
+		obsidian.enable = true;
     
     starship.enable = true;
 

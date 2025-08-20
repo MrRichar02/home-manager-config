@@ -24,11 +24,14 @@
     #sql things
     # dbeaver-bin
 
-    #lab-2 arqui
+    #request
     postman
 
 		#music
 		youtube-music
+
+		#meetings
+		zoom-us
 
   ];
 }
