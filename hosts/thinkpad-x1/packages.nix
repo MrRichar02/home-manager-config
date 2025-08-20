@@ -8,8 +8,6 @@
   home.packages = with pkgs; [
     zoom-us
 
-    prismlauncher
-
     #editors
     # inputs.nvf-flake.packages.${system}.default
     nvim-pkg
