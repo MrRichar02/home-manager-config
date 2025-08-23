@@ -12,6 +12,7 @@
         vimMode = true;
         showLineNumber = true;
         attachmentFolderPath = "./attachments";
+				readableLineLength = false;
       };
       vaults."Documents/obsidian-notes".enable = true;
     };
