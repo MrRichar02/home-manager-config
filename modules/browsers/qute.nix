@@ -11,23 +11,15 @@
       enable = true;
 
       extraConfig = ''
-        config.set('colors.webpage.darkmode.enabled', False, 'file://*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://docs.google.com/*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://app.diagrams.net/*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://excalidraw.com/*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://app.powerbi.com/*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://udeaeduco-my.sharepoint.com/*')
-        config.set('colors.webpage.darkmode.enabled', False, 'https://www.canva.com/*')
-
-        #privacy
-
-        config.set("content.webgl", False, "*")
-        #config.set("content.canvas_reading", False)
-        config.set("content.geolocation", False)
-        #config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
-        #config.set("content.cookies.accept", "all")
-        #config.set("content.cookies.store", True)
-      '';
+config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+#privacy
+config.set("content.webgl", False, "*")
+#config.set("content.canvas_reading", False)
+config.set("content.geolocation", False)
+#config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
+#config.set("content.cookies.accept", "all")
+#config.set("content.cookies.store", True)
+		'';
 
       settings = {
         colors.webpage.darkmode = {
@@ -37,6 +29,7 @@
         };
         auto_save.session = true;
         spellcheck.languages = ["en-US" "es-ES"];
+				qt.args = ["disable-features=PermissionElement"];
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
