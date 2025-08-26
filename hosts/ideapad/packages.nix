@@ -33,5 +33,7 @@
 		#meetings
 		zoom-us
 
+		logisim-evolution
+
   ];
 }
