@@ -27,5 +27,9 @@
 
     #lab-2 arqui
     postman
+
+		logisim-evolution
+
+		teams-for-linux
   ];
 }

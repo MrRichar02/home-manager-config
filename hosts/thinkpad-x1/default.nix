@@ -14,7 +14,6 @@
     yazi.enable = true;
     git.enable = true;
     rofi.enable = true;
-    oh-my-posh.enable = false;
     starship.enable = true;
 
     vscode.enable = true;

@@ -306,11 +306,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1754764835,
-        "narHash": "sha256-4omj9p+MzSyTDzOjb/ST2KXvvUTnWm2vX8IIKIqljDE=",
+        "lastModified": 1756229539,
+        "narHash": "sha256-kUAKoAvCNHSh2h3oDesnO3TX+vRgRJLJnDEpPrqQfF8=",
         "owner": "MrRichar02",
         "repo": "kickstart-nix",
-        "rev": "7624e8acc1d5645ffab8b6f3914da4ee33285542",
+        "rev": "4742b6b6b233642efe4145db180e4429d208996e",
         "type": "github"
       },
       "original": {
