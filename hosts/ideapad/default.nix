@@ -1,21 +1,24 @@
-{config, ...}:
 {
-home = {
-  # Home Manager needs a bit of information about you and the
-  # paths it should manage.
-  username = "docair";
-  homeDirectory = "/home/docair";
+  config,
+  pkgs,
+  ...
+}: {
+  home = {
+    # Home Manager needs a bit of information about you and the
+    # paths it should manage.
+    username = "docair";
+    homeDirectory = "/home/docair";
 
-  # This value determines the Home Manager release that your
-  # configuration is compatible with. This helps avoid breakage
-  # when a new Home Manager release introduces backwards
-  # incompatible changes.
-  #
-  # You can update Home Manager without changing this value. See
-  # the Home Manager release notes for a list of state version
-  # changes in each release.
-  stateVersion = "24.11";
-};
+    # This value determines the Home Manager release that your
+    # configuration is compatible with. This helps avoid breakage
+    # when a new Home Manager release introduces backwards
+    # incompatible changes.
+    #
+    # You can update Home Manager without changing this value. See
+    # the Home Manager release notes for a list of state version
+    # changes in each release.
+    stateVersion = "24.11";
+  };
 
   imports = [
     ./packages.nix
@@ -28,8 +31,8 @@ home = {
     git.enable = true;
     rofi.enable = true;
     oh-my-posh.enable = false;
-		obsidian.enable = true;
-    
+    obsidian.enable = true;
+
     starship.enable = true;
 
     zoxide.enable = true;
@@ -60,13 +63,18 @@ home = {
     mpv.enable = true;
 
     obs.enable = false;
-
   };
 
   myServices = {
     swaync.enable = true;
     swww.enable = true;
     git-sync-obsidian.enable = false;
+  };
+
+  gtk.cursorTheme = {
+    package = pkgs.rose-pine-cursor;
+    name = "BreezeX-RosePine-Linux";
+    size = 24;
   };
 
   # home.sessionVariables = {

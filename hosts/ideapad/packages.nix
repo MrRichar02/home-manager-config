@@ -35,5 +35,7 @@
 
 		logisim-evolution
 
+		teams-for-linux
+
   ];
 }
