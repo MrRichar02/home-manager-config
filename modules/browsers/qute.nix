@@ -50,7 +50,7 @@ config.set("content.geolocation", False)
         calidad = "https://udearroba.zoom.us/j/97886573439";
         fundamentos = "https://udearroba.zoom.us/j/99736892062";
         comu-2 = "https://udearroba.zoom.us/j/94871308458";
-        lab-fis = "https://udearroba.zoom.us/j/93957590011";
+        lab-fis = "https://udearroba.zoom.us/j/99311730710";
       };
 
       keyBindings = {
