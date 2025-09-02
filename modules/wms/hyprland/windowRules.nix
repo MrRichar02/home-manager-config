@@ -10,6 +10,8 @@
         "workspace 9 silent, class:zoom, title:Meeting"
         "workspace 10, class:spotify"
         "workspace 10, class:com.github.th_ch.youtube_music"
+				# "suppressevent maximize, class:.*"
+				"nofocus,class:^$,title:^$,xwayland:1,floating:1,fullscreen:0,pinned:0"
       ];
     };
   };

@@ -39,11 +39,12 @@
           #"hyprpanel"
           "waybar"
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+					"hyprctl setcursor BreezeX-RosePine-Linux 24"
         ];
 
         general = {
-          gaps_in = 2;
-          gaps_out = 10;
+          gaps_in = 1;
+          gaps_out = 5;
 
           border_size = 2;
 
@@ -97,6 +98,9 @@
           follow_mouse = 1;
 
           sensitivity = 0;
+
+					repeat_rate = 35;
+					repeat_delay = 200;
 
           touchpad = {
             natural_scroll = false;
