@@ -62,7 +62,7 @@
             "format" = "{format_source}";
             "format-source" = "{volume}% ";
             "format-source-muted" = "";
-            "on-click" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 75%";
+            "on-click" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 30%";
           };
 
           # "hyprland/window" = {
