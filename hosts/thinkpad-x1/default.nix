@@ -8,6 +8,10 @@
     ./packages.nix
   ];
 
+	programs.btop = {
+		enable = true;
+	};
+
   myModules = {
     fastfetch.enable = true;
     tmux.enable = true;
