@@ -7,19 +7,23 @@
   options.myModules.quteBrowser.enable = lib.mkEnableOption "enables qutebrowser module";
 
   config = lib.mkIf config.myModules.quteBrowser.enable {
+    home.packages = with pkgs; [
+      python312Packages.adblock
+    ];
+
     programs.qutebrowser = {
       enable = true;
 
       extraConfig = ''
-config.set('colors.webpage.darkmode.enabled', False, 'file://*')
-#privacy
-config.set("content.webgl", False, "*")
-#config.set("content.canvas_reading", False)
-config.set("content.geolocation", False)
-#config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
-#config.set("content.cookies.accept", "all")
-#config.set("content.cookies.store", True)
-		'';
+        config.set('colors.webpage.darkmode.enabled', False, 'file://*')
+        #privacy
+        config.set("content.webgl", False, "*")
+        #config.set("content.canvas_reading", False)
+        config.set("content.geolocation", False)
+        #config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
+        #config.set("content.cookies.accept", "all")
+        #config.set("content.cookies.store", True)
+      '';
 
       settings = {
         colors.webpage.darkmode = {
@@ -29,7 +33,8 @@ config.set("content.geolocation", False)
         };
         auto_save.session = true;
         spellcheck.languages = ["en-US" "es-ES"];
-				qt.args = ["disable-features=PermissionElement"];
+        qt.args = ["disable-features=PermissionElement"];
+				content.blocking.method = "both";
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";

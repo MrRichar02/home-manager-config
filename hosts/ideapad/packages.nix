@@ -37,5 +37,7 @@
 
 		teams-for-linux
 
+		vscode-fhs
+
   ];
 }
