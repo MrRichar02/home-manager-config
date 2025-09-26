@@ -20,7 +20,7 @@
     rofi.enable = true;
     starship.enable = true;
 
-    vscode.enable = true;
+    vscode.enable = false;
 
     waybar.enable = true;
 
@@ -39,7 +39,7 @@
 
     kitty.enable = true;
 
-    onlyOffice.enable = true;
+    onlyOffice.enable = false;
 
     taskwarrior.enable = true;
 

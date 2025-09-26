@@ -17,9 +17,9 @@
       extraConfig = ''
         config.set('colors.webpage.darkmode.enabled', False, 'file://*')
         #privacy
-        config.set("content.webgl", False, "*")
+        #config.set("content.webgl", False, "*")
         #config.set("content.canvas_reading", False)
-        config.set("content.geolocation", False)
+        #config.set("content.geolocation", False)
         #config.set("content.webrtc_ip_handling_policy", "default-public-interface-only")
         #config.set("content.cookies.accept", "all")
         #config.set("content.cookies.store", True)
@@ -34,7 +34,31 @@
         auto_save.session = true;
         spellcheck.languages = ["en-US" "es-ES"];
         qt.args = ["disable-features=PermissionElement"];
-				content.blocking.method = "both";
+        content = {
+          webgl = false;
+          canvas_reading = false;
+          cookies = {
+            store = true;
+            accept = "no-3rdparty";
+          };
+          geolocation = false;
+          blocking = {
+            enabled = true;
+            method = "both";
+            adblock.lists = [
+              "https://www.i-dont-care-about-cookies.eu/abp/"
+              "https://easylist.to/easylist/easylist.txt"
+              "https://easylist.to/easylist/easyprivacy.txt"
+              "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/privacy.txt"
+              "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/resource-abuse.txt"
+              "https://raw.githubusercontent.com/uBlockOrigin/uAssets/master/filters/annoyances.txt"
+              "https://filters.adtidy.org/extension/ublock/filters/224.txt"
+              "https://www.i-dont-care-about-cookies.eu/abp/"
+              "https://easylist-downloads.adblockplus.org/fanboy-annoyance.txt"
+            ];
+          };
+        };
+        editor.command = ["kitty" "-e" "nvim" "{file}"];
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
@@ -56,6 +80,8 @@
         fundamentos = "https://udearroba.zoom.us/j/99736892062";
         comu-2 = "https://udearroba.zoom.us/j/94871308458";
         lab-fis = "https://udearroba.zoom.us/j/99311730710";
+        translatese = "https://translate.google.com/?hl=es&sl=es&tl=en&op=translate";
+        translatees = "https://translate.google.com/?hl=es&sl=en&tl=es&op=translate";
       };
 
       keyBindings = {

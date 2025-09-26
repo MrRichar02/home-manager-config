@@ -17,12 +17,10 @@
     programs.rofi = {
       enable = true;
 
-      package = pkgs.rofi-wayland;
-
       font = "Monocraft Nerd Font 12";
 
       plugins = [
-        pkgs.rofi-emoji-wayland
+        pkgs.rofi-emoji
       ];
 
       theme = let

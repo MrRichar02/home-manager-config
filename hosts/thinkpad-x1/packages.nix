@@ -31,5 +31,12 @@
 		logisim-evolution
 
 		teams-for-linux
+
+		vscode-fhs
+
+		onlyoffice-bin
+
+		openvpn
+
   ];
 }
