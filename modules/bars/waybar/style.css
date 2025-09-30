@@ -8,8 +8,8 @@ window#waybar {
     /* background-color: rgba(43, 48, 59, 0.5); */
     background-color: transparent;
     /* border-bottom: 3px solid rgba(100, 114, 125, 0.5); */
-    /* color: #ffffff; */
-    color: rgba(0, 0, 0, 1);
+    color: #ffffff;
+    /* color: rgba(0, 0, 0, 1); */
     transition-property: background-color;
     transition-duration: .5s;
 }
@@ -49,8 +49,8 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    /* color: #ffffff; */
-    color: rgb(0,0,0);
+    color: #ffffff;
+    /* color: rgb(0,0,0); */
 }
 
 #workspaces button:hover {
@@ -78,7 +78,8 @@ button:hover {
 
 #clock {
 	padding: 0 10px;
-	color: rgb(0,0,0);
+	/* color: rgb(0,0,0); */
+	color: #ffffff;
 }
 
 #window,
