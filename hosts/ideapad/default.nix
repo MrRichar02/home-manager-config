@@ -45,7 +45,7 @@
 
     stylix.enable = true;
 
-    hyprland1 = {
+    hyprland2 = {
       enable = true;
       animations.enable = true;
       keybinds.enable = true;
