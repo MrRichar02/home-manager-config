@@ -1,18 +1,20 @@
-{ pkgs, inputs, ...}:
 {
-
+  pkgs,
+  inputs,
+  ...
+}: {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
     #editors
     # inputs.nvf-flake.packages.${system}.default
-		nvim-pkg
+    nvim-pkg
 
     #wallpaper
     waypaper
 
-		#password manager
-		bitwarden-desktop
+    #password manager
+    bitwarden-desktop
 
     #chat apps
     vesktop
@@ -22,22 +24,23 @@
     # obsidian
 
     #sql things
-    # dbeaver-bin
+    dbeaver-bin
 
     #request
     postman
 
-		#music
-		youtube-music
+    #music
+    youtube-music
 
-		#meetings
-		zoom-us
+    #meetings
+    zoom-us
 
-		logisim-evolution
+    logisim-evolution
 
-		teams-for-linux
+    teams-for-linux
 
-		vscode-fhs
+    vscode-fhs
 
+    mars-mips
   ];
 }

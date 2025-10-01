@@ -43,10 +43,10 @@
         ];
 
         general = {
-          gaps_in = 0;
-          gaps_out = 0;
+          gaps_in = 1;
+          gaps_out = 1;
 
-          border_size = 2;
+          border_size = 1;
 
           resize_on_border = true;
 
@@ -56,7 +56,7 @@
         };
 
         decoration = {
-          rounding = 4;
+          rounding = 0;
 
           active_opacity = 1;
           inactive_opacity = 1;
