@@ -6,6 +6,8 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+    #browsers
+    inputs.zen-browser.packages."${system}".default # beta not sigma :(
     #editors
     # inputs.nvf-flake.packages.${system}.default
     nvim-pkg

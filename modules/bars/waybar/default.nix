@@ -3,11 +3,25 @@
   config,
   pkgs,
   ...
-}: {
+}:
+let
+backlight-script = pkgs.writeShellScriptBin "backlight-script" ''
+PROCESS_NAME="hyprsunset"
+if pgrep "$PROCESS_NAME" > /dev/null; then
+  pkill -f "$PROCESS_NAME"
+	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light OFF"
+else
+  ${pkgs.hyprsunset}/bin/hyprsunset --temperature 5000 &
+	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light ON"
+fi
+'';
+
+in
+{
   options.myModules.waybar.enable = lib.mkEnableOption "enables waybar module";
 
   config = lib.mkIf config.myModules.waybar.enable {
-    home.packages = with pkgs; [helvum monocraft];
+    home.packages = with pkgs; [helvum monocraft backlight-script];
 
     fonts.fontconfig.enable = true;
 
@@ -49,6 +63,7 @@
             "device" = "intel_backlight";
             "format" = "{percent}% {icon}";
             "format-icons" = ["" ""];
+						"on-click" = "backlight-script";
           };
 
           "wireplumber" = {
@@ -62,7 +77,7 @@
             "format" = "{format_source}";
             "format-source" = "{volume}% ";
             "format-source-muted" = "";
-            "on-click" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 30%";
+            "on-click" = "wpctl set-volume @DEFAULT_AUDIO_SOURCE@ 70%";
           };
 
           # "hyprland/window" = {

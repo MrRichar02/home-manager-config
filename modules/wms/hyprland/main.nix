@@ -1,4 +1,4 @@
-{lib, config, ...}:
+{lib, config, pkgs, ...}:
 {
   options.myModules.hyprland1 = {
     enable = lib.mkEnableOption "enables main module for hyprland config 1";
@@ -15,7 +15,7 @@
         "$mainMod" = "SUPER";
 
         "$terminal" = "kitty";
-        "$fileManager" = "dolphin";
+        "$fileManager" = "${pkgs.kdePackages.dolphin}/bin/dolphin";
         "$browser" = "qutebrowser";
         "$menu" = "rofi -show drun";
 
@@ -36,10 +36,9 @@
 
         exec-once = [
           "swww-daemon"
-          #"hyprpanel"
           "waybar"
-          "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-					"hyprctl setcursor BreezeX-RosePine-Linux 24"
+					#      "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
+					# "hyprctl setcursor BreezeX-RosePine-Linux 24"
         ];
 
         general = {
@@ -110,6 +109,7 @@
         device = {
           name = "razer-razer-viper-mini";
           sensitivity = -0.9;
+					scroll_factor = 1.5;
         };
       };
     };

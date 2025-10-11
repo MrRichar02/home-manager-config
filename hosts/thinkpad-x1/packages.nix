@@ -6,7 +6,10 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+		heroic
     zoom-us
+    #browsers
+    inputs.zen-browser.packages."${system}".default # beta not sigma :(
 
     #editors
     # inputs.nvf-flake.packages.${system}.default
@@ -28,15 +31,12 @@
     #lab-2 arqui
     postman
 
-		logisim-evolution
+    teams-for-linux
 
-		teams-for-linux
+    vscode-fhs
 
-		vscode-fhs
+    onlyoffice-bin
 
-		onlyoffice-bin
-
-		openvpn
-
+    mars-mips
   ];
 }
