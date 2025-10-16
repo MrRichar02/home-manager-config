@@ -6,6 +6,7 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+		inputs.mango.packages.${system}.mango
     #browsers
     inputs.zen-browser.packages."${system}".default # beta not sigma :(
     #editors
@@ -37,12 +38,12 @@
     #meetings
     zoom-us
 
-    logisim-evolution
-
     teams-for-linux
 
     vscode-fhs
 
     mars-mips
+
+		prismlauncher
   ];
 }

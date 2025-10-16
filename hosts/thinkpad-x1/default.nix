@@ -22,7 +22,7 @@
 
     vscode.enable = false;
 
-    waybar.enable = true;
+    waybar-hypr.enable = true;
 
     bash.enable = true;
 
