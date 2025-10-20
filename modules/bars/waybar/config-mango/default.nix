@@ -3,21 +3,18 @@
   config,
   pkgs,
   ...
-}:
-let
-backlight-script = pkgs.writeShellScriptBin "backlight-script" ''
-PROCESS_NAME="hyprsunset"
-if pgrep "$PROCESS_NAME" > /dev/null; then
-  pkill -f "$PROCESS_NAME"
-	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light OFF"
-else
-  ${pkgs.hyprsunset}/bin/hyprsunset --temperature 5000 &
-	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light ON"
-fi
-'';
-
-in
-{
+}: let
+  backlight-script = pkgs.writeShellScriptBin "backlight-script" ''
+    PROCESS_NAME="hyprsunset"
+    if pgrep "$PROCESS_NAME" > /dev/null; then
+      pkill -f "$PROCESS_NAME"
+    	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light OFF"
+    else
+      ${pkgs.hyprsunset}/bin/hyprsunset --temperature 5000 &
+    	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light ON"
+    fi
+  '';
+in {
   options.myModules.waybar-mango.enable = lib.mkEnableOption "enables waybar module";
 
   config = lib.mkIf config.myModules.waybar-mango.enable {
@@ -34,7 +31,7 @@ in
           position = "top";
           height = 36;
 
-          modules-left = ["ext/workspaces" "dwl/tags"];
+          modules-left = ["ext/workspaces"];
           modules-center = ["clock"];
           modules-right = ["tray" "backlight" "pulseaudio" "wireplumber" "network" "battery"];
 
@@ -43,21 +40,21 @@ in
           #     "tooltip" = false;
           # };
 
-					"ext/workspaces"= {
-						"format"= "{icon}";
-						"ignore-hidden"= true;
-						"on-click"= "activate";
-						"sort-by-id"= true;
-					};
-					"dwl/tags"= {
-						"num-tags"=10;
-					};
+          "ext/workspaces" = {
+            "format" = "{icon}";
+            "ignore-hidden" = false;
+            "on-click" = "activate";
+            "sort-by-id" = true;
+          };
+          "dwl/tags" = {
+            "num-tags" = 9;
+          };
 
           "backlight" = {
             "device" = "intel_backlight";
             "format" = "{percent}% {icon}";
             "format-icons" = ["" ""];
-						"on-click" = "backlight-script";
+            "on-click" = "backlight-script";
           };
 
           "wireplumber" = {
