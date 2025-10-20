@@ -1,4 +1,4 @@
-{lib, config, ...}:
+{lib, config, pkgs, ...}:
 {
   options.myModules.hyprland2 = {
     enable = lib.mkEnableOption "enables main module for hyprland config 1";
@@ -15,7 +15,7 @@
         "$mainMod" = "SUPER";
 
         "$terminal" = "kitty";
-        "$fileManager" = "dolphin";
+        "$fileManager" = "${pkgs.xfce.thunar}/bin/thunar";
         "$browser" = "qutebrowser";
         "$menu" = "rofi -show drun";
 
@@ -109,7 +109,7 @@
         };
         device = {
           name = "razer-razer-viper-mini";
-          sensitivity = -0.9;
+          sensitivity = -0.2;
         };
       };
     };

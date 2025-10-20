@@ -1,8 +1,33 @@
-{lib, config, ...}:
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}: let
+  turnoff-reboot-script = pkgs.writeShellScriptBin "turnoff-reboot-script" ''
+    chosen=$(echo -e "Turn off\nReboot" | ${pkgs.rofi}/bin/rofi -dmenu -i -p "Turn off or Reboot xd")
+    case "$chosen" in
+    	"Turn off")
+    		shutdown -h now
+    		;;
+    	"Reboot")
+    		reboot
+    		;;
+    esac
+  '';
+	picker-script = pkgs.writeShellScriptBin "picker-script" ''
+    chosen=$(echo -e "hex\nrgb\nhsl\nhsv\ncmyk" | ${pkgs.rofi}/bin/rofi -dmenu -i -p "hyprpicker")
+		sleep 0.3
+		${pkgs.hyprpicker}/bin/hyprpicker -a -d -f "$chosen"
+	'';
+in {
   options.myModules.hyprland2.keybinds.enable = lib.mkEnableOption "enables keybinds for hyprland config 1";
 
   config = lib.mkIf config.myModules.hyprland2.keybinds.enable {
+    home.packages = [
+      turnoff-reboot-script
+			picker-script
+    ];
     wayland.windowManager.hyprland.settings = {
       bind = [
         "$mainMod, Return, exec, $terminal"
@@ -10,10 +35,12 @@
         "$mainMod, M, exit,"
         "$mainMod, E, exec, $fileManager"
         "$mainMod, V, togglefloating,"
-        "$mainMod, P, pseudo,"
+        "$mainMod SHIFT, P, pseudo,"
         "$mainMod, W, exec, $browser"
         "$mainMod, D, exec, $menu"
-        "$mainMod SHIFT, l, exec, hyprlock"
+        "$mainMod, R, exec, turnoff-reboot-script"
+        "$mainMod, P, exec, picker-script"
+        "$mainMod SHIFT, l, exec, ${pkgs.hyprlock}/bin/hyprlock"
 
         # Move focus with mainMod + arrow keys
         "$mainMod, H, movefocus, l"
@@ -53,10 +80,8 @@
         "$mainMod, mouse_down, workspace, e+1"
         "$mainMod, mouse_up, workspace, e-1"
 
-        ", Print, exec, hyprshot -m region -z --clipboard-only"
-        "$mainMod SHIFT, Print, exec, hyprshot -m region -z -o /home/docair/Pictures/screenshots"
-        "$mainMod, Print, exec, hyprshot -m region -z -o ~/Pictures/screenshots/"
-
+        ", Print, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z --clipboard-only"
+        "$mainMod, Print, exec, ${pkgs.hyprshot}/bin/hyprshot -m region -z -o $HOME/Pictures/screenshots/"
       ];
 
       bindm = [
@@ -68,8 +93,8 @@
         ",XF86AudioLowerVolume, exec, wpctl set-volume @DEFAULT_AUDIO_SINK@ 5%-"
         ",XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
         ",XF86AudioMicMute, exec, wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"
-        ",XF86MonBrightnessUp, exec, brightnessctl s 10%+"
-        ",XF86MonBrightnessDown, exec, brightnessctl s 10%-"
+        ",XF86MonBrightnessUp, exec, ${pkgs.brightnessctl}/bin/brightnessctl s 10%+"
+        ",XF86MonBrightnessDown, exec, ${pkgs.brightnessctl}/bin/brightnessctl s 10%-"
       ];
     };
   };
