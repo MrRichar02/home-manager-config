@@ -13,6 +13,10 @@
     kickstart-nix.url = "github:MrRichar02/kickstart-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     stylix.url = "github:danth/stylix";
+		mango = {
+			url = "github:DreamMaoMao/mangowc";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
   outputs = { nixpkgs, home-manager, ... }@ inputs:
