@@ -9,6 +9,10 @@
   config = lib.mkIf config.myModules.quteBrowser.enable {
     home.packages = with pkgs; [
       python312Packages.adblock
+      python312Packages.tldextract
+      python312Packages.pyperclip
+      bitwarden-cli
+			keyutils
     ];
 
     programs.qutebrowser = {
