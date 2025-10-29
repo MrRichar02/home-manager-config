@@ -2,11 +2,20 @@
   pkgs,
   inputs,
   ...
-}: {
+}: let
+  screenshotmango = pkgs.writeShellScriptBin "screenshotmango" ''
+    ${pkgs.grim}/bin/grim -l 0 -g "$(${pkgs.slurp}/bin/slurp)" - | ${pkgs.wl-clipboard}/bin/wl-copy
+  '';
+in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-		heroic
+		screenshotmango
+    kdePackages.xwaylandvideobridge
+    brightnessctl
+    inputs.mango.packages.${system}.mango
+
+    heroic
     zoom-us
     #browsers
     inputs.zen-browser.packages."${system}".default # beta not sigma :(

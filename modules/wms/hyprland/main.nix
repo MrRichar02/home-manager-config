@@ -108,7 +108,7 @@
         };
         device = {
           name = "razer-razer-viper-mini";
-          sensitivity = -0.9;
+          sensitivity = -0.3;
 					scroll_factor = 1.5;
         };
       };

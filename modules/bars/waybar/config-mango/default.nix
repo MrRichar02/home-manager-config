@@ -5,12 +5,12 @@
   ...
 }: let
   backlight-script = pkgs.writeShellScriptBin "backlight-script" ''
-    PROCESS_NAME="hyprsunset"
+    PROCESS_NAME="wlsunset"
     if pgrep "$PROCESS_NAME" > /dev/null; then
       pkill -f "$PROCESS_NAME"
     	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light OFF"
     else
-      ${pkgs.hyprsunset}/bin/hyprsunset --temperature 5000 &
+      ${pkgs.wlsunset}/bin/wlsunset &
     	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light ON"
     fi
   '';
