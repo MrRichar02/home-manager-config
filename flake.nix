@@ -17,6 +17,10 @@
 			url = "github:DreamMaoMao/mangowc";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
+		nixGL = {
+			url = "github:nix-community/nixGL";
+			inputs.nixpkgs.follows = "nixpkgs";
+		};
   };
 
   outputs = { nixpkgs, home-manager, ... }@ inputs:
@@ -52,6 +56,23 @@
 
           modules = [
             ./hosts/ideapad
+            ./modules
+            inputs.stylix.homeModules.stylix
+          ];
+
+          # Optionally use extraSpecialArgs
+
+          extraSpecialArgs = { inherit inputs; };
+
+          # to pass through arguments to home.nix
+        };
+
+        "void" = home-manager.lib.homeManagerConfiguration {
+
+          inherit pkgs;
+
+          modules = [
+            ./hosts/void
             ./modules
             inputs.stylix.homeModules.stylix
           ];
