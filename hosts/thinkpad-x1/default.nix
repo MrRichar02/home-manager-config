@@ -14,7 +14,7 @@
 
   myModules = {
     fastfetch.enable = true;
-    tmux.enable = true;
+    tmux.enable = false;
     yazi.enable = true;
     git.enable = true;
     rofi.enable = true;

@@ -11,7 +11,6 @@ in {
 
   home.packages = with pkgs; [
 		screenshotmango
-    kdePackages.xwaylandvideobridge
     brightnessctl
     inputs.mango.packages.${system}.mango
 
@@ -29,7 +28,6 @@ in {
 
     #wallpaper
     waypaper
-
     #chat apps
     vesktop
     zapzap
@@ -37,15 +35,18 @@ in {
     #music player
     youtube-music
 
-    #lab-2 arqui
-    postman
-
     teams-for-linux
 
-    vscode-fhs
+    vscodium-fhs
 
-    onlyoffice-bin
+    onlyoffice-desktopeditors
 
     mars-mips
+
+		logisim-evolution
+
+		nerd-fonts.zed-mono
+
+		tmux
   ];
 }
