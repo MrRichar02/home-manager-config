@@ -8,9 +8,22 @@
     ./packages.nix
   ];
 
-	programs.btop = {
+  xdg.mime.enable = true;
+  xdg.mimeApps = {
 		enable = true;
-	};
+    defaultApplications = {
+      "application/pdf" = ["onlyoffice-desktopeditors.desktop"];
+      "text/html" = ["org.qutebrowser.qutebrowser.desktop"];
+      "x-scheme-handler/http" = ["org.qutebrowser.qutebrowser.desktop"];
+      "x-scheme-handler/https" = ["org.qutebrowser.qutebrowser.desktop"];
+    };
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+  };
 
   myModules = {
     fastfetch.enable = true;
@@ -28,12 +41,12 @@
 
     zoxide.enable = true;
 
-    hyprland1 = {
-      enable = true;
-      animations.enable = true;
-      keybinds.enable = true;
-      windowRules.enable = true;
-    };
+    # hyprland1 = {
+    #   enable = true;
+    #   animations.enable = true;
+    #   keybinds.enable = true;
+    #   windowRules.enable = true;
+    # };
 
     stylix.enable = true;
 
@@ -49,8 +62,7 @@
 
     obs.enable = false;
 
-		obsidian.enable = true;
-
+    obsidian.enable = true;
   };
 
   myServices = {
@@ -69,9 +81,9 @@
   # changes in each release.
   home.stateVersion = "24.11";
 
-  # home.sessionVariables = {
-  #   EDITOR = "neovim";
-  # };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+  };
 
   #Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

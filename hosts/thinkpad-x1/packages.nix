@@ -17,7 +17,7 @@ in {
     heroic
     zoom-us
     #browsers
-    inputs.zen-browser.packages."${system}".default # beta not sigma :(
+    librewolf-bin
 
     #editors
     # inputs.nvf-flake.packages.${system}.default
@@ -32,11 +32,6 @@ in {
     vesktop
     zapzap
 
-    #music player
-    youtube-music
-
-    teams-for-linux
-
     vscodium-fhs
 
     onlyoffice-desktopeditors
@@ -48,5 +43,10 @@ in {
 		nerd-fonts.zed-mono
 
 		tmux
+		zed-editor-fhs
+		xfce.thunar
+		noto-fonts
+		noto-fonts-cjk-sans
+		kdePackages.kdenlive
   ];
 }
