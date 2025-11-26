@@ -11,11 +11,8 @@ in {
 
   home.packages = with pkgs; [
     screenshotmango
-    kdePackages.xwaylandvideobridge
     brightnessctl
     inputs.mango.packages.${system}.mango
-    xwayland
-    xwayland-run
 
     swaynotificationcenter
 
@@ -23,7 +20,7 @@ in {
     nerd-fonts.symbols-only
 
     #browsers
-    inputs.zen-browser.packages."${system}".default # beta not sigma :(
+    librewolf
 
     # nixgl
     inputs.nixGL.packages.${system}.nixGLIntel
@@ -48,11 +45,12 @@ in {
     vesktop
     zapzap
 
-    #music player
-    youtube-music
-
-    onlyoffice-bin
+    onlyoffice-desktopeditors
 
     mars-mips
+
+		fastfetch
+
+		logisim-evolution
   ];
 }

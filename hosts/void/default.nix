@@ -1,3 +1,4 @@
+{inputs, ...}:
 {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
@@ -8,9 +9,18 @@
     ./packages.nix
   ];
 
-	programs.btop = {
+	nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+
+	programs.direnv = {
 		enable = true;
+		enableBashIntegration = true;
+		nix-direnv.enable = true;
 	};
+
+	programs.bash.shellAliases = {
+		ls = "ls --color=auto";
+	};
+
 
   myModules = {
     tmux.enable = true;
@@ -49,9 +59,10 @@
   # changes in each release.
   home.stateVersion = "24.11";
 
-  # home.sessionVariables = {
-  #   EDITOR = "neovim";
-  # };
+  home.sessionVariables = {
+    EDITOR = "nvim";
+		XDG_DATA_DIRS="$HOME/.nix-profile/share:$HOME/.nix-profile/share/applications:/usr/local/share:/usr/share";
+  };
 
   #Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
