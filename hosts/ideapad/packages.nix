@@ -11,11 +11,11 @@ in {
 
   home.packages = with pkgs; [
     screenshotmango
-    kdePackages.xwaylandvideobridge
     brightnessctl
     inputs.mango.packages.${system}.mango
     #browsers
-    inputs.zen-browser.packages."${system}".default # beta not sigma :(
+    librewolf-bin
+    # inputs.zen-browser.packages."${system}".default # beta not sigma :(
     #editors
     # inputs.nvf-flake.packages.${system}.default
     nvim-pkg
@@ -31,7 +31,7 @@ in {
     zapzap
 
     #note taking
-    # obsidian
+    obsidian
 
     #sql things
     dbeaver-bin
@@ -39,18 +39,21 @@ in {
     #request
     postman
 
-    #music
-    youtube-music
-
     #meetings
     zoom-us
-
-    teams-for-linux
-
-    vscode-fhs
 
     mars-mips
 
     prismlauncher
+
+		xfce.thunar
+
+		noto-fonts
+		noto-fonts-cjk-sans
+		
+		tmux
+
+		vscodium-fhs
+		zed-editor-fhs
   ];
 }

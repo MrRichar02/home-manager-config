@@ -26,13 +26,10 @@
 
   myModules = {
     fastfetch.enable = true;
-    tmux.enable = true;
     yazi.enable = true;
     git.enable = true;
     rofi.enable = true;
     oh-my-posh.enable = false;
-    obsidian.enable = true;
-
     starship.enable = true;
 
     zoxide.enable = true;
@@ -45,12 +42,12 @@
 
     stylix.enable = true;
 
-    hyprland2 = {
-      enable = true;
-      animations.enable = true;
-      keybinds.enable = true;
-      windowRules.enable = true;
-    };
+    # hyprland2 = {
+    #   enable = true;
+    #   animations.enable = true;
+    #   keybinds.enable = true;
+    #   windowRules.enable = true;
+    # };
 
     kitty.enable = true;
 
@@ -75,6 +72,12 @@
     package = pkgs.rose-pine-cursor;
     name = "BreezeX-RosePine-Linux";
     size = 24;
+  };
+
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
   };
 
   # home.sessionVariables = {

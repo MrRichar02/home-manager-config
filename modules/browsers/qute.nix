@@ -9,10 +9,6 @@
   config = lib.mkIf config.myModules.quteBrowser.enable {
     home.packages = with pkgs; [
       python312Packages.adblock
-      python312Packages.tldextract
-      python312Packages.pyperclip
-      bitwarden-cli
-			keyutils
     ];
 
     programs.qutebrowser = {
@@ -36,6 +32,7 @@
           policy.images = "never";
         };
         auto_save.session = true;
+				zoom.default = "67%";
         spellcheck.languages = ["en-US" "es-ES"];
         qt.args = ["disable-features=PermissionElement"];
         content = {
