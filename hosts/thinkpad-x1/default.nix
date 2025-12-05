@@ -10,7 +10,7 @@
 
   xdg.mime.enable = true;
   xdg.mimeApps = {
-		enable = true;
+  enable = true;
     defaultApplications = {
       "application/pdf" = ["onlyoffice-desktopeditors.desktop"];
       "text/html" = ["org.qutebrowser.qutebrowser.desktop"];
@@ -19,19 +19,14 @@
     };
   };
 
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    nix-direnv.enable = true;
-  };
-
   myModules = {
     fastfetch.enable = true;
-    tmux.enable = false;
     yazi.enable = true;
     git.enable = true;
     rofi.enable = true;
     starship.enable = true;
+		tmux.enable = true;
+		direnvnix.enable = true;
 
     vscode.enable = false;
 
@@ -59,8 +54,6 @@
     quteBrowser.enable = true;
 
     mpv.enable = true;
-
-    obs.enable = false;
 
     obsidian.enable = true;
   };

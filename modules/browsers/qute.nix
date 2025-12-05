@@ -32,7 +32,6 @@
           policy.images = "never";
         };
         auto_save.session = true;
-				zoom.default = "67%";
         spellcheck.languages = ["en-US" "es-ES"];
         qt.args = ["disable-features=PermissionElement"];
         content = {
@@ -63,8 +62,9 @@
       };
       searchEngines = {
         yt = "https://www.youtube.com/results?search_query={}";
-        np = "https://search.nixos.org/packages?channel=unstable&type=packages&query={}";
-        hm = "https://home-manager-options.extranix.com/?query={}&release=master";
+        npu = "https://search.nixos.org/packages?channel=unstable&type=packages&query={}";
+        np = "https://search.nixos.org/packages?channel=25.11&type=packages&query={}";
+        hm = "https://home-manager-options.extranix.com/?query={}&release=release-25.11";
       };
 
       quickmarks = {

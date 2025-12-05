@@ -11,5 +11,6 @@
     ./fastfetch.nix
     ./starship.nix
     ./zoxide.nix
+		./direnvnix.nix
   ];
 }

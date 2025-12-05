@@ -51,8 +51,6 @@ in {
 		noto-fonts
 		noto-fonts-cjk-sans
 		
-		tmux
-
 		vscodium-fhs
 		zed-editor-fhs
   ];

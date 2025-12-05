@@ -47,6 +47,6 @@ in {
 		xfce.thunar
 		noto-fonts
 		noto-fonts-cjk-sans
-		kdePackages.kdenlive
+		quickshell
   ];
 }
