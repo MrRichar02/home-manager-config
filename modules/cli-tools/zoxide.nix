@@ -1,5 +1,8 @@
-{lib, config, ...}:
 {
+  lib,
+  config,
+  ...
+}: {
   options.myModules.zoxide.enable = lib.mkEnableOption "enables zoxide";
 
   config = lib.mkIf config.myModules.zoxide.enable {
@@ -9,4 +12,3 @@
     };
   };
 }
-

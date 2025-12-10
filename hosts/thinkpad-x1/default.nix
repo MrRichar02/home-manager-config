@@ -10,7 +10,7 @@
 
   xdg.mime.enable = true;
   xdg.mimeApps = {
-  enable = true;
+    enable = true;
     defaultApplications = {
       "application/pdf" = ["onlyoffice-desktopeditors.desktop"];
       "text/html" = ["org.qutebrowser.qutebrowser.desktop"];
@@ -25,8 +25,8 @@
     git.enable = true;
     rofi.enable = true;
     starship.enable = true;
-		tmux.enable = true;
-		direnvnix.enable = true;
+    tmux.enable = true;
+    direnvnix.enable = true;
 
     vscode.enable = false;
 

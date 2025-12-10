@@ -1,5 +1,8 @@
-{lib, config, ...}:
 {
+  lib,
+  config,
+  ...
+}: {
   options.myModules.oh-my-posh.enable = lib.mkEnableOption "enables oh-my-posh module";
 
   config = lib.mkIf config.myModules.oh-my-posh.enable {

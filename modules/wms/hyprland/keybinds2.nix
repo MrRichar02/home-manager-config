@@ -15,18 +15,18 @@
     		;;
     esac
   '';
-	picker-script = pkgs.writeShellScriptBin "picker-script" ''
-    chosen=$(echo -e "hex\nrgb\nhsl\nhsv\ncmyk" | ${pkgs.rofi}/bin/rofi -dmenu -i -p "hyprpicker")
-		sleep 0.3
-		${pkgs.hyprpicker}/bin/hyprpicker -a -d -f "$chosen"
-	'';
+  picker-script = pkgs.writeShellScriptBin "picker-script" ''
+      chosen=$(echo -e "hex\nrgb\nhsl\nhsv\ncmyk" | ${pkgs.rofi}/bin/rofi -dmenu -i -p "hyprpicker")
+    sleep 0.3
+    ${pkgs.hyprpicker}/bin/hyprpicker -a -d -f "$chosen"
+  '';
 in {
   options.myModules.hyprland2.keybinds.enable = lib.mkEnableOption "enables keybinds for hyprland config 1";
 
   config = lib.mkIf config.myModules.hyprland2.keybinds.enable {
     home.packages = [
       turnoff-reboot-script
-			picker-script
+      picker-script
     ];
     wayland.windowManager.hyprland.settings = {
       bind = [

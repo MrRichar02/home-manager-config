@@ -1,5 +1,9 @@
-{lib, config, pkgs, ...}:
 {
+  lib,
+  config,
+  pkgs,
+  ...
+}: {
   options.myModules.hyprland2 = {
     enable = lib.mkEnableOption "enables main module for hyprland config 1";
   };
@@ -11,7 +15,6 @@
       xwayland.enable = true;
 
       settings = {
-
         "$mainMod" = "SUPER";
 
         "$terminal" = "kitty";
@@ -19,9 +22,7 @@
         "$browser" = "qutebrowser";
         "$menu" = "rofi -show drun";
 
-
         monitor = ",preferred,auto,1";
-
 
         env = [
           "NIXOS_OZONE_WL,1"
@@ -39,7 +40,7 @@
           #"hyprpanel"
           "waybar"
           "dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP"
-					"hyprctl setcursor BreezeX-RosePine-Linux 24"
+          "hyprctl setcursor BreezeX-RosePine-Linux 24"
         ];
 
         general = {
@@ -75,7 +76,6 @@
 
             vibrancy = "0.1696";
           };
-
         };
 
         dwindle = {
@@ -99,13 +99,12 @@
 
           sensitivity = 0;
 
-					repeat_rate = 35;
-					repeat_delay = 200;
+          repeat_rate = 35;
+          repeat_delay = 200;
 
           touchpad = {
             natural_scroll = false;
           };
-
         };
         device = {
           name = "razer-razer-viper-mini";

@@ -1,5 +1,8 @@
-{lib, config, ...}:
 {
+  lib,
+  config,
+  ...
+}: {
   options.myModules.ranger.enable = lib.mkEnableOption "enables ranger module";
 
   config = lib.mkIf config.myModules.ranger.enable {

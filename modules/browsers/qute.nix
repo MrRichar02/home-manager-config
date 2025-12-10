@@ -88,7 +88,7 @@
       keyBindings = {
         normal = {
           "<Ctrl-ñ>" = "hint links spawn --detach mpv {hint-url}";
-					",p" = "spawn --userscript qute-bitwarden --auto-lock 0";
+          ",p" = "spawn --userscript qute-bitwarden --auto-lock 0";
         };
       };
     };

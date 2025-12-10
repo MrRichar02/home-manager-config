@@ -1,5 +1,9 @@
-{ pkgs, lib, config, ...}:
 {
+  pkgs,
+  lib,
+  config,
+  ...
+}: {
   options.myModules.stylix.enable = lib.mkEnableOption "enables stylix module";
 
   config = lib.mkIf config.myModules.stylix.enable {
@@ -11,8 +15,8 @@
       targets = {
         rofi.enable = false;
         qutebrowser.enable = false;
-				kitty.enable = false;
-				waybar.enable = false;
+        kitty.enable = false;
+        waybar.enable = false;
         # starship.enable = false;
       };
 
@@ -54,8 +58,6 @@
       };
 
       polarity = "dark";
-
     };
-
   };
 }

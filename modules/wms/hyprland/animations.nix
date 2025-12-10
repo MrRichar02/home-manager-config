@@ -1,5 +1,8 @@
-{lib, config, ...}:
 {
+  lib,
+  config,
+  ...
+}: {
   options.myModules.hyprland1.animations.enable = lib.mkEnableOption "enables animations for hyprland config 1";
 
   config = lib.mkIf config.myModules.hyprland1.animations.enable {

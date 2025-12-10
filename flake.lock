@@ -346,11 +346,11 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1764084984,
-        "narHash": "sha256-aJ3TsQg0ECmjIoj2kP+6aSQuKQtjwaTGzzuLPaYLsy0=",
+        "lastModified": 1765382326,
+        "narHash": "sha256-QWHaXSzXZ2G29Z4axSAjTK82gHsAVVQlXw8U6xfpxoQ=",
         "owner": "MrRichar02",
         "repo": "kickstart-nix",
-        "rev": "7935e74ca88a4f20630d714d59c12a78bfa5987f",
+        "rev": "4da97c9f0606cbae32775f54d4a2719120c8e05a",
         "type": "github"
       },
       "original": {
@@ -495,16 +495,16 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1763966396,
-        "narHash": "sha256-6eeL1YPcY1MV3DDStIDIdy/zZCDKgHdkCmsrLJFiZf0=",
+        "lastModified": 1764983851,
+        "narHash": "sha256-y7RPKl/jJ/KAP/VKLMghMgXTlvNIJMHKskl8/Uuar7o=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5ae3b07d8d6527c42f17c876e404993199144b6a",
+        "rev": "d9bc5c7dceb30d8d6fafa10aeb6aa8a48c218454",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
-        "ref": "nixos-unstable",
+        "ref": "nixos-25.11",
         "repo": "nixpkgs",
         "type": "github"
       }

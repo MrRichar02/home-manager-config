@@ -46,12 +46,12 @@ in {
 
     prismlauncher
 
-		xfce.thunar
+    xfce.thunar
 
-		noto-fonts
-		noto-fonts-cjk-sans
-		
-		vscodium-fhs
-		zed-editor-fhs
+    noto-fonts
+    noto-fonts-cjk-sans
+
+    vscodium-fhs
+    zed-editor-fhs
   ];
 }

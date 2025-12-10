@@ -10,7 +10,7 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-		screenshotmango
+    screenshotmango
     brightnessctl
     inputs.mango.packages.${system}.mango
 
@@ -38,15 +38,17 @@ in {
 
     mars-mips
 
-		logisim-evolution
+    logisim-evolution
 
-		nerd-fonts.zed-mono
+    nerd-fonts.zed-mono
 
-		tmux
-		zed-editor-fhs
-		xfce.thunar
-		noto-fonts
-		noto-fonts-cjk-sans
-		quickshell
+    tmux
+    zed-editor-fhs
+    xfce.thunar
+    noto-fonts
+    noto-fonts-cjk-sans
+
+		nixd
+		alejandra
   ];
 }

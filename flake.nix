@@ -14,77 +14,74 @@
     kickstart-nix.url = "github:MrRichar02/kickstart-nix";
     zen-browser.url = "github:0xc000022070/zen-browser-flake";
     stylix.url = "github:danth/stylix/release-25.11";
-		mango = {
-			url = "github:DreamMaoMao/mangowc";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
-		nixGL = {
-			url = "github:nix-community/nixGL";
-			inputs.nixpkgs.follows = "nixpkgs";
-		};
+    mango = {
+      url = "github:DreamMaoMao/mangowc";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    nixGL = {
+      url = "github:nix-community/nixGL";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
-  outputs = { nixpkgs, home-manager, ... }@ inputs:
-    let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
-    in {
-      homeConfigurations = {
+  outputs = {
+    nixpkgs,
+    home-manager,
+    ...
+  } @ inputs: let
+    system = "x86_64-linux";
+    pkgs = nixpkgs.legacyPackages.${system};
+  in {
+    homeConfigurations = {
+      "thinkpad" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-        "thinkpad" = home-manager.lib.homeManagerConfiguration {
+        # Specify your home configuration modules here, for example,
+        # the path to your home.nix.
+        modules = [
+          ./hosts/thinkpad-x1
+          ./modules
+          inputs.stylix.homeModules.stylix
+        ];
 
-          inherit pkgs;
+        # Optionally use extraSpecialArgs
 
-          # Specify your home configuration modules here, for example,
-          # the path to your home.nix.
-          modules = [ 
-            ./hosts/thinkpad-x1
-            ./modules
-            inputs.stylix.homeModules.stylix
-          ];
+        extraSpecialArgs = {inherit inputs;};
 
+        # to pass through arguments to home.nix
+      };
 
-          # Optionally use extraSpecialArgs
+      "ideapad" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          extraSpecialArgs = { inherit inputs; };
+        modules = [
+          ./hosts/ideapad
+          ./modules
+          inputs.stylix.homeModules.stylix
+        ];
 
-          # to pass through arguments to home.nix
-        };
+        # Optionally use extraSpecialArgs
 
-        "ideapad" = home-manager.lib.homeManagerConfiguration {
+        extraSpecialArgs = {inherit inputs;};
 
-          inherit pkgs;
+        # to pass through arguments to home.nix
+      };
 
-          modules = [
-            ./hosts/ideapad
-            ./modules
-            inputs.stylix.homeModules.stylix
-          ];
+      "void" = home-manager.lib.homeManagerConfiguration {
+        inherit pkgs;
 
-          # Optionally use extraSpecialArgs
+        modules = [
+          ./hosts/void
+          ./modules
+          inputs.stylix.homeModules.stylix
+        ];
 
-          extraSpecialArgs = { inherit inputs; };
+        # Optionally use extraSpecialArgs
 
-          # to pass through arguments to home.nix
-        };
+        extraSpecialArgs = {inherit inputs;};
 
-        "void" = home-manager.lib.homeManagerConfiguration {
-
-          inherit pkgs;
-
-          modules = [
-            ./hosts/void
-            ./modules
-            inputs.stylix.homeModules.stylix
-          ];
-
-          # Optionally use extraSpecialArgs
-
-          extraSpecialArgs = { inherit inputs; };
-
-          # to pass through arguments to home.nix
-        };
-
+        # to pass through arguments to home.nix
       };
     };
+  };
 }

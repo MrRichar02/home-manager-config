@@ -1,9 +1,11 @@
-{lib, config, ...}:
 {
+  lib,
+  config,
+  ...
+}: {
   options.myModules.git.enable = lib.mkEnableOption "enables git module";
 
   config = lib.mkIf config.myModules.git.enable {
-
     programs.git = {
       enable = true;
       settings = {

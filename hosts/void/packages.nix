@@ -29,7 +29,7 @@ in {
     # inputs.nvf-flake.packages.${system}.default
     nvim-pkg
 
-		vscodium
+    vscodium
 
     #password manager
     bitwarden-desktop
@@ -49,8 +49,8 @@ in {
 
     mars-mips
 
-		fastfetch
+    fastfetch
 
-		logisim-evolution
+    logisim-evolution
   ];
 }

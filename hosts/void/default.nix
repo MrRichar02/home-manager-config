@@ -1,5 +1,4 @@
-{inputs, ...}:
-{
+{inputs, ...}: {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "docair";
@@ -9,18 +8,17 @@
     ./packages.nix
   ];
 
-	nix.nixPath = [ "nixpkgs=${inputs.nixpkgs}" ];
+  nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
 
-	programs.direnv = {
-		enable = true;
-		enableBashIntegration = true;
-		nix-direnv.enable = true;
-	};
+  programs.direnv = {
+    enable = true;
+    enableBashIntegration = true;
+    nix-direnv.enable = true;
+  };
 
-	programs.bash.shellAliases = {
-		ls = "ls --color=auto";
-	};
-
+  programs.bash.shellAliases = {
+    ls = "ls --color=auto";
+  };
 
   myModules = {
     tmux.enable = true;
@@ -45,8 +43,7 @@
 
     mpv.enable = true;
 
-		obsidian.enable = true;
-
+    obsidian.enable = true;
   };
 
   # This value determines the Home Manager release that your
@@ -61,7 +58,7 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-		XDG_DATA_DIRS="$HOME/.nix-profile/share:$HOME/.nix-profile/share/applications:/usr/local/share:/usr/share";
+    XDG_DATA_DIRS = "$HOME/.nix-profile/share:$HOME/.nix-profile/share/applications:/usr/local/share:/usr/share";
   };
 
   #Let Home Manager install and manage itself.

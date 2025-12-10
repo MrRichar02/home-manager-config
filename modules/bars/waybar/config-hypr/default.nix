@@ -3,21 +3,18 @@
   config,
   pkgs,
   ...
-}:
-let
-backlight-script = pkgs.writeShellScriptBin "backlight-script" ''
-PROCESS_NAME="hyprsunset"
-if pgrep "$PROCESS_NAME" > /dev/null; then
-  pkill -f "$PROCESS_NAME"
-	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light OFF"
-else
-  ${pkgs.hyprsunset}/bin/hyprsunset --temperature 5000 &
-	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light ON"
-fi
-'';
-
-in
-{
+}: let
+  backlight-script = pkgs.writeShellScriptBin "backlight-script" ''
+    PROCESS_NAME="hyprsunset"
+    if pgrep "$PROCESS_NAME" > /dev/null; then
+      pkill -f "$PROCESS_NAME"
+    	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light OFF"
+    else
+      ${pkgs.hyprsunset}/bin/hyprsunset --temperature 5000 &
+    	${pkgs.libnotify}/bin/notify-send -t 1300 -i "" "Blue light ON"
+    fi
+  '';
+in {
   options.myModules.waybar-hypr.enable = lib.mkEnableOption "enables waybar module";
 
   config = lib.mkIf config.myModules.waybar-hypr.enable {
@@ -63,7 +60,7 @@ in
             "device" = "intel_backlight";
             "format" = "{percent}% {icon}";
             "format-icons" = ["" ""];
-						"on-click" = "backlight-script";
+            "on-click" = "backlight-script";
           };
 
           "wireplumber" = {

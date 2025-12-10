@@ -3,17 +3,15 @@
   config,
   pkgs,
   ...
-}:
-{
+}: {
   options.myModules.rofi.enable = lib.mkEnableOption "enables rofi module";
 
   config = lib.mkIf config.myModules.rofi.enable {
-
     home.packages = with pkgs; [
       monocraft
     ];
 
-		fonts.fontconfig.enable = true;
+    fonts.fontconfig.enable = true;
 
     programs.rofi = {
       enable = true;
