@@ -32,6 +32,8 @@ in {
     vesktop
     zapzap
 
+		prismlauncher
+
     vscodium-fhs
 
     onlyoffice-desktopeditors
