@@ -53,5 +53,9 @@ in {
 
     vscodium-fhs
     zed-editor-fhs
+		heroic
+
+		nixd
+		alejandra
   ];
 }

@@ -28,6 +28,7 @@
     fastfetch.enable = true;
     yazi.enable = true;
     git.enable = true;
+		direnvnix.enable = true;
     rofi.enable = true;
     oh-my-posh.enable = false;
     starship.enable = true;
@@ -56,6 +57,7 @@
     taskwarrior.enable = true;
 
     quteBrowser.enable = true;
+		zen-browser.enable = true;
 
     mpv.enable = true;
 
@@ -72,12 +74,6 @@
     package = pkgs.rose-pine-cursor;
     name = "BreezeX-RosePine-Linux";
     size = 24;
-  };
-
-  programs.direnv = {
-    enable = true;
-    enableBashIntegration = true;
-    nix-direnv.enable = true;
   };
 
   # home.sessionVariables = {
