@@ -12,7 +12,13 @@
     # nixvim-flake.url = "github:MrRichar02/nixvim";
     # nvf-flake.url = "github:MrRichar02/nvf";
     kickstart-nix.url = "github:MrRichar02/kickstart-nix";
-    zen-browser.url = "github:0xc000022070/zen-browser-flake";
+    zen-browser = {
+      url = "github:0xc000022070/zen-browser-flake";
+      inputs = {
+        nixpkgs.follows = "nixpkgs";
+        home-manager.follows = "home-manager";
+      };
+    };
     stylix.url = "github:danth/stylix/release-25.11";
     mango = {
       url = "github:DreamMaoMao/mangowc";
