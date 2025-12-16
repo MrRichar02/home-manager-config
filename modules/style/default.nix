@@ -18,6 +18,7 @@
         kitty.enable = false;
         waybar.enable = false;
         # starship.enable = false;
+				zen-browser.profileNames = [ "default" ];
       };
 
       cursor = {
