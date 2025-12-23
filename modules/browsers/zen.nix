@@ -40,8 +40,12 @@
       defaultApplications = associations;
     };
 
+		home.packages = [pkgs.firefoxpwa];
+
     programs.zen-browser = {
       enable = true;
+
+			nativeMessagingHosts = [pkgs.firefoxpwa];
 
       policies = let
         mkLockedAttrs = builtins.mapAttrs (_: value: {
@@ -99,6 +103,7 @@
           };
           "languagetool-webextension@languagetool.org" = "languagetool";
           "{446900e4-71c2-419f-a6a7-df9c091e268b}" = "bitwarden-password-manager";
+					"firefoxpwa@filips.si" = "pwas-for-firefox";
           "{74145f27-f039-47ce-a470-a662b129930a}" = "clearurls";
           "@searchengineadremover" = "searchengineadremover";
           "jid1-BoFifL9Vbdl2zQ@jetpack" = "decentraleyes";
