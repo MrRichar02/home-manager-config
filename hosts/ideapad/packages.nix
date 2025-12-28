@@ -57,5 +57,7 @@ in {
 
 		nixd
 		alejandra
+
+		tldr
   ];
 }
