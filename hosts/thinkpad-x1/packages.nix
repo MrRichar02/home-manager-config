@@ -34,13 +34,11 @@ in {
 
 		prismlauncher
 
+		tldr
+
     vscodium-fhs
 
     onlyoffice-desktopeditors
-
-    mars-mips
-
-    logisim-evolution
 
     nerd-fonts.zed-mono
 
@@ -52,5 +50,7 @@ in {
 
 		nixd
 		alejandra
+
+		koodo-reader
   ];
 }
