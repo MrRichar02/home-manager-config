@@ -13,39 +13,51 @@ in {
     screenshotmango
     brightnessctl
     inputs.mango.packages.${system}.mango
-
-    heroic
-
+    #browsers
+    librewolf-bin
+    # inputs.zen-browser.packages."${system}".default # beta not sigma :(
     #editors
     # inputs.nvf-flake.packages.${system}.default
     nvim-pkg
 
+    #wallpaper
+    waypaper
+
     #password manager
     bitwarden-desktop
 
-    #wallpaper
-    waypaper
     #chat apps
     vesktop
     zapzap
 
-		prismlauncher
+    #note taking
+    obsidian
 
-		tldr
+    #sql things
+    dbeaver-bin
 
-    onlyoffice-desktopeditors
+    #request
+    postman
 
-    nerd-fonts.zed-mono
+    #meetings
+    zoom-us
 
-    tmux
-    zed-editor-fhs
+    mars-mips
+
+    prismlauncher
+
     xfce.thunar
+
     noto-fonts
     noto-fonts-cjk-sans
+
+    vscodium-fhs
+    zed-editor-fhs
+		heroic
 
 		nixd
 		alejandra
 
-		koodo-reader
+		tldr
   ];
 }
