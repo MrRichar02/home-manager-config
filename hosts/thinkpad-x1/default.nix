@@ -30,7 +30,7 @@
 
     vscode.enable = false;
 
-    waybar-mango.enable = true;
+    waybar-mango.enable = false;
 
     bash.enable = true;
 

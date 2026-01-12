@@ -10,9 +10,10 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+		waybar
     screenshotmango
     brightnessctl
-    inputs.mango.packages.${system}.mango
+    # inputs.mango.packages.${system}.mango
 
     heroic
 
@@ -38,7 +39,6 @@ in {
     nerd-fonts.zed-mono
 
     tmux
-    zed-editor-fhs
     xfce.thunar
     noto-fonts
     noto-fonts-cjk-sans
@@ -47,5 +47,8 @@ in {
 		alejandra
 
 		koodo-reader
+		zoom-us
+
+		hyprshot
   ];
 }
