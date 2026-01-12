@@ -89,21 +89,6 @@
         # to pass through arguments to home.nix
       };
 
-      "khan" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./hosts/khan
-          ./modules
-          inputs.stylix.homeModules.stylix
-        ];
-
-        # Optionally use extraSpecialArgs
-
-        extraSpecialArgs = {inherit inputs;};
-
-        # to pass through arguments to home.nix
-      };
     };
   };
 }

@@ -14,7 +14,6 @@ in {
     brightnessctl
     inputs.mango.packages.${system}.mango
     #browsers
-    librewolf-bin
     # inputs.zen-browser.packages."${system}".default # beta not sigma :(
     #editors
     # inputs.nvf-flake.packages.${system}.default
@@ -52,7 +51,6 @@ in {
     noto-fonts-cjk-sans
 
     vscodium-fhs
-    zed-editor-fhs
 		heroic
 
 		nixd
