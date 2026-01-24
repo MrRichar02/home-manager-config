@@ -1,4 +1,4 @@
-{
+{pkgs, lib, ...}: {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "docair";
@@ -19,6 +19,14 @@
     };
   };
 
+  # Style
+  myModules.stylix.enable = true;
+  stylix = {
+    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+    # base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+    image = lib.mkForce ./wallhaven-p9zjrj.png;
+  };
+
   myModules = {
     fastfetch.enable = true;
     yazi.enable = true;
@@ -35,18 +43,6 @@
     bash.enable = true;
 
     zoxide.enable = true;
-
-    # hyprland1 = {
-    #   enable = true;
-    #   animations.enable = true;
-    #   keybinds.enable = true;
-    #   windowRules.enable = true;
-    # };
-
-    stylix = {
-      enable = true;
-			image = ./wallhaven-gpl8d3.jpg;
-    };
 
     kitty.enable = true;
 
