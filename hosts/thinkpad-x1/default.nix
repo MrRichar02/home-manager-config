@@ -43,7 +43,10 @@
     #   windowRules.enable = true;
     # };
 
-    stylix.enable = true;
+    stylix = {
+      enable = true;
+			image = ./wallhaven-gpl8d3.jpg;
+    };
 
     kitty.enable = true;
 
@@ -52,7 +55,7 @@
     taskwarrior.enable = true;
 
     quteBrowser.enable = true;
-		zen-browser.enable = true;
+    zen-browser.enable = true;
 
     mpv.enable = true;
 

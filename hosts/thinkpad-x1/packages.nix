@@ -39,7 +39,9 @@ in {
     nerd-fonts.zed-mono
 
     tmux
-    xfce.thunar
+
+		kdePackages.dolphin
+
     noto-fonts
     noto-fonts-cjk-sans
 
@@ -50,5 +52,15 @@ in {
 		zoom-us
 
 		hyprshot
+		hyprsunset
+		hyprpicker
+		wiremix
+		helvum
+
+		pyprland
+		quickshell
+
+		pastel
+		clipse
   ];
 }

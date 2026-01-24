@@ -3,15 +3,19 @@
   lib,
   config,
   ...
-}: {
-  options.myModules.stylix.enable = lib.mkEnableOption "enables stylix module";
+}:
+let
+  cfg = config.myModules.stylix;
+in 
+{
+	options.myModules.stylix = {
+		enable = lib.mkEnableOption "Enable or disable custom stylix module";
 
-  config = lib.mkIf config.myModules.stylix.enable {
+  config = lib.mkIf cfg.enable {
     stylix = {
       enable = true;
       base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
       # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-
       targets = {
         rofi.enable = false;
         qutebrowser.enable = false;
