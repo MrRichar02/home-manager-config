@@ -1,4 +1,8 @@
-{pkgs, lib, ...}: {
+{
+  pkgs,
+  lib,
+  ...
+}: {
   # Home Manager needs a bit of information about you and the
   # paths it should manage.
   home.username = "docair";
@@ -21,11 +25,19 @@
 
   # Style
   myModules.stylix.enable = true;
-  stylix = {
-    # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
-    # base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
-    image = lib.mkForce ./wallhaven-p9zjrj.png;
+  # stylix = {
+  #   base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  #   base16Scheme = lib.mkForce "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  #   image = lib.mkForce ./wallhaven-gpl8d3.jpg;
+  # };
+
+  # Wayland compositor hyrpland
+  myModules.hyprland = {
+    enable = true;
+    pyprland.enable = true;
   };
+
+  wayland.windowManager.hyprland.settings.monitor = lib.mkForce ",1920x1080@60,auto,1";
 
   myModules = {
     fastfetch.enable = true;
@@ -37,8 +49,6 @@
     direnvnix.enable = true;
 
     vscode.enable = false;
-
-    waybar-mango.enable = false;
 
     bash.enable = true;
 

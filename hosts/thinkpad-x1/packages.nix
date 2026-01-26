@@ -57,10 +57,8 @@ in {
 		wiremix
 		helvum
 
-		pyprland
 		quickshell
 
 		pastel
-		clipse
   ];
 }
