@@ -8,19 +8,35 @@
 in {
   options.myModules.waybar = {
     enable = lib.mkEnableOption "Enables or disables waybar custom module";
-    isHyprland = lib.mkEnableOption "Enable waybar support for wayland compositor hyprland";
-    isMango = lib.mkEnableOption "Enable waybar support for wayland compositor mango";
+    compositor = lib.mkOption {
+      type = lib.types.enum ["hyprland" "mango"];
+      default = "hyprland";
+      description = "Wayland compositor where waybar is going to be use";
+    };
   };
   config = lib.mkIf cfg.enable {
     programs.waybar = {
       enable = true;
+      style =
+        {
+          hyprland = ./hyprland.css;
+          mango = ./mango.css;
+        }.${
+          cfg.compositor
+        };
       settings = {
         mainBar = {
           layer = "top";
           position = "top";
           height = 30;
           spacing = 0;
-          modules-left = [] ++ lib.optionals cfg.isHyprland ["hyprland/workspaces"];
+          modules-left =
+            {
+              hyprland = ["hyprland/workspaces"];
+              mango = ["ext/workspaces" "dwl/window"];
+            }.${
+              cfg.compositor
+            };
           modules-center = ["clock"];
           modules-right = [
             "tray"
@@ -46,6 +62,26 @@ in {
             "persistent-workspaces" = {
               "*" = 10;
             };
+          };
+
+          "ext/workspaces" = {
+            "format" = "{icon}";
+            "ignore-hidden" = false;
+            "on-click" = "activate";
+            "on-click-right" = "deactivate";
+            "sort-by-id" = true;
+            "format-icons" = {
+              "urgent" = "";
+              "active" = "";
+              "default" = "";
+            };
+          };
+
+          "dwl/tags" = {
+            "num-tags" = 9;
+          };
+          "dwl/window" = {
+            "format" = "{layout}";
           };
 
           "tray" = {

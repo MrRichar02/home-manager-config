@@ -24,12 +24,26 @@
     ./packages.nix
   ];
 
+  # Styles
+  myModules.stylix.enable = true;
+  # stylix = {
+  # image = ./wallhaven-e83378.jpg;
+  # base16Scheme = "${pkgs.base16-schemes}/share/themes/catppuccin-mocha.yaml";
+  # base16Scheme = "${pkgs.base16-schemes}/share/themes/gruvbox-dark-hard.yaml";
+  # };
+
+  # wayland compositor mangowc
+  myModules.waybar = {
+    enable = true;
+    compositor = "mango";
+  };
+
   myModules = {
     fastfetch.enable = true;
     yazi.enable = true;
     git.enable = true;
-		direnvnix.enable = true;
-		tmux.enable = true;
+    direnvnix.enable = true;
+    tmux.enable = true;
     rofi.enable = true;
     oh-my-posh.enable = false;
     starship.enable = true;
@@ -38,18 +52,9 @@
 
     vscode.enable = false;
 
-    waybar-mango.enable = true;
+    # waybar-mango.enable = true;
 
     bash.enable = true;
-
-    stylix.enable = true;
-
-    # hyprland2 = {
-    #   enable = true;
-    #   animations.enable = true;
-    #   keybinds.enable = true;
-    #   windowRules.enable = true;
-    # };
 
     kitty.enable = true;
 
@@ -58,7 +63,7 @@
     taskwarrior.enable = true;
 
     quteBrowser.enable = true;
-		zen-browser.enable = true;
+    zen-browser.enable = true;
 
     mpv.enable = true;
 

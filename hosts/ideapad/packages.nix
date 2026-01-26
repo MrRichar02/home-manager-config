@@ -32,30 +32,28 @@ in {
     #note taking
     obsidian
 
-    #sql things
-    dbeaver-bin
-
-    #request
-    postman
-
-    #meetings
-    zoom-us
-
-    mars-mips
-
     prismlauncher
 
-    xfce.thunar
+    kdePackages.dolphin
 
     noto-fonts
     noto-fonts-cjk-sans
-
-    vscodium-fhs
-		heroic
 
 		nixd
 		alejandra
 
 		tldr
+
+		wiremix
+		helvum
+		waybar
+		pastel
+
+		wlsunset
+		hyprpicker
+		wl-clipboard
+		cliphist
+		wl-clip-persist
+		clipse
   ];
 }

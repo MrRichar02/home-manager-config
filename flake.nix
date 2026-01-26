@@ -64,6 +64,7 @@
           ./hosts/ideapad
           ./modules
           inputs.stylix.homeModules.stylix
+					inputs.mango.hmModules.mango
         ];
 
         # Optionally use extraSpecialArgs
