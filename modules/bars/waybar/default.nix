@@ -131,8 +131,20 @@ in {
             # // "device"= "acpi_video1";
             "format" = "{percent}% {icon}";
             "format-icons" = ["" "" "" "" "" "" "" "" ""];
-            "on-click" = "hyprsunset -t 5000";
-            "on-click-right" = "pkill hyprsunset";
+            "on-click" =
+              {
+                hyrpland = "${pkgs.hyprsunset}/bin/hyprsunset -t 5000";
+                mango = "${pkgs.wlsunset}/bin/wlsunset";
+              }.${
+                cfg.compositor
+              };
+            "on-click-right" =
+              {
+                hyprland = "pkill hyprsunset";
+                mango = "pkill wlsunset";
+              }.${
+                cfg.compositor
+              };
           };
 
           "battery" = {
