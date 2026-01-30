@@ -170,7 +170,17 @@ in {
             "tooltip-format" = "{ifname} via {gwaddr} ";
             "format-linked" = "{ifname} (No IP) ";
             "format-disconnected" = "Disconnected ⚠";
-            "format-alt" = "{ifname}: {ipaddr}/{cidr}";
+            # "format-alt" = "{ifname}: {ipaddr}/{cidr}";
+            "on-click-right" = let
+              scriptWifi = pkgs.writeShellScript "scriptWifi" ''
+
+                nmcli_output=$(nmcli -t -f SIGNAL,RATE,SSID,BSSID device wifi list | sort -t: -k1 -nr | ${pkgs.fzf}/bin/fzf)
+                ssid=$(echo "$nmcli_output" | awk -F: '{print $3}')
+                bssid=$(echo "$nmcli_output" | awk -F: '{print $4,$5,$6,$7,$8,$9}' | sed 's/\\ /:/g')
+                nmcli connection modify "$ssid" wifi.bssid "$bssid" && nmcli connection down "$ssid" && nmcli connection up "$ssid"
+
+              '';
+            in "kitty --detach --app-id floatingTui ${scriptWifi}";
           };
 
           "wireplumber" = {
