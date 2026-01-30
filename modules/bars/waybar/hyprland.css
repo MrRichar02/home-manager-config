@@ -5,8 +5,8 @@
 }
 
 window#waybar {
-    background-color: rgba(196, 170, 113, 0.7);
-    border-bottom: 3px solid rgba(187, 152, 62, 0.8);
+    background-color: rgba(74, 56, 126, 0.2);
+    border-bottom: 3px solid rgba(74, 56, 126, 0.5);
     color: #ffffff;
     transition-property: background-color;
     transition-duration: .5s;
@@ -56,22 +56,21 @@ button:hover {
 #workspaces button {
     padding: 0 5px;
     background-color: transparent;
-    color: #5A6C49;
+    color: #FAD2AE;
 }
 
 #workspaces button:hover {
     background: rgba(0, 0, 0, 0.2);
 }
 
-#workspaces button.active {
-    /* background-color: #64727D; */
-	  color: #5A6C49;
-    box-shadow: inset 0 -3px #5A6C49;
+#workspaces button.empty {
+		color: #FFF;
 }
 
-#workspaces button.hidden {
+#workspaces button.active {
     /* background-color: #64727D; */
-	  color: #ffffff;
+    box-shadow: inset 0 -3px #DCA274;
+		color: #FAD2AE;
 }
 
 #workspaces button.urgent {
@@ -85,7 +84,7 @@ button:hover {
 
 #clock {
 	font-size: 15px;
-	background-color: #bb995a;
+	background-color: #1D1E57;
 	padding: 0 10px;
 	color: #ffffff;
 }
@@ -127,7 +126,7 @@ button:hover {
 }
 
 #battery {
-    background-color: #ebe6c8;
+    background-color: #c4dbfd;
     color: #000000;
 }
 
@@ -159,21 +158,21 @@ label:focus {
 }
 
 #cpu {
-    background-color: #a5986b;
+    background-color: #d09bee;
     color: #000000;
 }
 
 #memory {
-    background-color: #c8be98;
-		color: #000000;
+    background-color: #ccbcf6;
+		color: #000;
 }
 
 #backlight {
-    background-color: #827240;
+    background-color: #a480df;
 }
 
 #network {
-    background-color: #957f48;
+    background-color: #7767d0;
 }
 
 #network.disconnected {
@@ -181,7 +180,7 @@ label:focus {
 }
 
 #wireplumber {
-    background-color: #a88c51;
+    background-color: #604fa5;
     color: #FFF;
 }
 

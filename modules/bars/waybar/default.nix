@@ -133,7 +133,7 @@ in {
             "format-icons" = ["" "" "" "" "" "" "" "" ""];
             "on-click" =
               {
-                hyrpland = "${pkgs.hyprsunset}/bin/hyprsunset -t 5000";
+                hyprland = "${pkgs.hyprsunset}/bin/hyprsunset -t 5000";
                 mango = "${pkgs.wlsunset}/bin/wlsunset";
               }.${
                 cfg.compositor
@@ -171,6 +171,7 @@ in {
             "format-linked" = "{ifname} (No IP) ";
             "format-disconnected" = "Disconnected ⚠";
             # "format-alt" = "{ifname}: {ipaddr}/{cidr}";
+						"on-click" = "kitty --detach nmtui";
             "on-click-right" = let
               scriptWifi = pkgs.writeShellScript "scriptWifi" ''
 
@@ -180,14 +181,14 @@ in {
                 nmcli connection modify "$ssid" wifi.bssid "$bssid" && nmcli connection down "$ssid" && nmcli connection up "$ssid"
 
               '';
-            in "kitty --detach --app-id floatingTui ${scriptWifi}";
+            in "kitty --detach --title floatingTui ${scriptWifi}";
           };
 
           "wireplumber" = {
             "format" = "{volume}% {icon}";
             "format-muted" = "";
             "on-click" = "helvum";
-            "on-click-right" = "kitty --detach --class wiremix wiremix";
+            "on-click-right" = "kitty --detach --title floatingTui wiremix";
             "format-icons" = ["" "" ""];
           };
           "wireplumber#source" = {

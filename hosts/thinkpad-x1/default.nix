@@ -39,6 +39,11 @@
 
   wayland.windowManager.hyprland.settings.monitor = lib.mkForce ",1920x1080@60,auto,1";
 
+  # Bar
+  myModules.waybar = {
+    enable = true;
+  };
+
   myModules = {
     fastfetch.enable = true;
     yazi.enable = true;
