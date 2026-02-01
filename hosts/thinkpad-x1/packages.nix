@@ -60,5 +60,7 @@ in {
 		quickshell
 
 		pastel
+
+		wl-clipboard
   ];
 }

@@ -15,6 +15,19 @@
     #     };
     #   });
     # })
+
+    (final: prev: {
+      clipse = prev.clipse.overrideAttrs (old: rec {
+        version = "1.2.1";
+        src = old.src.override {
+          rev = "v${version}";
+          hash = "sha256-iDMHEhYuxspBYG54WivnVj2GfMxAc5dcrjNxtAMhsck=";
+        };
+        vendorHash = "sha256-rq+2UhT/kAcYMdla+Z/11ofNv2n4FLvpVgHZDe0HqX4=";
+        tags = ["wayland"];
+      });
+    })
+
     (final: prev: {
       mars-mips = prev.mars-mips.overrideAttrs (old: {
         installPhase =
