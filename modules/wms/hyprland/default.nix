@@ -11,7 +11,6 @@ in {
   };
 
   imports = [
-    ./pyprland.nix
     ./keybinds.nix
     ./rules.nix
   ];

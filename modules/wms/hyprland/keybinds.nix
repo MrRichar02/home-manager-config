@@ -18,11 +18,22 @@
     "$mainMod" = "SUPER"; # Sets "Windows" key as main modifier
 
     # Example binds, see https://wiki.hypr.land/Configuring/Binds/ for more
-    bind = [
+    bind = let
+      zoomScript = pkgs.writeShellScript "zoomScript" ''
+        is_zoom_in=$(hyprctl getoption cursor:zoom_factor | head -n1 | awk '{print $2}' | awk '{print ($1>1)}')
+
+        if [ $is_zoom_in -eq 1 ]; then
+        	hyprctl keyword cursor:zoom_factor 1
+        else
+        	hyprctl keyword cursor:zoom_factor 1.6
+        		fi
+      '';
+    in [
       "$mainMod, Return, exec, $terminal"
       "$mainMod, Q, killactive,"
       "$mainMod, M, exit,"
       "$mainMod, E, exec, $fileManager"
+      "$mainMod, Z, exec, ${zoomScript}"
       "$mainMod, W, exec, $browser"
       "$mainMod, F, togglefloating,"
       "$mainMod SHIFT, F, fullscreen,"

@@ -34,7 +34,6 @@
   # Wayland compositor hyrpland
   myModules.hyprland = {
     enable = true;
-    pyprland.enable = true;
   };
 
   wayland.windowManager.hyprland.settings.monitor = lib.mkForce ",1920x1080@60,auto,1";
