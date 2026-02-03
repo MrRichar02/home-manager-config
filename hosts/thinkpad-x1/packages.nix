@@ -10,7 +10,7 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-		waybar
+    waybar
     screenshotmango
     brightnessctl
     # inputs.mango.packages.${system}.mango
@@ -30,9 +30,9 @@ in {
     vesktop
     zapzap
 
-		prismlauncher
+    prismlauncher
 
-		tldr
+    tldr
 
     onlyoffice-desktopeditors
 
@@ -40,27 +40,28 @@ in {
 
     tmux
 
-		kdePackages.dolphin
+    kdePackages.dolphin
 
     noto-fonts
     noto-fonts-cjk-sans
 
-		nixd
-		alejandra
+    nixd
+    alejandra
 
-		koodo-reader
-		zoom-us
+    koodo-reader
+    zoom-us
 
-		hyprshot
-		hyprsunset
-		hyprpicker
-		wiremix
-		helvum
+    hyprshot
+    hyprsunset
+    hyprpicker
+    wiremix
+    helvum
 
-		quickshell
+    quickshell
 
-		pastel
+    pastel
 
-		wl-clipboard
+    wl-clipboard
+    brave
   ];
 }
