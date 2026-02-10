@@ -18,6 +18,7 @@
       "workspace 5 silent, class:ZapZap"
       "workspace 5 silent, class:vesktop"
       "workspace 10 silent, title:.*YouTube Music.*"
+      "workspace 9 silent, title:.*udearroba.zoom.us.*"
 
       # Ignore maximize requests from apps. You'll probably like this.
       "suppressevent maximize, class:.*"

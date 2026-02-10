@@ -28,12 +28,20 @@
         	hyprctl keyword cursor:zoom_factor 1.6
         		fi
       '';
+      classScript = pkgs.writeShellScript "classScript" ''
+        class=$(cat "$HOME/.config/rofi/clases.txt" | rofi -dmenu -p 'Udearroba class' | awk -F '  ' '{print $2}')
+
+        if [ "$class" != "" ]; then
+        	qutebrowser --target private-window $class
+        fi
+      '';
     in [
       "$mainMod, Return, exec, $terminal"
       "$mainMod, Q, killactive,"
       "$mainMod, M, exit,"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, Z, exec, ${zoomScript}"
+      "$mainMod, U, exec, ${classScript}"
       "$mainMod, W, exec, $browser"
       "$mainMod, F, togglefloating,"
       "$mainMod SHIFT, F, fullscreen,"
@@ -83,7 +91,7 @@
       "$mainMod SHIFT, S, movetoworkspace, special:magic"
 
       # ClipboardManager + Color picker
-      "SUPER, C, exec, ${pkgs.kitty}/bin/kitty --title floatingTui -e '${pkgs.clipse}/bin/clipse'"
+      "$mainMod, C, exec, ${pkgs.kitty}/bin/kitty --title floatingTui -e '${pkgs.clipse}/bin/clipse'"
       "$mainMod SHIFT, C, exec, ${pkgs.hyprpicker}/bin/hyprpicker | ${pkgs.wl-clipboard}/bin/wl-copy -n"
 
       # Scroll through existing workspaces with mainMod + scroll
