@@ -10,6 +10,7 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
+		utilities-menu
     screenshotmango
     brightnessctl
     inputs.mango.packages.${system}.mango
@@ -55,5 +56,7 @@ in {
 		cliphist
 		wl-clip-persist
 		clipse
+		brave
+		heroic
   ];
 }

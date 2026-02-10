@@ -63,7 +63,7 @@
     taskwarrior.enable = true;
 
     quteBrowser.enable = true;
-    zen-browser.enable = true;
+    # zen-browser.enable = true;
 
     mpv.enable = true;
 

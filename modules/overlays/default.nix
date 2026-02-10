@@ -41,6 +41,21 @@
                 desc = "Clasess launcher";
                 key = "c";
               }
+              {
+                cmd = pkgs.writeShellScript "powerMenu" ''
+                  selection=$(echo "|" | rofi -dmenu -sep '|')
+
+                  if [ "$selection" == "" ]; then
+                  	shutdown -h now
+
+                  		elif [ "$selection" == "" ]; then
+                  		reboot
+                  		fi
+                '';
+
+                desc = "Power menu (shutdown or reboot)";
+                key = "p";
+              }
             ];
           });
       in
