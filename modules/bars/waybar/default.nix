@@ -62,6 +62,8 @@ in {
             "persistent-workspaces" = {
               "*" = 10;
             };
+						"show-special" = true;
+						"special-visible-only" = true;
           };
 
           "ext/workspaces" = {

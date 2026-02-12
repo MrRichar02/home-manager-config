@@ -28,11 +28,11 @@
         	hyprctl keyword cursor:zoom_factor 1.6
         		fi
       '';
-      classScript = pkgs.writeShellScript "classScript" ''
-        class=$(cat "$HOME/.config/rofi/clases.txt" | rofi -dmenu -p 'Udearroba class' | awk -F '  ' '{print $2}')
+      specialWorkspaceScript = pkgs.writeShellScript "specialWorkspaceScript" ''
+        workspace_name=$(hyprctl monitors -j | ${lib.getExe pkgs.jq} -r ".[0].specialWorkspace.name" | awk -F ':' '{print $2}')
 
-        if [ "$class" != "" ]; then
-        	qutebrowser --target private-window $class
+        if [ -n "$workspace_name" ]; then
+        	hyprctl dispatch togglespecialworkspace $workspace_name
         fi
       '';
     in [
@@ -41,7 +41,7 @@
       "$mainMod, M, exit,"
       "$mainMod, E, exec, $fileManager"
       "$mainMod, Z, exec, ${zoomScript}"
-      "$mainMod, U, exec, ${classScript}"
+      "$mainMod, U, exec, ${lib.getExe pkgs.utilities-menu}"
       "$mainMod, W, exec, $browser"
       "$mainMod, F, togglefloating,"
       "$mainMod SHIFT, F, fullscreen,"
@@ -88,7 +88,10 @@
 
       # Example special workspace (scratchpad)
       "$mainMod, S, togglespecialworkspace, magic"
-      "$mainMod SHIFT, S, movetoworkspace, special:magic"
+      "$mainMod SHIFT, S, exec, ${specialWorkspaceScript}"
+
+      "$mainMod, N, togglespecialworkspace, redhat"
+      "$mainMod SHIFT, N, movetoworkspace, special:magic"
 
       # ClipboardManager + Color picker
       "$mainMod, C, exec, ${pkgs.kitty}/bin/kitty --title floatingTui -e '${pkgs.clipse}/bin/clipse'"

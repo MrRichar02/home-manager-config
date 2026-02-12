@@ -39,7 +39,7 @@
           canvas_reading = false;
           cookies = {
             store = true;
-            accept = "no-3rdparty";
+            accept = "all";
           };
           geolocation = false;
           blocking = {
