@@ -87,7 +87,10 @@
       "$mainMod SHIFT, 0, movetoworkspace, 10"
 
       # Example special workspace (scratchpad)
-      "$mainMod, S, togglespecialworkspace, magic"
+      # "$mainMod, S, togglespecialworkspace, magic"
+
+      # scratchpads
+      "$mainMod, S, exec, ${lib.getExe pkgs.scratchpads-hyprland-menu}"
       "$mainMod SHIFT, S, exec, ${specialWorkspaceScript}"
 
       "$mainMod, N, togglespecialworkspace, redhat"

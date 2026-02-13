@@ -19,6 +19,7 @@
       "workspace 5 silent, class:vesktop"
       "workspace 10 silent, title:.*YouTube Music.*"
       "workspace 9 silent, title:.*udearroba.zoom.us.*"
+      "workspace special:password-manager, title:Bitwarden"
 
       # Ignore maximize requests from apps. You'll probably like this.
       "suppressevent maximize, class:.*"
