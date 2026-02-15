@@ -50,7 +50,6 @@ in {
     alejandra
 
     koodo-reader
-    zoom-us
 
     hyprshot
     hyprsunset
