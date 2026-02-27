@@ -8,6 +8,7 @@
     ./java-applications.nix
     ./utilities-menu.nix
 		./scratchpads-hyprland-menu.nix
+		./layouts-menu.nix
   ];
   nixpkgs.overlays = [
     inputs.kickstart-nix.overlays.default

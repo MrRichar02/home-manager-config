@@ -13,6 +13,7 @@ in {
   imports = [
     ./keybinds.nix
     ./rules.nix
+		./plugins.nix
   ];
 
   config = lib.mkIf cfg.enable {
@@ -122,7 +123,7 @@ in {
           # Please see https://wiki.hypr.land/Configuring/Tearing/ before you turn this on
           allow_tearing = false;
 
-          layout = "dwindle";
+          layout = "scrolling";
         };
 
         # https://wiki.hypr.land/Configuring/Variables/#decoration

@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgsu,
   inputs,
   ...
 }: let
@@ -49,7 +50,7 @@ in {
     nixd
     alejandra
 
-    koodo-reader
+    somebar
 
     hyprshot
     hyprsunset
@@ -63,5 +64,7 @@ in {
 
     wl-clipboard
     brave
+
+		pkgsu.vscodium-fhs
   ];
 }

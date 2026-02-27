@@ -32,11 +32,13 @@
 
   outputs = {
     nixpkgs,
+    nixpkgs-unstable,
     home-manager,
     ...
   } @ inputs: let
     system = "x86_64-linux";
     pkgs = nixpkgs.legacyPackages.${system};
+    pkgsu = nixpkgs-unstable.legacyPackages.${system};
   in {
     homeConfigurations = {
       "thinkpad" = home-manager.lib.homeManagerConfiguration {
@@ -52,7 +54,7 @@
 
         # Optionally use extraSpecialArgs
 
-        extraSpecialArgs = {inherit inputs;};
+        extraSpecialArgs = {inherit inputs; inherit pkgsu;};
 
         # to pass through arguments to home.nix
       };

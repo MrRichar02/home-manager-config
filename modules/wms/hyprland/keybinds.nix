@@ -42,6 +42,7 @@
       "$mainMod, E, exec, $fileManager"
       "$mainMod, Z, exec, ${zoomScript}"
       "$mainMod, U, exec, ${lib.getExe pkgs.utilities-menu}"
+      "$mainMod, Y, exec, ${lib.getExe pkgs.layouts-hyprland-menu}"
       "$mainMod, W, exec, $browser"
       "$mainMod, F, togglefloating,"
       "$mainMod SHIFT, F, fullscreen,"
@@ -50,9 +51,10 @@
       # bind = $mainMod, P, pseudo, # dwindle
       # bind = $mainMod, J, togglesplit, # dwindle
 
+
       # Move focus with mainMod + arrow keys
-      "$mainMod, L, movefocus, l"
-      "$mainMod, H, movefocus, r"
+      "$mainMod, L, movefocus, r"
+      "$mainMod, H, movefocus, l"
       "$mainMod, K, movefocus, u"
       "$mainMod, J, movefocus, d"
 
