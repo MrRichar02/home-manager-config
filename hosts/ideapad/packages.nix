@@ -1,5 +1,6 @@
 {
   pkgs,
+  pkgsu,
   inputs,
   ...
 }: let
@@ -10,8 +11,9 @@ in {
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-		utilities-menu
+    utilities-menu
     screenshotmango
+    layouts-mango-menu
     brightnessctl
     inputs.mango.packages.${system}.mango
     #browsers
@@ -40,23 +42,26 @@ in {
     noto-fonts
     noto-fonts-cjk-sans
 
-		nixd
-		alejandra
+    nixd
+    alejandra
 
-		tldr
+    tldr
 
-		wiremix
-		helvum
-		waybar
-		pastel
+    wiremix
+    helvum
+    waybar
+    pastel
 
-		wlsunset
-		hyprpicker
-		wl-clipboard
-		cliphist
-		wl-clip-persist
-		clipse
-		brave
-		heroic
+    wlsunset
+    hyprpicker
+    wl-clipboard
+    cliphist
+    wl-clip-persist
+    clipse
+    brave
+    heroic
+    localsend
+
+    pkgsu.vscodium-fhs
   ];
 }

@@ -71,7 +71,7 @@
 
         # Optionally use extraSpecialArgs
 
-        extraSpecialArgs = {inherit inputs;};
+        extraSpecialArgs = {inherit inputs; inherit pkgsu;};
 
         # to pass through arguments to home.nix
       };

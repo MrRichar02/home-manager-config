@@ -6,9 +6,7 @@
 }: {
   imports = [
     ./java-applications.nix
-    ./utilities-menu.nix
-		./scratchpads-hyprland-menu.nix
-		./layouts-menu.nix
+		./wlr-which-key-menus.nix
   ];
   nixpkgs.overlays = [
     inputs.kickstart-nix.overlays.default

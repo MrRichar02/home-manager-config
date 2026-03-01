@@ -33,7 +33,7 @@ in {
           modules-left =
             {
               hyprland = ["hyprland/workspaces"];
-              mango = ["ext/workspaces" "dwl/window"];
+              mango = ["ext/workspaces" "custom/music" "dwl/window"];
             }.${
               cfg.compositor
             };
@@ -62,8 +62,8 @@ in {
             "persistent-workspaces" = {
               "*" = 10;
             };
-						"show-special" = true;
-						"special-visible-only" = true;
+            "show-special" = true;
+            "special-visible-only" = true;
           };
 
           "ext/workspaces" = {
@@ -77,6 +77,11 @@ in {
               "active" = "";
               "default" = "";
             };
+          };
+
+          "custom/music" = {
+            format = "";
+            "on-click" = "mmsg -d toggle_named_scratchpad,brave-music.youtube.com__-Default,YouTube Music,brave --app='https://music.youtube.com'";
           };
 
           "dwl/tags" = {
@@ -173,7 +178,7 @@ in {
             "format-linked" = "{ifname} (No IP) ";
             "format-disconnected" = "Disconnected ⚠";
             # "format-alt" = "{ifname}: {ipaddr}/{cidr}";
-						"on-click" = "kitty --detach nmtui";
+            "on-click" = "kitty --detach nmtui";
             "on-click-right" = let
               scriptWifi = pkgs.writeShellScript "scriptWifi" ''
 
