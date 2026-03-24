@@ -32,11 +32,6 @@ in {
     vesktop
     zapzap
 
-    #note taking
-    obsidian
-
-    prismlauncher
-
     kdePackages.dolphin
 
     noto-fonts
@@ -59,9 +54,15 @@ in {
     wl-clip-persist
     clipse
     brave
-    heroic
     localsend
 
     pkgsu.vscodium-fhs
+		foot
+		nerd-fonts.jetbrains-mono
+
+		joplin-desktop
+		zettlr
+		teams-for-linux #:(
+		pavucontrol
   ];
 }

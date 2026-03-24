@@ -38,6 +38,8 @@
     compositor = "mango";
   };
 
+	programs.nix-index-database.comma.enable = true;
+
   myModules = {
     fastfetch.enable = true;
     yazi.enable = true;

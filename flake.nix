@@ -28,6 +28,10 @@
       url = "github:nix-community/nixGL";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nix-index-database = {
+      url = "github:nix-community/nix-index-database";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = {
@@ -54,7 +58,10 @@
 
         # Optionally use extraSpecialArgs
 
-        extraSpecialArgs = {inherit inputs; inherit pkgsu;};
+        extraSpecialArgs = {
+          inherit inputs;
+          inherit pkgsu;
+        };
 
         # to pass through arguments to home.nix
       };
@@ -66,12 +73,16 @@
           ./hosts/ideapad
           ./modules
           inputs.stylix.homeModules.stylix
-					inputs.mango.hmModules.mango
+          inputs.mango.hmModules.mango
+					inputs.nix-index-database.homeModules.default
         ];
 
         # Optionally use extraSpecialArgs
 
-        extraSpecialArgs = {inherit inputs; inherit pkgsu;};
+        extraSpecialArgs = {
+          inherit inputs;
+          inherit pkgsu;
+        };
 
         # to pass through arguments to home.nix
       };
@@ -91,7 +102,6 @@
 
         # to pass through arguments to home.nix
       };
-
     };
   };
 }

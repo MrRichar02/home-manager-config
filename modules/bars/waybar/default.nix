@@ -80,7 +80,7 @@ in {
           };
 
           "custom/music" = {
-            format = "";
+            "format" = "󰽰";
             "on-click" = "mmsg -d toggle_named_scratchpad,brave-music.youtube.com__-Default,YouTube Music,brave --app='https://music.youtube.com'";
           };
 
