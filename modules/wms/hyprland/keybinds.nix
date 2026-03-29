@@ -29,12 +29,28 @@
         		fi
       '';
       specialWorkspaceScript = pkgs.writeShellScript "specialWorkspaceScript" ''
-        workspace_name=$(hyprctl monitors -j | ${lib.getExe pkgs.jq} -r ".[0].specialWorkspace.name" | awk -F ':' '{print $2}')
+        workspace_name=$(hyprctl monitors -j | ${lib.getExe pkgs.jq} -r ".[1].specialWorkspace.name" | awk -F ':' '{print $2}')
 
         if [ -n "$workspace_name" ]; then
         	hyprctl dispatch togglespecialworkspace $workspace_name
         fi
       '';
+
+			# Lo que saco gpt chino we
+      # specialWorkspaceScript = pkgs.writeShellScript "specialWorkspaceScript" ''
+      #   set -euo pipefail
+      #
+      #   workspace_name=$(hyprctl monitors -j 2>/dev/null | \
+      #     ${lib.getExe pkgs.jq} -r '.[] | select(.focused == true) | .specialWorkspace.name // empty' | \
+      #     awk -F ':' '{print $2}')
+      #
+      #   if [ -n "$workspace_name" ]; then
+      #     exec hyprctl dispatch togglespecialworkspace "$workspace_name"
+      #   else
+      #     echo "Error: Could not determine special workspace" >&2
+      #     exit 1
+      #   fi
+      # '';
     in [
       "$mainMod, Return, exec, $terminal"
       "$mainMod, Q, killactive,"
@@ -50,7 +66,6 @@
       "$mainMod, D, exec, $menu"
       # bind = $mainMod, P, pseudo, # dwindle
       # bind = $mainMod, J, togglesplit, # dwindle
-
 
       # Move focus with mainMod + arrow keys
       "$mainMod, L, movefocus, r"

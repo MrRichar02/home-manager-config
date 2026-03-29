@@ -66,5 +66,7 @@ in {
     brave
 
 		pkgsu.vscodium-fhs
+
+		joplin-desktop
   ];
 }

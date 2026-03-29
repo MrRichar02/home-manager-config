@@ -36,7 +36,7 @@
     enable = true;
   };
 
-  wayland.windowManager.hyprland.settings.monitor = lib.mkForce ",1920x1080@60,auto,1";
+  #wayland.windowManager.hyprland.settings.monitor = lib.mkForce ",1920x1080@60,auto,1";
 
   # Bar
   myModules.waybar = {
@@ -67,8 +67,6 @@
     quteBrowser.enable = true;
 
     mpv.enable = true;
-
-    obsidian.enable = true;
   };
 
   myServices = {

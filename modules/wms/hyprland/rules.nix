@@ -32,5 +32,17 @@
       "float,title:(floatingTui)" # ensure you have a floating window class set if you want this behavior
       "size 1700 1000,title:(floatingTui)" # set the size of the window as necessary
     ];
+    workspace = [
+      "1, monitor:HDMI-A-1, default:true"
+      "2, monitor:HDMI-A-1, default:true"
+      "3, monitor:HDMI-A-1, default:true"
+      "4, monitor:HDMI-A-1, default:true"
+      "5, monitor:HDMI-A-1, default:true"
+      "6, monitor:HDMI-A-1, default:true"
+      "7, monitor:HDMI-A-1, default:true"
+      "8, monitor:HDMI-A-1, default:true"
+      "9, monitor:HDMI-A-1, default:true"
+      "10, monitor:HDMI-A-1, default:true"
+    ];
   };
 }

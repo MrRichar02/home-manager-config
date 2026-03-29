@@ -30,6 +30,7 @@ in {
           position = "top";
           height = 30;
           spacing = 0;
+          output = ["HDMI-A-1"];
           modules-left =
             {
               hyprland = ["hyprland/workspaces"];
@@ -51,7 +52,7 @@ in {
 
           "hyprland/workspaces" = {
             "disable-scroll" = true;
-            "all-outputs" = true;
+            "all-outputs" = false;
             "warp-on-scroll" = false;
             "format" = "{name}: {icon}";
             "format-icons" = {
@@ -60,10 +61,11 @@ in {
               "persistent" = "";
             };
             "persistent-workspaces" = {
-              "*" = 10;
+              "HDMI-A-1" = [1 2 3 4 5 6 7 8 9 10];
             };
             "show-special" = true;
             "special-visible-only" = true;
+            "persistent-only" = true;
           };
 
           "ext/workspaces" = {
