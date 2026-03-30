@@ -37,12 +37,12 @@
       "2, monitor:HDMI-A-1, default:true"
       "3, monitor:HDMI-A-1, default:true"
       "4, monitor:HDMI-A-1, default:true"
-      "5, monitor:HDMI-A-1, default:true"
+      "5, monitor:eDP-1, default:true"
       "6, monitor:HDMI-A-1, default:true"
-      "7, monitor:HDMI-A-1, default:true"
-      "8, monitor:HDMI-A-1, default:true"
-      "9, monitor:HDMI-A-1, default:true"
-      "10, monitor:HDMI-A-1, default:true"
+      "7, monitor:eDP-1, default:true"
+      "8, monitor:eDP-1, default:true"
+      "9, monitor:eDP-1, default:true"
+      "10, monitor:eDP-1, default:true"
     ];
   };
 }

@@ -30,7 +30,7 @@ in {
           position = "top";
           height = 30;
           spacing = 0;
-          output = ["HDMI-A-1"];
+          # output = ["HDMI-A-1"];
           modules-left =
             {
               hyprland = ["hyprland/workspaces"];
@@ -61,7 +61,9 @@ in {
               "persistent" = "";
             };
             "persistent-workspaces" = {
-              "HDMI-A-1" = [1 2 3 4 5 6 7 8 9 10];
+							"*" = [1 2 3 4 5 6 7 8 9 10];
+              # "HDMI-A-1" = [1 2 3 4 6];
+              # "eDP-1" = [5 7 8 9 10];
             };
             "show-special" = true;
             "special-visible-only" = true;
