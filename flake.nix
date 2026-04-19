@@ -32,76 +32,17 @@
       url = "github:nix-community/nix-index-database";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    flake-parts.url = "github:hercules-ci/flake-parts";
+    import-tree.url = "github:vic/import-tree";
   };
 
   outputs = {
     nixpkgs,
     nixpkgs-unstable,
     home-manager,
+    flake-parts,
     ...
-  } @ inputs: let
-    system = "x86_64-linux";
-    pkgs = nixpkgs.legacyPackages.${system};
-    pkgsu = nixpkgs-unstable.legacyPackages.${system};
-  in {
-    homeConfigurations = {
-      "thinkpad" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
+  } @ inputs: 
+    flake-parts.lib.mkFlake {inherit inputs;} (inputs.import-tree ./modules);
 
-        # Specify your home configuration modules here, for example,
-        # the path to your home.nix.
-        modules = [
-          ./hosts/thinkpad-x1
-          ./modules
-          inputs.stylix.homeModules.stylix
-        ];
-
-        # Optionally use extraSpecialArgs
-
-        extraSpecialArgs = {
-          inherit inputs;
-          inherit pkgsu;
-        };
-
-        # to pass through arguments to home.nix
-      };
-
-      "ideapad" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./hosts/ideapad
-          ./modules
-          inputs.stylix.homeModules.stylix
-          inputs.mango.hmModules.mango
-					inputs.nix-index-database.homeModules.default
-        ];
-
-        # Optionally use extraSpecialArgs
-
-        extraSpecialArgs = {
-          inherit inputs;
-          inherit pkgsu;
-        };
-
-        # to pass through arguments to home.nix
-      };
-
-      "void" = home-manager.lib.homeManagerConfiguration {
-        inherit pkgs;
-
-        modules = [
-          ./hosts/void
-          ./modules
-          inputs.stylix.homeModules.stylix
-        ];
-
-        # Optionally use extraSpecialArgs
-
-        extraSpecialArgs = {inherit inputs;};
-
-        # to pass through arguments to home.nix
-      };
-    };
-  };
 }
