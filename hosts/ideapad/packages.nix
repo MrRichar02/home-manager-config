@@ -61,7 +61,6 @@ in {
 		nerd-fonts.jetbrains-mono
 
 		joplin-desktop
-		zettlr
 		teams-for-linux #:(
 		pavucontrol
   ];

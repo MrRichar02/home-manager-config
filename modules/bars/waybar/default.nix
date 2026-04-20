@@ -145,7 +145,7 @@ in {
             "on-click" =
               {
                 hyprland = "${pkgs.hyprsunset}/bin/hyprsunset -t 5000";
-                mango = "${pkgs.wlsunset}/bin/wlsunset";
+                mango = "${pkgs.wlsunset}/bin/wlsunset -t 2000 -T 4000";
               }.${
                 cfg.compositor
               };
