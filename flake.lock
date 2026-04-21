@@ -429,7 +429,7 @@
         "type": "github"
       }
     },
-    "nixGL": {
+    "nixgl": {
       "inputs": {
         "flake-utils": "flake-utils_2",
         "nixpkgs": [
@@ -621,11 +621,10 @@
         "kickstart-nix": "kickstart-nix",
         "mango": "mango",
         "nix-index-database": "nix-index-database",
-        "nixGL": "nixGL",
+        "nixgl": "nixgl",
         "nixpkgs": "nixpkgs_3",
         "nixpkgs-unstable": "nixpkgs-unstable",
-        "stylix": "stylix",
-        "zen-browser": "zen-browser"
+        "stylix": "stylix"
       }
     },
     "scenefx": {
@@ -805,29 +804,6 @@
       "original": {
         "owner": "tinted-theming",
         "repo": "base16-zed",
-        "type": "github"
-      }
-    },
-    "zen-browser": {
-      "inputs": {
-        "home-manager": [
-          "home-manager"
-        ],
-        "nixpkgs": [
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "lastModified": 1776638237,
-        "narHash": "sha256-dZGuVerSxZG/9ljBKcXQXkpBt5djkVoLzHeZVycip8U=",
-        "owner": "0xc000022070",
-        "repo": "zen-browser-flake",
-        "rev": "75cc7559281e65e7a9ee54cbc301a4fe96e474f2",
-        "type": "github"
-      },
-      "original": {
-        "owner": "0xc000022070",
-        "repo": "zen-browser-flake",
         "type": "github"
       }
     }
