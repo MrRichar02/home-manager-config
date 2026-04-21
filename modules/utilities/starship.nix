@@ -1,0 +1,22 @@
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.homeModules.starship = {
+    programs.starship = {
+      enable = true;
+      enableBashIntegration = true;
+      settings = {
+        "$schema" = "https://starship.rs/config-schema.json";
+
+        add_newline = false;
+
+        character = {
+          success_symbol = "[➜](bold green)";
+          error_symbol = "[➜](bold red)";
+        };
+      };
+    };
+  };
+}
