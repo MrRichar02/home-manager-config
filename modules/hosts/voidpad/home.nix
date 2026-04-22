@@ -85,9 +85,13 @@
       vesktop
       teams-for-linux
 
+      joplin-desktop
+
       firefoxpwa
 
+      alejandra
       nixd
+
       tmux
       bitwarden-desktop
       # # Adds the 'hello' command to your environment. It prints a friendly

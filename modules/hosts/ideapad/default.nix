@@ -8,7 +8,7 @@
       system = "x86_64-linux";
       config.allowUnfree = true;
     };
-    extraSpecialArgs = {pkgsu = inputs.pkgsu;};
+    extraSpecialArgs = {pkgsu = inputs.pkgsu;nixgl = inputs.nixgl;};
     modules = [
       self.homeModules.ideapad-home
     ];
