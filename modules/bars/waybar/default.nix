@@ -1,20 +1,23 @@
 {
-  pkgs,
-  lib,
-  config,
+  self,
+  inputs,
   ...
-}: let
-  cfg = config.myModules.waybar;
-in {
-  options.myModules.waybar = {
-    enable = lib.mkEnableOption "Enables or disables waybar custom module";
-    compositor = lib.mkOption {
-      type = lib.types.enum ["hyprland" "mango"];
-      default = "hyprland";
-      description = "Wayland compositor where waybar is going to be use";
+}: {
+  flake.homeModules.waybar = {
+    pkgs,
+    lib,
+    config,
+    ...
+  }: let
+    cfg = config.myModules.waybar;
+  in {
+    options.myModules.waybar = {
+      compositor = lib.mkOption {
+        type = lib.types.enum ["hyprland" "mango"];
+        default = "hyprland";
+        description = "Wayland compositor where waybar is going to be use";
+      };
     };
-  };
-  config = lib.mkIf cfg.enable {
     programs.waybar = {
       enable = true;
       style =
@@ -61,7 +64,7 @@ in {
               "persistent" = "";
             };
             "persistent-workspaces" = {
-							"*" = [1 2 3 4 5 6 7 8 9 10];
+              "*" = [1 2 3 4 5 6 7 8 9 10];
               # "HDMI-A-1" = [1 2 3 4 6];
               # "eDP-1" = [5 7 8 9 10];
             };

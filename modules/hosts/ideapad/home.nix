@@ -35,19 +35,19 @@
 		 self.homeModules.mpv
 
 		 self.homeModules.qutebrowser
+		 
+		 self.homeModules.waybar
 
 		 self.homeModules.kitty
 		 
 		 self.homeModules.swww
 		 self.homeModules.swaync
-    ];
 
-    # Styles
-    myModules.stylix.enable = true;
+		 self.homeModules.stylix
+    ];
 
     # wayland compositor mangowc
     myModules.waybar = {
-      enable = true;
       compositor = "mango";
     };
 
