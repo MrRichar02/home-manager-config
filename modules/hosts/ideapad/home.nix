@@ -44,6 +44,10 @@
 		 self.homeModules.swaync
 
 		 self.homeModules.stylix
+
+		 self.homeModules.overlay
+		 self.homeModules.overlay-java-apps
+		 self.homeModules.overlay-wlr-which-key-menus
     ];
 
     # wayland compositor mangowc
@@ -51,7 +55,7 @@
       compositor = "mango";
     };
 
-    programs.nix-index-database.comma.enable = true;
+    #programs.nix-index-database.comma.enable = true;
 
     gtk.cursorTheme = {
       package = pkgs.rose-pine-cursor;
@@ -59,9 +63,9 @@
       size = 24;
     };
 
-    # home.sessionVariables = {
-    #   EDITOR = "neovim";
-    # };
+    home.sessionVariables = {
+      EDITOR = "nvim";
+    };
 
     #Let Home Manager install and manage itself.
     programs.home-manager.enable = true;

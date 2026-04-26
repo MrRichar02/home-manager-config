@@ -1,22 +1,20 @@
 {
-  lib,
-  pkgs,
-  config,
+  self,
+  inputs,
   ...
-}: let
-  cfg = config.myModules.hyprland;
-in {
-  options.myModules.hyprland = {
-    enable = lib.mkEnableOption "Enables or disable hyprland custom module";
-  };
+}: {
+  flake.homeModules.hyprland = {
+    lib,
+    pkgs,
+    config,
+    ...
+  }: {
+    imports = [
+      self.homeModules.hyprland-keybinds
+      self.homeModules.hyprland-plugins
+      self.homeModules.hyprland-rules
+    ];
 
-  imports = [
-    ./keybinds.nix
-    ./rules.nix
-		./plugins.nix
-  ];
-
-  config = lib.mkIf cfg.enable {
     wayland.windowManager.hyprland = {
       enable = true;
       settings = {
@@ -43,12 +41,12 @@ in {
         ################
 
         # See https://wiki.hypr.land/Configuring/Monitors/
-				#monitor = name, resolution, position, scale
-				monitor = [
-				"HDMI-A-1, 1920x1080@120, 0x0, 1"
-				"eDP-1, 1920x1080@60, -1920x0, 1"
-				# "eDP-1, disable"
-				];
+        #monitor = name, resolution, position, scale
+        monitor = [
+          "HDMI-A-1, 1920x1080@120, 0x0, 1"
+          "eDP-1, 1920x1080@60, -1920x0, 1"
+          # "eDP-1, disable"
+        ];
 
         ###################
         ### MY PROGRAMS ###

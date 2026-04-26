@@ -5,8 +5,7 @@
 }: {
   flake.homeModules.ideapad-pkgs = {
     pkgs,
-    pkgsu,
-    inputs,
+    # pkgsu,
     ...
   }: let
     screenshotmango = pkgs.writeShellScriptBin "screenshotmango" ''
@@ -61,7 +60,7 @@
       brave
       localsend
 
-      pkgsu.vscodium-fhs
+      # pkgsu.vscodium-fhs
       foot
       nerd-fonts.jetbrains-mono
 

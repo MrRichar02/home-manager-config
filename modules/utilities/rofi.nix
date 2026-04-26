@@ -1,5 +1,13 @@
-	{self, inputs, ...}:{
-	flake.homeModules.rofi = {pkgs, config, ...}:{
+{
+  self,
+  inputs,
+  ...
+}: {
+  flake.homeModules.rofi = {
+    pkgs,
+    config,
+    ...
+  }: {
     home.packages = with pkgs; [
       monocraft
     ];
@@ -85,6 +93,5 @@
         };
       };
     };
-	};
-	}
-	
+  };
+}
