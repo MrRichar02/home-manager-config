@@ -9,6 +9,25 @@
     config,
     ...
   }: {
+
+    imports = [
+     self.homeModules.voidpad-pkgs
+
+		 self.homeModules.bash
+
+		 self.homeModules.direnv
+		 self.homeModules.git
+		 self.homeModules.tmux
+
+		 self.homeModules.starship
+
+		 self.homeModules.waybar
+
+		 # self.homeModules.overlay
+		 # self.homeModules.overlay-java-apps
+		 self.homeModules.overlay-wlr-which-key-menus
+    ];
+
     # Home Manager needs a bit of information about you and the paths it should
     # manage.
     home.username = "docair";
@@ -29,6 +48,10 @@
     #   intel = pkgs.nixgl.nixGLIntel;
     # };
 
+    myModules.waybar = {
+      compositor = "mango";
+    };
+
     xdg = {
       enable = true;
       mime.enable = true;
@@ -44,73 +67,7 @@
       installScripts = ["mesa"];
     };
 
-    programs.direnv = {
-      enable = true;
-      enableBashIntegration = true;
-      nix-direnv.enable = true;
-    };
-
-    programs.bash = {
-      enable = true;
-      enableCompletion = true;
-      shellAliases = {
-        ls = "ls --color=auto";
-      };
-    };
-
     nix.nixPath = ["nixpkgs=${inputs.nixpkgs}"];
-
-    programs.starship = {
-      enable = true;
-      enableBashIntegration = true;
-      settings = {
-        "$schema" = "https://starship.rs/config-schema.json";
-
-        add_newline = false;
-
-        character = {
-          success_symbol = "[➜](bold green)";
-          error_symbol = "[➜](bold red)";
-        };
-      };
-    };
-
-    # The home.packages option allows you to install Nix packages into your
-    # environment.
-    home.packages = with pkgs; [
-      # (config.lib.nixGL.wrap pkgs.vscode)
-      vscode
-
-      (config.lib.nixGL.wrap zapzap)
-      vesktop
-      teams-for-linux
-
-      joplin-desktop
-
-      firefoxpwa
-
-      alejandra
-      nixd
-
-      tmux
-      bitwarden-desktop
-      # # Adds the 'hello' command to your environment. It prints a friendly
-      # # "Hello, world!" when run.
-      # pkgs.hello
-
-      # # It is sometimes useful to fine-tune packages, for example, by applying
-      # # overrides. You can do that directly here, just don't forget the
-      # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-      # # fonts?
-      # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
-
-      # # You can also create simple shell scripts directly inside your
-      # # configuration. For example, this adds a command 'my-hello' to your
-      # # environment:
-      # (pkgs.writeShellScriptBin "my-hello" ''
-      #   echo "Hello, ${config.home.username}!"
-      # '')
-    ];
 
     # programs.joplin-desktop = {
     #   enable = true;

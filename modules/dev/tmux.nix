@@ -49,6 +49,7 @@
         				bind-key -T copy-mode-vi v send-keys -X begin-selection
         				bind-key -T copy-mode-vi c-v send-keys -X rectangle-toggle
         				bind-key -T copy-mode-vi y send-keys -X copy-selection-and-cancel
+                bind -T copy-mode-vi y send -X copy-pipe-and-cancel "xclip -selection clipboard -i"  # Linux
         				unbind -T copy-mode-vi MouseDragEnd1Pane
       '';
     };
