@@ -1,5 +1,5 @@
 {self, inputs, ...}:{
-  flake.homeModules.voidpad-pkgs = {pkgs, nixgl, config, ...}:{
+  flake.homeModules.voidpad-pkgs = {pkgs, pkgsu, nixgl, config, ...}:{
     # The home.packages option allows you to install Nix packages into your
     # environment.
     home.packages = let
@@ -9,9 +9,10 @@
   in with pkgs; [
       # (config.lib.nixGL.wrap pkgs.vscode)
       vscode
+      pkgsu.opencode
 
       (config.lib.nixGL.wrap zapzap)
-      vesktop
+      (config.lib.nixGL.wrap vesktop)
       teams-for-linux
 
       firefoxpwa
@@ -21,7 +22,6 @@
 
       joplin-desktop
 
-      tmux
       bitwarden-desktop
       
       waypaper

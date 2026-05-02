@@ -8,7 +8,15 @@
       system = "x86_64-linux";
       config.allowUnfree = true;
     };
-    extraSpecialArgs = {nixgl = inputs.nixgl;pkgsu = inputs.pkgsu;};
+    extraSpecialArgs = let
+      pkgsu = import inputs.nixpkgs-unstable {
+        system = "x86_64-linux";
+        config.allowUnfree = true;
+      };
+    in {
+      nixgl = inputs.nixgl;
+      inherit pkgsu;
+    };
     modules = [
       self.homeModules.voidpad-home
     ];
